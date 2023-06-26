@@ -3,21 +3,7 @@
     "name": "SingularityX",
     "logo": "/assets/images/logo.png"
   },
-  "navigation": [
-    {
-      "name": "Features",
-      "href": "features"
-    },
-
-    {
-      "name": "Pricing",
-      "href": "pricing"
-    },
-    {
-      "name": "Our Teams",
-      "href": "teams"
-    }
-  ],
+  "navigation": [],
   "callToAction": {
     "text": "Get started",
     "href": "#"
@@ -25,7 +11,7 @@
   "mainHero": {
     "title": "Dive into Code, Surf with Ease - ",
     "subtitle": "Snorkell.",
-    "description": "Transforming complex code into plain English explanations. Enhance productivity, reduce debugging time, and improve collaboration. Effortlessly grasp code workflows and smoothly onboard new team members",
+    "description": "Transforming complex code into plain English explanations. Enhance productivity, reduce debugging time, and improve collaboration. Effortlessly grasp code workflows and smoothly onboard new team members.",
     "img": "/assets/images/happyTeam.jpeg",
     "primaryAction": {
       "text": "Get started",
