@@ -1,6 +1,5 @@
 import React from 'react';
 
-import About from '../components/About';
 import Analytics from '../components/Analytics';
 import Canvas from '../components/Canvas';
 import Features from '../components/Features';
@@ -9,6 +8,7 @@ import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
 import MainHeroImage from '../components/MainHeroImage';
 import Pricing from '../components/Pricing';
+import Teams from '../components/Teams';
 
 const App = () => {
   return (
@@ -43,7 +43,7 @@ const App = () => {
       <LazyShow>
         <>
           <Canvas />
-          <About />
+          <Teams />
         </>
       </LazyShow>
       <Analytics />

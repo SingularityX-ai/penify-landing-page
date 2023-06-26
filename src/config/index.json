@@ -1,6 +1,6 @@
 {
   "company": {
-    "name": "React landing page 2021",
+    "name": "SingularityX",
     "logo": "/assets/images/logo.png"
   },
   "navigation": [
@@ -14,8 +14,8 @@
       "href": "pricing"
     },
     {
-      "name": "About",
-      "href": "about"
+      "name": "Our Teams",
+      "href": "teams"
     }
   ],
   "callToAction": {
@@ -36,45 +36,20 @@
       "href": "mailto:sumansaurabh@singularityx.ai?subject=I want to pitch in with you!"
     }
   },
-  "product": {
-    "title": "React landing page 2021",
-    "items": [
-      {
-        "title": "A plug n play template",
-        "description": "Just edit the config.json file with details about your company and voila your beautiful state of the art landing page is ready to go live! Remember to also update your assets, add any images you want to show to /assets/images and link them in the config.json",
-        "img": "/assets/images/product1.jpg"
-      },
-      {
-        "title": "Make it your own!",
-        "description": "Play around with the theme.ts file and configure the color palette to match the branding of your company! If you're feeling wild, maybe change some tailwind css as well!",
-        "img": "/assets/images/product2.jpg"
-      }
-    ]
-  },
   "features": {
-    "title": "Latest & greatest ",
-    "subtitle": "All the best technologies out there!",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+    "title": "Features ",
+    "subtitle": "",
+    "description": "",
     "items": [
       {
-        "name": "React.js",
-        "description": "React is a free and open-source front-end JavaScript library for building user interfaces or UI components.",
-        "icon": "/assets/images/react.png"
+        "name": "Chrome Extension",
+        "description": "Snorkell's chrome extension that allows you to get plain English explanations of code snippets on any website.",
+        "icon": "/assets/images/chrome.png"
       },
       {
-        "name": "Tailwind",
-        "description": "Tailwind CSS is a highly customizable, low-level CSS framework for quickly creating beautiful designs without any annoying opinionated stylesheet nonsense.",
-        "icon": "/assets/images/tailwindcss.svg"
-      },
-      {
-        "name": "Next.js",
-        "description": "Next.js is a framework for server-rendered React applications using Next.js.",
-        "icon": "/assets/images/nextjs.svg"
-      },
-      {
-        "name": "Typescript",
-        "description": "TypeScript is a programming language developed and maintained by Microsoft.",
-        "icon": "/assets/images/ts.png"
+        "name": "VsCode Extension",
+        "description": "Snorkell's VsCode extension that allows you to get plain English explanations of code snippets in Vscode.",
+        "icon": "/assets/images/vscode.png"
       }
     ]
   },
@@ -117,33 +92,19 @@
       }
     ]
   },
-  "about": {
+  "teams": {
+    "title": "Our Teams",
     "sections": [
       {
-        "name": "Something",
+        "name": "Suman Saurabh",
         "href": "#",
-        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+        "avatar": "https://media.licdn.com/dms/image/D5603AQEDru6Q4UkzEg/profile-displayphoto-shrink_400_400/0/1681498314029?e=1693440000&v=beta&t=Eu3BIv1nY_SFCe9bVrqG-KGrouVqHmcVz74UdYN9EC8"
       },
       {
-        "name": "Something",
+        "name": "Sunil Agarwal",
         "href": "#",
-        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-      },
-      {
-        "name": "Something",
-        "href": "#",
-        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-      },
-      {
-        "name": "Something",
-        "href": "#",
-        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+        "avatar": "https://media.licdn.com/dms/image/C5103AQEEV77g1j3kyA/profile-displayphoto-shrink_200_200/0/1579079261668?e=1693440000&v=beta&t=QNoh4z5O_kWyI0MGZ0G02XbxV7klVARLx-hPkH8A3fA"
       }
-    ],
-    "socialMedia": {
-      "github": "https://github.com/issaafalkattan",
-      "twitter": "https://twitter.com/issaafkattan",
-      "linkedin": "https://www.linkedin.com/in/issaaf-kattan/"
-    }
+    ]
   }
 }
