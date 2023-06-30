@@ -22,7 +22,7 @@ const App = () => {
       {/* <Canvas /> */}
       {/* <LazyShow>
         <>
-          <Product />
+          <Product /> 
           <Canvas />
         </>
       </LazyShow> */}
