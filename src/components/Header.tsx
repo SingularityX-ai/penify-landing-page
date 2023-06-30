@@ -2,12 +2,11 @@ import React, { Fragment } from 'react';
 
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { Link } from 'react-scroll';
 
 import config from '../config/index.json';
 
 const Menu = () => {
-  const { navigation, company, callToAction } = config;
+  const { company, callToAction } = config;
   const { name: companyName, logo } = company;
 
   return (
@@ -44,7 +43,7 @@ const Menu = () => {
                 </div>
               </div>
             </div>
-            <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+            {/* <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
               {navigation.map((item) => (
                 <Link
                   spy={true}
@@ -58,13 +57,13 @@ const Menu = () => {
                   {item.name}
                 </Link>
               ))}
-              {/* <a
+              <a
                 href="#"
                 className={`font-medium text-primary hover:text-secondary`}
               >
                 Call to action
-              </a> */}
-            </div>
+              </a>
+            </div> */}
           </nav>
         </div>
 
@@ -97,7 +96,7 @@ const Menu = () => {
                   </Popover.Button>
                 </div>
               </div>
-              <div className="px-2 pt-2 pb-3 space-y-1">
+              {/* <div className="px-2 pt-2 pb-3 space-y-1">
                 {navigation.map((item) => (
                   <Link
                     spy={true}
@@ -111,7 +110,7 @@ const Menu = () => {
                     {item.name}
                   </Link>
                 ))}
-              </div>
+              </div> */}
               <a
                 href={callToAction.href}
                 className={`block w-full px-5 py-3 text-center font-medium text-primary bg-gray-50 hover:bg-gray-100`}
