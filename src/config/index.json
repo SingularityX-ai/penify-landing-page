@@ -15,7 +15,7 @@
     "img": "/assets/images/happyTeam.jpeg",
     "primaryAction": {
       "text": "Get started",
-      "href": "#"
+      "href": "https://dashboard.snorkell.ai/auth/sign-up"
     },
     "secondaryAction": {
       "text": "Email us",
