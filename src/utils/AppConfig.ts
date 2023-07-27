@@ -1,6 +1,8 @@
 export const AppConfig = {
-  site_name: 'React landing page',
-  title: 'React landing page template 2021',
-  description: 'Production ready plug n play landing page!',
+  site_name: 'Snorkell',
+  title: 'Snorkell | Dive into code with ease!',
+  description: 'Dive into code with ease!',
+  keywords: 'code, dive, ease, snorkell, code, snorkell.ai, documentation',
   locale: 'en',
+  author: 'Snorkell',
 };

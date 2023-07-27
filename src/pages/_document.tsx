@@ -7,6 +7,11 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang={AppConfig.locale}>
+        <title>{AppConfig.title}</title>
+        <meta name="description" content={AppConfig.description} />
+        <meta name="keywords" content={AppConfig.keywords} />
+        <meta name="author" content={AppConfig.author} />
+        <link rel="icon" href="/favicon.ico" />
         <Head />
         <body>
           <Main />
