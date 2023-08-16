@@ -1,7 +1,7 @@
 {
   "company": {
     "name": "Snorkell",
-    "logo": "/assets/images/logo.png"
+    "logo": "/assets/images/logo.svg"
   },
   "navigation": [],
   "callToAction": {
@@ -9,7 +9,7 @@
     "href": "#"
   },
   "mainHero": {
-    "title": "Dive into Code, Surf with Ease - ",
+    "title": "Right Click! Unravel the Code!!",
     "subtitle": "Snorkell.",
     "description": "Transforming complex code into plain English explanations. Enhance productivity, reduce debugging time, and improve collaboration. Effortlessly grasp code workflows and smoothly onboard new team members.",
     "img": "/assets/images/happyTeam.jpeg",
