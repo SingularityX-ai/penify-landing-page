@@ -8,6 +8,14 @@ import MainHeroImage from '../components/MainHeroImage';
 const App = () => {
   return (
     <div className={`bg-background grid gap-y-16 overflow-hidden`}>
+      {/* <video
+        autoPlay
+        muted
+        loop
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/assets/images/background.mp4" type="video/mp4" />
+      </video> */}
       <div className={`relative bg-background`}>
         <div className="max-w-7xl mx-auto">
           <div

@@ -18,6 +18,17 @@ a:hover {
 }
 
 
+.bg-background {
+  /* background-: url('/assets/images/background.mp4'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* .rotate-45 {
+  --tw-rotate: 9deg;
+  transform: var(--tw-transform);
+} */
 
 .content p {
   @apply my-6;
@@ -26,3 +37,46 @@ a:hover {
 .content ul {
   @apply my-6;
 }
+
+.bg-image-background {
+  /* background-color: #4d4394; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-hero-subtitle {
+  --tw-text-opacity: 1;
+  color: rgba(77, 67, 148, var(--tw-text-opacity));
+}
+
+.get-started {
+  --tw-text-opacity: 1;
+  background-color: #0bb7d2;
+}
+
+.email-us {
+  --tw-text-opacity: 1;
+  /* background-color: rgba(77, 67, 148, var(--tw-text-opacity)); */
+  /* border-color: rgba(77, 67, 148, var(--tw-text-opacity)); */
+  color: #0bb7d2
+}
+
+.email-us:hover {
+  --tw-text-opacity: 1;
+  /* background-color: rgba(77, 67, 148, var(--tw-text-opacity)); */
+  /* border-color: rgba(77, 67, 148, var(--tw-text-opacity)); */
+  background-color: #0bb7d2;
+  color: #fff;
+  border-color:  #0bb7d2; 
+}
+
+.get-started:hover {
+  --tw-text-opacity: 1;
+  background-color: rgba(77, 67, 148, var(--tw-text-opacity));
+  border-color: rgba(77, 67, 148, var(--tw-text-opacity)); 
+}
+
+/*
+  #0bb7d2
+  */
