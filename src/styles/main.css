@@ -4,8 +4,8 @@
 
 
 :root {
-  --color-primary: #1292ee;
-  --color-secondary: #2e82bf;
+  --color-primary: #4d4394;
+  --color-secondary: #0bb7d2;
   --color-tertiaty: #99a0a3;
 }
 
@@ -52,6 +52,10 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* .text-primary {
+  color: --color-primary;
+} */
 
 .main-hero-subtitle {
   --tw-text-opacity: 1;
