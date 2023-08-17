@@ -5,12 +5,8 @@ import config from '../config/index.json';
 const MainHeroImage = () => {
   const { mainHero } = config;
   return (
-    <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <img
-        className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-        src={mainHero.img}
-        alt="happy team image"
-      />
+    <div className="hidden xl:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+      <img src={mainHero.img} className="side-image" alt="happy team image" />
     </div>
   );
 };
