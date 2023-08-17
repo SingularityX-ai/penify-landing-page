@@ -17,6 +17,14 @@ a:hover {
   @apply border-b-2 border-blue-500;
 }
 
+.side-image {
+  top: 10rem;
+  position: relative;
+  /* padding: 25px; */
+  transform: scale(0.9);
+  left: 3rem;
+}
+
 
 .bg-background {
   /* background-: url('/assets/images/background.mp4'); */

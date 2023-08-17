@@ -11,7 +11,7 @@ class MyDocument extends Document {
         <meta name="description" content={AppConfig.description} />
         <meta name="keywords" content={AppConfig.keywords} />
         <meta name="author" content={AppConfig.author} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/assets/snorkell.ico" />
         <Head />
         <body>
           <Main />
