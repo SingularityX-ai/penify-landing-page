@@ -1,7 +1,9 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 
 import { Popover } from '@headlessui/react';
 import { motion } from 'framer-motion';
+
+import axiosInstance from '../config/axiosConfig';
 
 export default function ContactUsBox() {
   const buttonVariants = {
@@ -13,6 +15,28 @@ export default function ContactUsBox() {
     },
   };
 
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    try {
+      const response = await axiosInstance.post('/contact', formData);
+      console.log(response.data);
+      // Reset the form data
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="relative w-full h-full">
       <motion.div
@@ -21,21 +45,33 @@ export default function ContactUsBox() {
         transition={{ delay: 0.2 }}
         className="absolute inset-0 bg-white p-8 rounded-xl shadow-md space-y-4"
       >
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={handleSubmit}>
           <input
             className="w-full p-2 border rounded-md"
             type="text"
             placeholder="Your Name"
+            value={formData.name}
+            onChange={(event) =>
+              setFormData({ ...formData, name: event.target.value })
+            }
           />
           <input
             className="w-full p-2 border rounded-md"
             type="email"
             placeholder="Your Email"
+            value={formData.email}
+            onChange={(event) =>
+              setFormData({ ...formData, email: event.target.value })
+            }
           />
           <textarea
             className="w-full p-2 border rounded-md"
             rows={9}
             placeholder="Your Message"
+            value={formData.message}
+            onChange={(event) =>
+              setFormData({ ...formData, message: event.target.value })
+            }
           />
           <motion.button
             whileHover="hover"
