@@ -53,9 +53,17 @@ a:hover {
   background-repeat: no-repeat;
 }
 
-/* .text-primary {
-  color: --color-primary;
-} */
+.text-primary {
+  color: #4d4394;
+}
+
+.bg-blue-600 {
+  background-color: #4d4394;
+}
+
+.bg-main-blue {
+  background-color: #7951ad;
+}
 
 .main-hero-subtitle {
   --tw-text-opacity: 1;

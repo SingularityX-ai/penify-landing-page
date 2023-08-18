@@ -19,7 +19,6 @@ const ContactUs = () => {
         <Divider />
         <div className={`flex flex-wrap`}>
           <div className={`w-5/6 sm:w-1/2 flex flex-col`}>
-            <div className="flex-grow">{/* Rest of the content */}</div>
             <ContactUsBox />
           </div>
           <div className={`w-full sm:w-1/2 flex flex-col pl-8`}>

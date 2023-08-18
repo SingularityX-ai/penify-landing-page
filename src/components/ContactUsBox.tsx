@@ -1,7 +1,6 @@
 import { Fragment } from 'react';
 
 import { Popover } from '@headlessui/react';
-import { MailIcon } from '@heroicons/react/solid';
 import { motion } from 'framer-motion';
 
 export default function ContactUsBox() {
@@ -15,14 +14,13 @@ export default function ContactUsBox() {
   };
 
   return (
-    <div className="flex justify-center items-center bg-gradient-to-r ">
+    <div className="relative w-full h-full">
       <motion.div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="bg-white p-8 rounded-xl shadow-md space-y-4"
+        className="absolute inset-0 bg-white p-8 rounded-xl shadow-md space-y-4"
       >
-        <h1 className="text-2xl font-bold text-center">Contact Us</h1>
         <form className="space-y-4">
           <input
             className="w-full p-2 border rounded-md"
@@ -36,14 +34,14 @@ export default function ContactUsBox() {
           />
           <textarea
             className="w-full p-2 border rounded-md"
-            rows={4}
+            rows={9}
             placeholder="Your Message"
           />
           <motion.button
             whileHover="hover"
             variants={buttonVariants}
             type="submit"
-            className="w-full p-2 bg-blue-600 text-white rounded-md"
+            className="w-full p-2 bg-main-blue text-white rounded-md"
           >
             Send
           </motion.button>
@@ -51,10 +49,7 @@ export default function ContactUsBox() {
         <Popover className="relative">
           {() => (
             <Fragment>
-              <Popover.Button className="flex items-center space-x-2 text-blue-600">
-                <MailIcon className="h-6 w-6" aria-hidden="true" />
-                <span>info@example.com</span>
-              </Popover.Button>
+              <Popover.Button className="flex items-center space-x-2 text-blue-600"></Popover.Button>
             </Fragment>
           )}
         </Popover>
