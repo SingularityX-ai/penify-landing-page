@@ -4,8 +4,8 @@
 
 
 :root {
-  --color-primary: #1292ee;
-  --color-secondary: #2e82bf;
+  --color-primary: #4d4394;
+  --color-secondary: #0bb7d2;
   --color-tertiaty: #99a0a3;
 }
 
@@ -51,6 +51,18 @@ a:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.text-primary {
+  color: #4d4394;
+}
+
+.bg-blue-600 {
+  background-color: #4d4394;
+}
+
+.bg-main-blue {
+  background-color: #7951ad;
 }
 
 .main-hero-subtitle {

@@ -3,7 +3,16 @@
     "name": "Snorkell",
     "logo": "/assets/images/logo.svg"
   },
-  "navigation": [],
+  "navigation": [
+    {
+      "name": "Product",
+      "href": "product"
+    },
+    {
+      "name": "Contact us",
+      "href": "contactus"
+    }
+  ],
   "callToAction": {
     "text": "Get started",
     "href": "#"
@@ -19,8 +28,28 @@
     },
     "secondaryAction": {
       "text": "Email us",
-      "href": "mailto:sumansaurabh@singularityx.ai?subject=I want to pitch in with you!"
+      "href": "/#contactus"
     }
+  },
+  "product": {
+    "title": "Our Product",
+    "items": [
+      {
+        "title": "VSCode Extension",
+        "description": "Snorkell's VSCode extension that allows you to get plain English explanations of code snippets in Vscode.",
+        "img": "/assets/images/product1.svg"
+      }
+    ]
+  },
+  "contactus": {
+    "title": "Contact Us",
+    "items": [
+      {
+        "title": "",
+        "description": "Snorkell's VSCode extension that allows you to get plain English explanations of code snippets in Vscode.",
+        "img": "/assets/images/contact-us.png"
+      }
+    ]
   },
   "features": {
     "title": "Features ",
