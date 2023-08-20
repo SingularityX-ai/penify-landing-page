@@ -4,10 +4,10 @@ interface Config {
 
 const config: Config = {
   local: {
-    apiUrl: 'http://localhost:3000/api',
+    apiUrl: 'http://localhost:8000/api',
   },
   development: {
-    apiUrl: 'http://localhost:3000/api',
+    apiUrl: 'http://localhost:8000/api',
   },
   production: {
     apiUrl: 'https://production-gateway.snorkell.ai/api',
