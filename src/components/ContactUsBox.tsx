@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 
 import { Popover } from '@headlessui/react';
 import { motion } from 'framer-motion';
@@ -39,6 +39,17 @@ export default function ContactUsBox() {
     }
   };
 
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    if (textareaRef.current) {
+      const height = (textareaRef.current.parentNode as HTMLElement)
+        ?.offsetHeight;
+      const rows = Math.floor(height / 20); // Assuming 20 pixels per row
+      textareaRef.current.rows = rows;
+    }
+  }, []);
+
   return (
     <div className="relative w-full h-full">
       {submitted ? (
@@ -46,7 +57,7 @@ export default function ContactUsBox() {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="absolute inset-0 bg-white p-8 rounded-xl shadow-md space-y-4"
+          className="inset-0 bg-white p-8 rounded-xl shadow-md space-y-4"
         >
           <h2 className="text-2xl font-bold text-center">
             We will contact you shortly!
@@ -57,7 +68,7 @@ export default function ContactUsBox() {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="absolute inset-0 bg-white p-8 rounded-xl shadow-md space-y-4"
+          className="inset-0 bg-white p-8 rounded-xl shadow-md space-y-4"
         >
           <form className="space-y-4" onSubmit={handleSubmit}>
             <input
@@ -79,8 +90,8 @@ export default function ContactUsBox() {
               }
             />
             <textarea
+              ref={textareaRef}
               className="w-full p-2 border rounded-md"
-              rows={9}
               placeholder="Your Message"
               value={formData.message}
               onChange={(event) =>
