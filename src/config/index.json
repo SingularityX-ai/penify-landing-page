@@ -21,10 +21,18 @@
     "title": "Right Click! Unravel the Code!!",
     "subtitle": "Snorkell.",
     "description": "Transforming complex code into plain English explanations. Enhance productivity, reduce debugging time, and improve collaboration. Effortlessly grasp code workflows and smoothly onboard new team members.",
+    "descriptionArr": [
+      "code snippets explained in simple English.",
+      "enhanced productivity.",
+      "time-saving debugging.",
+      "- reduce knowledge gap among developers.",
+      "complex code workflows."
+    ],
     "img": "/assets/images/happyTeam.jpeg",
     "primaryAction": {
-      "text": "Get started",
-      "href": "https://dashboard.snorkell.ai/auth/sign-up"
+      "text": "Get Extension",
+      "href": "vscode:extension/snorkell.snorkell",
+      "img": "/assets/images/vscode.png"
     },
     "secondaryAction": {
       "text": "Email us",
@@ -35,8 +43,8 @@
     "title": "Our Product",
     "items": [
       {
-        "title": "VSCode Extension",
-        "description": "Snorkell's VSCode extension that allows you to get plain English explanations of code snippets in Vscode.",
+        "title": "VS Code Extension",
+        "description": "Transforming complex code into plain English explanations. Enhance productivity, reduce debugging time, and improve collaboration. Effortlessly grasp code workflows and smoothly onboard new team members.",
         "img": "/assets/images/product1.svg"
       }
     ]
