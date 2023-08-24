@@ -48,12 +48,14 @@ const Menu = () => {
                   {item.name}
                 </Link>
               ))}
-              {/* <a
-                href="#"
+              <a
+                target="_blank"
+                href="https://dashboard.snorkell.ai"
                 className={`font-medium text-primary hover:text-secondary`}
+                rel="noreferrer"
               >
-                Call to action
-              </a> */}
+                Dashboard
+              </a>
             </div>
           </nav>
         </div>

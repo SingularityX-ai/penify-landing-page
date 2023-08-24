@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { TypeAnimation } from 'react-type-animation';
+
 import config from '../config/index.json';
 
 const MainHero = () => {
@@ -14,7 +16,25 @@ const MainHero = () => {
           </span>
         </h1>
         <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-          {mainHero.description}
+          <p style={{ fontSize: '1.5em' }}>A VS Code extension to unlock</p>
+          <TypeAnimation
+            sequence={[
+              // Same substring at the start will only be typed once, initially
+              mainHero.descriptionArr[0] || '',
+              1000,
+              mainHero.descriptionArr[1] || '',
+              1000,
+              mainHero.descriptionArr[2] || '',
+              1000,
+              mainHero.descriptionArr[3] || '',
+              1000,
+              mainHero.descriptionArr[4] || '',
+              1000,
+            ]}
+            speed={50}
+            style={{ fontSize: '1.5em' }}
+            repeat={Infinity}
+          />
         </p>
         <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
           <div className="rounded-md shadow">
@@ -22,6 +42,7 @@ const MainHero = () => {
               href={mainHero.primaryAction.href}
               className={`w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-background get-started md:py-4 md:text-lg md:px-10`}
             >
+              {/* <img src={mainHero.primaryAction.img} alt="VS code"></img> */}
               {mainHero.primaryAction.text}
             </a>
           </div>
