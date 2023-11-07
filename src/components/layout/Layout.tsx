@@ -3,6 +3,9 @@ import { useState } from "react";
 import ScrollProgress from "./ScrollProgress";
 import Header from "./Header";
 import Footer from "./Footer";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -28,6 +31,19 @@ export default function Layout({ children }: LayoutProps) {
         <Footer />
         
         <ScrollProgress />
+
+        <ToastContainer
+          position="bottom-left"
+          autoClose={2500}
+          hideProgressBar
+          newestOnTop
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss={false}
+          draggable={false}
+          pauseOnHover={false}
+          theme="dark"
+        />
       </div>
     </>
   );
