@@ -24,6 +24,10 @@
     gap: 24px;
     column-gap: 80px;
     min-width: 100%;
+
+    .nav__logo {
+      margin-left: -12px;
+    }
   }
 
   .nav__menu {
@@ -33,7 +37,7 @@
   .nav__menu-items {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   .nav__menu-link {

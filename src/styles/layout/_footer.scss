@@ -28,6 +28,33 @@
         color: $septenary-color;
       }
     }
+
+    a.logo:hover {
+      padding-left: 0;
+    }
+
+    .logo {
+      margin: 0 0 18px -12px;
+    }
+
+    .social {
+      justify-content: flex-start;
+      margin-top: 32px;
+  
+      a {
+        font-size: 24px;
+        color: $white;
+  
+        &:hover {
+          color:  $septenary-color;
+          padding-left: 0 !important;
+        }
+      }
+    }
+
+    p {
+      text-transform: none;
+    }
   }
 
   .copyright-inner {
