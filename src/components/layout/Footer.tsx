@@ -6,7 +6,7 @@ import snorkellLogo from "public/asset/snorkell-dark-logo.svg";
 
 export default function Footer () {
   return (
-    <footer className="footer section pb-0">
+    <footer className="footer section">
       <div className="container">
         <div className="row items-gap-two">
         <div className="col-12 col-sm-6 col-lg-3">
