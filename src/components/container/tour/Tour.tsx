@@ -1,7 +1,36 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useEffect, useRef, useState } from "react";
 
 // used function expression for working of scrolling effect
 const Tour = forwardRef<HTMLDivElement>(function (_,ref) {
+  const videoRef = useRef<HTMLDivElement>(null);
+  const [autoplay, setAutoplay] = useState(false);
+
+  // whenever scrolled within video view, autoplay is true
+  // whenever scrolled outside video view, autoplay is false
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if(entry.isIntersecting) {
+            setAutoplay(true);
+          } else {
+            setAutoplay(false)
+          }
+        });
+      }, { threshold: .2}
+    );
+
+    if(videoRef.current) {
+      obs.observe(videoRef.current);
+    }
+
+    return () => {
+      if(videoRef.current) {
+        obs.unobserve(videoRef.current)
+      }
+    }
+  }, [])
+
   return (
     <section className="section tour" ref={ref}>
       <div className="container">
@@ -37,8 +66,8 @@ const Tour = forwardRef<HTMLDivElement>(function (_,ref) {
                 </div>
               </div>
 
-              <div className="frame__mid">
-                <iframe height={480} src="https://www.youtube.com/embed/s32GS0glydA?&showinfo=0&rel=0&mute=0&controls=1" title="Snorkell Trailer" allow="accelerometer; encrypted-media; web-share"></iframe>
+              <div className="frame__mid" ref={videoRef}>
+                <iframe src={`https://www.youtube.com/embed/s32GS0glydA?autoplay=${Number(autoplay)}&loop=1&rel=0&fs=0&playlist=s32GS0glydA`} height="480" title="Snorkell Trailer"></iframe>
               </div>
             </div>
           </div>
