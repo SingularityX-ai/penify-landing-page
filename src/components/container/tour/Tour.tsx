@@ -1,8 +1,9 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-export default function Tour() {
+// used function expression for working of scrolling effect
+const Tour = forwardRef<HTMLDivElement>(function (_,ref) {
   return (
-    <section className="section tour">
+    <section className="section tour" ref={ref}>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-xl-8">
@@ -45,4 +46,6 @@ export default function Tour() {
       </div>
     </section>
   );
-};
+});
+
+export default Tour;

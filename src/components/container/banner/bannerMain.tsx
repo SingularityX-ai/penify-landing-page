@@ -2,7 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import heroIllustration from "public/images/banner/banner-one-thumb.png";
 
-export default function BannerMain() {
+type BannerMainProps = {
+  onDemoClick: () => void;
+}
+
+export default function BannerMain({onDemoClick}: BannerMainProps) {
   return (
     <section className="section banner-one bg-img">
       <div className="container">
@@ -19,9 +23,9 @@ export default function BannerMain() {
                 <Link href="https://github.com/apps/snorkell-ai" className="btn btn--primary">
                   Start free now
                 </Link>
-                <Link href="/" className="btn btn--secondary">
+                <button type="button" onClick={onDemoClick} className="btn btn--secondary">
                   Request a demo
-                </Link>
+                </button>
               </div>
             </div>
           </div>
