@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-import gen01 from "public/asset/illustration-generator/placeholder01.png";
+import gen01 from "public/asset/illustration-generator/Snorkell-documentation.png";
 import gen02 from "public/asset/illustration-generator/placeholder02.png";
 import Anime from "public/images/anime-four.png";
 import One from "public/images/icons/overview-one.png";
@@ -37,7 +37,7 @@ export default function OverviewMid () {
 
                   <div className="content">
                     <h5 className="h5">Automated Documentation</h5>
-                    <p> create unique and well organized full length articles from start to finish </p>
+                    <p> Create unique and well organized full length articles from start to finish </p>
                   </div>
                 </div>
 
