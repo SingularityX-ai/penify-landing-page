@@ -13,14 +13,14 @@ export default function BannerMain() {
               <span>AI Documentation</span>
               </p>
 
-              <h1 className="h1">Generate Automated Documentation For Your GitHub Repo&apos;s</h1>
+              <h1 className="h1">Generate Automated Documentation for your GitHub Repositories</h1>
 
               <div className="section__content-cta">
                 <Link href="https://github.com/apps/snorkell-ai" className="btn btn--primary">
-                  start free now
+                  Start free now
                 </Link>
                 <Link href="/" className="btn btn--secondary">
-                  request A Demo
+                  Request a demo
                 </Link>
               </div>
             </div>

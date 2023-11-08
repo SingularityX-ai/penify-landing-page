@@ -7,9 +7,9 @@ export default function FAQ() {
     <section className="section faq">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-12 col-xl-6">
+          <div className="col-12 col-xl-7">
             <div className="section__header">
-              <h2 className="h2">frequently ask questions</h2>
+              <h2 className="h2">Frequently Asked Questions</h2>
             </div>
           </div>
         </div>

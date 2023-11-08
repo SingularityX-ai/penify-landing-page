@@ -34,11 +34,11 @@ export default function Footer () {
               <h5 className="h5">Our Products</h5>
               <ul>
                 <li>
-                  <Link href="https://github.com/apps/snorkell-ai" target="_blank">doc generator</Link>
+                  <Link href="https://github.com/apps/snorkell-ai" target="_blank">Doc Generator</Link>
                 </li>
                 
                 <li>
-                  <Link href="https://marketplace.visualstudio.com/items?itemName=Snorkell.snorkell" target="_blank">coding assistant</Link>
+                  <Link href="https://marketplace.visualstudio.com/items?itemName=Snorkell.snorkell" target="_blank">Coding Assistant</Link>
                 </li>
               </ul>
             </div>
@@ -53,11 +53,11 @@ export default function Footer () {
                 </li>
                 
                 <li>
-                  <Link href="https://dashboard.snorkell.ai/auth/login" target="_blank">sign in</Link>
+                  <Link href="https://dashboard.snorkell.ai/auth/login" target="_blank">Sign In</Link>
                 </li>
 
                 <li>
-                  <Link href="https://dashboard.snorkell.ai/auth/sign-up" target="_blank">register</Link>
+                  <Link href="https://dashboard.snorkell.ai/auth/sign-up" target="_blank">Register</Link>
                 </li>
               </ul>
             </div>
@@ -68,15 +68,15 @@ export default function Footer () {
               <h5 className="h5">Support</h5>
               <ul>
                 <li>
-                  <Link href="https://production-gateway.snorkell.ai/api/privacy-policy" target="_blank">privacy policy</Link>
+                  <Link href="https://production-gateway.snorkell.ai/api/privacy-policy" target="_blank">Privacy Policy</Link>
                 </li>
                 
                 <li>
-                  <Link href="https://production-gateway.snorkell.ai/api/toc" target="_blank">terms & conditions</Link>
+                  <Link href="https://production-gateway.snorkell.ai/api/toc" target="_blank">Terms & Conditions</Link>
                 </li>
 
                 <li>
-                  <Link href="/contact-us" target="_self">helpdesk </Link>
+                  <Link href="/contact-us" target="_self">Helpdesk </Link>
                 </li>
               </ul>
             </div>

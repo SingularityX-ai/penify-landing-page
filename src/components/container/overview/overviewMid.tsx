@@ -21,7 +21,7 @@ export default function OverviewMid () {
             <div className="generate__content" data-aos="fade-up" data-aos-duration="600">
               <div className="section__header text-start">
                 <h2 className="h2">
-                  Generate content in seconds using
+                  Automate Documentation in seconds using
                   <span className="grd" style={{ textTransform: "none" }}>
                     {" "}
                     Snorkell.ai

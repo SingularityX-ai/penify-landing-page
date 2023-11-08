@@ -14,11 +14,6 @@ export default function Tour() {
               <h2 className="h2">
                 Take a Quick Tour of Automated Documentation Generation
               </h2>
-
-              <p className="max-5">
-                Watch this video to learn all about our AI and how to use it in
-                your GitHub Repo&apos;s
-              </p>
             </div>
           </div>
         </div>
