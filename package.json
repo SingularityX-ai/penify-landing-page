@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "prod-test": "next build && npx serve@latest out",
     "start": "next start",
     "lint": "next lint",
     "export": "next export"
