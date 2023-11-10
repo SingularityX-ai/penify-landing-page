@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
-import gen01 from "public/asset/illustration-generator/Snorkell-documentation.png";
-import gen02 from "public/asset/illustration-generator/placeholder02.png";
+import gen01 from "public/asset/illustration-generator/placeholder 01.png";
+import gen02 from "public/asset/illustration-generator/placeholder 02.png";
 import Anime from "public/images/anime-four.png";
 import One from "public/images/icons/overview-one.png";
 import Two from "public/images/icons/overview-two.png";
@@ -37,7 +37,8 @@ export default function OverviewMid () {
 
                   <div className="content">
                     <h5 className="h5">Automated Documentation</h5>
-                    <p> Create unique and well organized full length articles from start to finish </p>
+                    {/* Inshort: Sync Snorkell.ai with GitHub to auto-generate/update docs for each pull request in your main branch. */}
+                    <p>Connect Snorkell.ai with your GitHub repo, and watch it automatically create or refresh your function documentation with each pull request that lands in your "main" branch.</p>
                   </div>
                 </div>
 
@@ -48,7 +49,8 @@ export default function OverviewMid () {
 
                   <div className="content">
                     <h5 className="h5">Coding Assistant</h5>
-                    <p> create unique and well organized full length articles from start to finish </p>
+                    {/* Inshort: Snorkell.ai: Free AI coding tool with real-time code explanations in 70+ languages, ensuring efficiency and quality. */}
+                    <p> Step into the future of coding with Snorkell.ai, your free AI-backed coding companion. Designed with state-of-the-art AI, Snorkell.ai offers real-time code explanation across 70+ languages, ensuring unparalleled efficiency and unmatched quality in your suggestions.</p>
                   </div>
                 </div>
               </div>
