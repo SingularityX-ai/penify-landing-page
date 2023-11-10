@@ -64,7 +64,7 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
                     </li>
 
                     <li className="nav__menu-item">
-                      <Link href="/" className="nav__menu-link hide-nav">Product</Link>
+                      <Link href="/?scrollTo=productOverview" scroll={false} className="nav__menu-link hide-nav">Product</Link>
                     </li>
 
                     <li className="nav__menu-item">

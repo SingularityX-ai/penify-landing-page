@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import Image from "next/image";
 import gen01 from "public/asset/illustration-generator/placeholder 01.png";
 import gen02 from "public/asset/illustration-generator/placeholder 02.png";
@@ -6,7 +6,7 @@ import Anime from "public/images/anime-four.png";
 import One from "public/images/icons/overview-one.png";
 import Two from "public/images/icons/overview-two.png";
 
-export default function OverviewMid () {
+const OverviewMid = forwardRef<HTMLDivElement>(function (_,ref) { 
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   const handleTabClick = (index: number) => {
@@ -14,7 +14,7 @@ export default function OverviewMid () {
   };
 
   return (
-    <section className="section generate pb-0">
+    <section className="section generate pb-0" ref={ref}>
       <div className="container">
         <div className="row items-gap">
           <div className="col-12 col-lg-6 col-xl-5">
@@ -76,4 +76,6 @@ export default function OverviewMid () {
       </div>
     </section>
   );
-} 
+})
+
+export default OverviewMid;
