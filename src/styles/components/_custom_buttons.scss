@@ -1,0 +1,36 @@
+.generate {
+  .generate__content-btn {
+    a.tool_btn {
+      border-radius: 6px;
+      background-color: white;
+      border: 1px solid transparent;
+
+      font-size: 14px;
+      font-weight: 500;
+
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .generate__content-btn-active {
+    a.tool_btn {
+      min-height: auto;
+      max-height: 100%;
+      opacity: 1;
+      visibility: visible;
+      margin-top: 12px;
+      padding: 8px 20px;
+
+      &:hover {
+        background-color: transparent;
+        border: 1px solid white;
+
+        color: white;
+      }
+    }
+  }
+}

@@ -37,8 +37,12 @@ const OverviewMid = forwardRef<HTMLDivElement>(function (_,ref) {
 
                   <div className="content">
                     <h5 className="h5">Automated Documentation</h5>
-                    {/* Inshort: Sync Snorkell.ai with GitHub to auto-generate/update docs for each pull request in your main branch. */}
-                    <p>Connect Snorkell.ai with your GitHub repo, and watch it automatically create or refresh your function documentation with each pull request that lands in your "main" branch.</p>
+                    <p>Sync Snorkell.ai with GitHub to auto-generate/update docs for each pull request in your main branch.</p>
+
+                    <a href="https://github.com/apps/snorkell-ai" className="tool_btn" target="_blank">
+                      <i className="fa-solid fa-download" style={{marginRight: "2px"}}></i>
+                      Get the tool
+                    </a>
                   </div>
                 </div>
 
@@ -49,8 +53,12 @@ const OverviewMid = forwardRef<HTMLDivElement>(function (_,ref) {
 
                   <div className="content">
                     <h5 className="h5">Coding Assistant</h5>
-                    {/* Inshort: Snorkell.ai: Free AI coding tool with real-time code explanations in 70+ languages, ensuring efficiency and quality. */}
-                    <p> Step into the future of coding with Snorkell.ai, your free AI-backed coding companion. Designed with state-of-the-art AI, Snorkell.ai offers real-time code explanation across 70+ languages, ensuring unparalleled efficiency and unmatched quality in your suggestions.</p>
+                    <p>Snorkell.ai: Free AI coding tool with real-time code explanations in 70+ languages, ensuring efficiency and quality. </p>
+
+                    <a href="https://marketplace.visualstudio.com/items?itemName=Snorkell.snorkell" className="tool_btn" target="_blank">
+                      <i className="fa-solid fa-download" style={{marginRight: "2px"}}></i>
+                      Get the extension
+                    </a>
                   </div>
                 </div>
               </div>
