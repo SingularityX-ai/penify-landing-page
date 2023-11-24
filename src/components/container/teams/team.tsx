@@ -1,90 +1,71 @@
-import Image from "next/image";
-import Link from "next/link";
-import usrImg from "public/images/teams/one.png";
+import Image from 'next/image';
+import usrImg from 'public/images/teams/one.png';
 
-export default function Teams () {
+const TeamsContent = [
+  {
+    devName: 'Suman Saurabh',
+    devRole: 'Software Engineer',
+    devSocial: 'ssumansaurabh',
+  },
+  {
+    devName: 'Sunil Agarwal',
+    devRole: 'Backend Engineer',
+    devSocial: 'sunilagwl5',
+  },
+  {
+    devName: 'Popin Bose Roy',
+    devRole: 'Product Management',
+    devSocial: 'popinboseroy',
+  },
+  {
+    devName: 'Mayur Dayal',
+    devRole: 'Frontend Developer',
+    devSocial: 'mayur-dayal',
+  },
+];
+
+export default function Teams() {
   return (
-    <section className="section team-main pb-0">
-      <div className="container">
-        <div className="row items-gap">
-          
-          <div className="col-12 col-md-6 col-xl-4">
-            <div className="team-main-single" data-aos="fade-up" data-aos-duration="600">
-              <div className="thumb">
-                <Image src={usrImg} alt="profile image" />
-
-                <div className="social">
-                  <Link href="https://www.linkedin.com/in/ssumansaurabh/">
-                    <i className="fa-brands fa-linkedin-in"></i>
-                  </Link>
+    <section className='section team-main pb-0'>
+      <div className='container'>
+        <div className='row g-4'>
+          {TeamsContent.map((team, index) => (
+            <div className='col-12 col-md-6 col-lg-3' key={index}>
+              <div
+                className='colored-card'
+                data-aos='fade-up'
+                data-aos-duration='600'
+                data-aos-delay={index * 200}
+              >
+                <div className='card-img-center'>
+                  <Image
+                    src={usrImg}
+                    alt={`Profile photo of ${team.devName}`}
+                  />
                 </div>
 
-                <div className="content">
-                  <h5 className="h5">Suman Saurabh</h5>
-                  <p>Software Engineer</p>
-                </div>
-              </div>
-            </div>
-          </div>
+                <div className='card-content-wrapper'>
+                  <div className='card-content'>
+                    <div className='card-devData'>
+                      <h3 className='h5 mb-1'>{team.devName}</h3>
+                      <p className='text-muted'>{team.devRole}</p>
+                    </div>
 
-          <div className="col-12 col-md-6 col-xl-4">
-            <div className="team-main-single" data-aos="fade-up" data-aos-duration="600">
-              <div className="thumb">
-                <Image src={usrImg} alt="profile image" />
-
-                <div className="social">
-                  <Link href="https://www.linkedin.com/in/sunilagwl5/">
-                    <i className="fa-brands fa-linkedin-in"></i>
-                  </Link>
-                </div>
-
-                <div className="content">
-                  <h5 className="h5">Sunil Agarwal</h5>
-                  <p>Backend Engineer</p>
+                    <a
+                      href={`https://www.linkedin.com/in/${team.devSocial}/`}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='socials'
+                    >
+                      <i className='fa-brands fa-linkedin-in'></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="col-12 col-md-6 col-xl-4">
-            <div className="team-main-single" data-aos="fade-up" data-aos-duration="600">
-              <div className="thumb">
-                <Image src={usrImg} alt="profile image" />
-
-                <div className="social">
-                  <Link href="https://www.linkedin.com/in/popinboseroy/">
-                    <i className="fa-brands fa-linkedin-in"></i>
-                  </Link>
-                </div>
-
-                <div className="content">
-                  <h5 className="h5">Popin Bose Roy</h5>
-                  <p>Product Management</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-12 col-md-6 col-xl-4">
-            <div className="team-main-single" data-aos="fade-up" data-aos-duration="600">
-              <div className="thumb">
-                <Image src={usrImg} alt="profile image" />
-
-                <div className="social">
-                  <Link href="https://www.linkedin.com/in/mayur-dayal/">
-                    <i className="fa-brands fa-linkedin-in"></i>
-                  </Link>
-                </div>
-
-                <div className="content">
-                  <h5 className="h5">Mayur Dayal</h5>
-                  <p>Frontend Developer</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

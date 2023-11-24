@@ -1,0 +1,79 @@
+.team-main {
+  .colored-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: linear-gradient(
+      90deg,
+      rgb(108, 213, 246) 0%,
+      rgb(248, 157, 92) 50%,
+      rgb(91, 106, 240) 100%
+    );
+    cursor: default;
+    user-select: none;
+
+    .card-img-center {
+      display: flex;
+      justify-content: center;
+      min-height: 320px;
+    }
+
+    .card-content-wrapper {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 0.75rem;
+
+      .card-content {
+        border-radius: 0.5rem;
+        background-color: #fff;
+        padding: 1rem 1.25rem;
+
+        .card-devData {
+          transition: all 250ms ease-in;
+
+          h3.h5,
+          p {
+            line-height: normal;
+          }
+
+          h3.h5 {
+            color: #111827;
+          }
+        }
+
+        .socials {
+          height: 0;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(100%);
+        }
+      }
+    }
+
+    &:hover {
+      .card-content-wrapper {
+        .card-content {
+          .card-devData {
+            margin-bottom: 0.875rem;
+            padding-bottom: 0.75rem;
+            border-bottom: var(--bs-border-width) var(--bs-border-style)
+              var(--bs-border-color);
+          }
+
+          .socials {
+            height: 16px;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+}
