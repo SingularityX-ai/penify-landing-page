@@ -1,7 +1,7 @@
 {
   "name": "snorkell-landing-page-v2",
   "description": "Landing page for the snorkell.ai website",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,11 +9,12 @@
     "prod-test": "next build && npx serve@latest out",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export"
+    "export": "next export",
+    "ts:check": "tsc"
   },
   "engines": {
-    "node": ">=18.17.0"
-   },
+    "node": "20.x"
+  },
   "dependencies": {
     "aos": "^2.3.4",
     "bootstrap": "^5.3.2",
@@ -30,6 +31,11 @@
     "@types/node": "^20.8.10",
     "@types/react": "^18.2.36",
     "@types/react-dom": "^18.2.14",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "eslint": "^8.54.0",
+    "eslint-config-next": "^14.0.3",
+    "eslint-config-prettier": "^9.0.0",
     "typescript": "^5.2.2"
   }
 }
