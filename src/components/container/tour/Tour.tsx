@@ -20,16 +20,24 @@ const Tour = forwardRef<HTMLDivElement>(function (_,ref) {
       }, { threshold: .2}
     );
 
-    if(videoRef.current) {
-      obs.observe(videoRef.current);
-    }
+    const observe = () => {
+      if (videoRef.current) {
+        obs.observe(videoRef.current);
+      }
+    };
+
+    const unobserve = () => {
+      if (videoRef.current) {
+        obs.unobserve(videoRef.current);
+      }
+    };
+
+    observe();
 
     return () => {
-      if(videoRef.current) {
-        obs.unobserve(videoRef.current)
-      }
-    }
-  }, [])
+      unobserve();
+    };
+  }, []);
 
   return (
     <section className="section tour" ref={ref}>
