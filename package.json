@@ -6,11 +6,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "prod-test": "next build && npx serve@latest out",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export",
-    "ts:check": "tsc"
+    "clean": "rimraf .next out build",
+    "ts:check": "tsc",
+    "serve": "npx serve out --debug",
+    "dev:test": "run-s ts:check lint dev",
+    "prod:test": "run-s clean ts:check build serve"
   },
   "engines": {
     "node": "20.x"
@@ -36,6 +38,8 @@
     "eslint": "^8.54.0",
     "eslint-config-next": "^14.0.3",
     "eslint-config-prettier": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.5",
     "typescript": "^5.2.2"
   }
 }
