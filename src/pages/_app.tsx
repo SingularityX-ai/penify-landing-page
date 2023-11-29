@@ -13,6 +13,7 @@ import "@/styles/main.scss";
 import type { AppProps } from "next/app";
 import { Suspense, useEffect } from "react";
 import Aos from "aos";
+import GoogleAnalytics from "@/utils/GoogleAnalytics";
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -21,6 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <Suspense>
+      <GoogleAnalytics />
       <Component {...pageProps} />
     </Suspense>
   );
