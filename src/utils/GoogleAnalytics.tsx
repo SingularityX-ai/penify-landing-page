@@ -1,14 +1,29 @@
 import { useRouter } from "next/router";
 import Script from "next/script";
-import { useEffect} from "react";
-import { pageView } from "./gtag";
+import { useEffect, useState } from "react";
+import { pageView, trackScroll } from "./gtag";
 
 export default function GoogleAnalytics() {
   const router = useRouter();
+  const [hasTrackedScroll, setHasTrackedScroll] = useState<boolean>(false);
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
       pageView(url);
+    };
+
+    // Scroll Tracking for homepage
+    const handleTrackScroll = () => {
+      if (hasTrackedScroll) return;
+
+      const scrolled = window.scrollY + window.innerHeight;
+      const height = document.documentElement.scrollHeight;
+      const scrollDepth = Math.trunc((scrolled / height) * 100);
+
+      if (scrollDepth > 50) {
+        trackScroll(scrollDepth);
+        setHasTrackedScroll(true); // Ensure event is only tracked once
+      }
     };
 
     // Record pageview for first page load
@@ -17,10 +32,15 @@ export default function GoogleAnalytics() {
     // Record pageview on route change
     router.events.on("routeChangeComplete", handleRouteChange);
 
+    if (router.pathname === "/") {
+      window.addEventListener("scroll", handleTrackScroll);
+    }
+
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
+      window.removeEventListener("scroll", handleTrackScroll);
     };
-  }, [router.events]);
+  }, [router.events, router.pathname, hasTrackedScroll]);
 
   return (
     <>

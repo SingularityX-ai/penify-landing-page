@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { ContactFormUi } from "./ContactFormUi";
 import { axiosInstance } from "@/config/axiosConfig";
 import { ContactModal } from "./ContactModal";
+import { trackFormSubmission } from "@/utils/gtag";
 
 type FieldData = {
   value: string;
@@ -81,6 +82,7 @@ const ContactFormLogic = () => {
       setModalStatus("failure");
       setShowModal(true);
     } finally {
+      trackFormSubmission([sendData.email]);
       setFormData(initialFormState);
     }
   };

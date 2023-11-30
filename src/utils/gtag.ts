@@ -13,10 +13,23 @@ export const pageView = (url: string) => {
   }
 };
 
-export const event = ({ action, category, label, value }: any) => {
-  window.gtag("event", action, {
-    event_category: category,
-    event_label: label,
-    value: value,
-  });
+export const trackScroll = (value: number) => {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "scroll", {
+      event_category: "scroll depth",
+      event_label: "scrolled 50% on homepage",
+      value: value,
+    });
+  }
+};
+
+export const trackFormSubmission = (value: [string]) => {
+  console.log(value);
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "submit", {
+      event_category: "Contact Form",
+      event_label: "contact us form submission",
+      "user": value
+    });
+  }
 };
