@@ -24,12 +24,20 @@ export const trackScroll = (value: number) => {
 };
 
 export const trackFormSubmission = (value: [string]) => {
-  console.log(value);
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("event", "submit", {
       event_category: "Contact Form",
       event_label: "contact us form submission",
-      "user": value
+      user: value,
+    });
+  }
+};
+
+export const trackVideoStart = (value: boolean) => {
+  if (typeof window !== "undefined" && window.gtag && value) {
+    window.gtag("event", "video-view", {
+      event_category: "Video",
+      event_label: "Snorkell.ai video tuts",
     });
   }
 };

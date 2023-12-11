@@ -1,3 +1,4 @@
+import { trackVideoStart } from "@/utils/gtag";
 import React, { forwardRef, useEffect, useRef, useState } from "react";
 
 // used function expression for working of scrolling effect
@@ -11,13 +12,16 @@ const Tour = forwardRef<HTMLDivElement>(function (_,ref) {
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if(entry.isIntersecting) {
+          if (entry.isIntersecting) {
             setAutoplay(true);
+            trackVideoStart(true);
           } else {
-            setAutoplay(false)
+            setAutoplay(false);
+            trackVideoStart(false);
           }
         });
-      }, { threshold: .2}
+      },
+      { threshold: 0.2 }
     );
 
     const observe = () => {
