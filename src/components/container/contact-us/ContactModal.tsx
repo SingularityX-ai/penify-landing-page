@@ -22,7 +22,7 @@ export const ContactModal = ({ promised, closeBtn }: ContactModalProps) => {
           We encountered a technical issue and couldn&apos;t send your message. It might be a network or server problem.
           Please try resending shortly or{" "}
           <a
-            href="mailto:sumansaurabh@singularityx.ai"
+            href="mailto:info@snorkell.ai"
             style={{ color: "#4569e7" }}>
             email us
           </a>

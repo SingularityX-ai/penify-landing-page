@@ -3,14 +3,16 @@ import usrImg from 'public/images/teams/one.png';
 
 const TeamsContent = [
   {
-    devName: 'Suman Saurabh',
+    devName: 'Stealth Founder - 1',
     devRole: 'Software Engineer',
-    devSocial: 'ssumansaurabh',
+    devSocial: null,
+    // devSocial: 'ssumansaurabh',
   },
   {
-    devName: 'Sunil Agarwal',
+    devName: 'Stealth Founder - 2',
     devRole: 'Backend Engineer',
-    devSocial: 'sunilagwl5',
+    devSocial: null,
+    // devSocial: 'sunilagwl5',
   },
   {
     devName: 'Popin Bose Roy',
@@ -44,21 +46,25 @@ export default function Teams() {
                   />
                 </div>
 
-                <div className='card-content-wrapper'>
+                <div className={` card-content-wrapper ${!team.devSocial ? "link-disabled" : "" }`}>
                   <div className='card-content'>
                     <div className='card-devData'>
                       <h3 className='h5 mb-1'>{team.devName}</h3>
                       <p className='text-muted'>{team.devRole}</p>
                     </div>
 
-                    <a
-                      href={`https://www.linkedin.com/in/${team.devSocial}/`}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='socials'
-                    >
-                      <i className='fa-brands fa-linkedin-in'></i>
-                    </a>
+                    {team.devSocial ? (
+                      <a
+                        href={`https://www.linkedin.com/in/${team.devSocial}/`}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='socials'
+                      >
+                        <i className='fa-brands fa-linkedin-in'></i>
+                      </a>
+                    ) : (
+                     ""
+                    )}
                   </div>
                 </div>
               </div>

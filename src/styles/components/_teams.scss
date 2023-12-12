@@ -57,7 +57,7 @@
     }
 
     &:hover {
-      .card-content-wrapper {
+      .card-content-wrapper:not(.link-disabled) {
         .card-content {
           .card-devData {
             margin-bottom: 0.875rem;
