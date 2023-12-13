@@ -17,12 +17,14 @@ const TeamsContent = [
   {
     devName: 'Popin Bose Roy',
     devRole: 'Product Management',
-    devSocial: 'popinboseroy',
+    devSocial: null,
+    // devSocial: 'popinboseroy',
   },
   {
     devName: 'Mayur Dayal',
     devRole: 'Frontend Developer',
-    devSocial: 'mayur-dayal',
+    devSocial: null,
+    // devSocial: 'mayur-dayal',
   },
 ];
 
