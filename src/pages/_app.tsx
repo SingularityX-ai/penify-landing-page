@@ -14,6 +14,7 @@ import type { AppProps } from "next/app";
 import { Suspense, useEffect } from "react";
 import Aos from "aos";
 import GoogleAnalytics from "@/utils/GoogleAnalytics";
+import HubspotAnalytics from "@/utils/HubspotAnalytics";
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -23,6 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Suspense>
       <GoogleAnalytics />
+      <HubspotAnalytics />
       <Component {...pageProps} />
     </Suspense>
   );
