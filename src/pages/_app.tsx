@@ -23,8 +23,8 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <Suspense>
-      <GoogleAnalytics />
       <HubspotAnalytics />
+      <GoogleAnalytics />
       <Component {...pageProps} />
     </Suspense>
   );

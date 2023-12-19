@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
-import ScrollProgress from "./ScrollProgress";
+// import ScrollProgress from "./ScrollProgress";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -27,7 +27,7 @@ export default function Layout({ children }: LayoutProps) {
 
         <Footer />
         
-        <ScrollProgress />
+        {/* <ScrollProgress /> */}
       </div>
     </>
   );
