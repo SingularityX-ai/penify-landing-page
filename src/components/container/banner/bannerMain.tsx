@@ -17,7 +17,7 @@ export default function BannerMain({onDemoClick}: BannerMainProps) {
               <span>AI Documentation</span>
               </p>
 
-              <h1 className="h1">Generate Automated Documentation for your GitHub Repositories</h1>
+              <h1 className="h1">Smartly Automate Your Code Documentation with GenAI</h1>
 
               <div className="section__content-cta">
                 <Link href="https://github.com/apps/snorkell-ai" className="btn btn--primary">
