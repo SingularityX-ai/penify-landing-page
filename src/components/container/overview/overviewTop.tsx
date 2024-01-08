@@ -10,13 +10,13 @@ export default function OverviewTop () {
         <div className="row items-gap justify-content-center">
           <div className="col-12 col-md-6 col-xl-4">
             <div className="overview__single" data-aos="fade-up" data-aos-duration="600">
-              <Image src={One} priority alt="Image" />
+              <Image src={One} loading="lazy" alt="GitHub icon" />
               <p className="h6">Automated Documentation</p>
             </div>
           </div>
           <div className="col-12 col-md-6 col-xl-4">
             <div className="overview__single" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-              <Image src={Two} priority alt="Image" />
+              <Image src={Two} loading="lazy" alt="Visual Studio Code icon" />
               <p className="h6">Coding Assistant Extension</p>
             </div>
           </div>

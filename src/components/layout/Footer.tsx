@@ -12,7 +12,7 @@ export default function Footer () {
         <div className="col-12 col-sm-6 col-lg-3">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600">
               <Link href="/" className="logo">
-                <Image src={snorkellLogo} alt="snorkell.ai brand logo" priority />
+                <Image src={snorkellLogo} alt="snorkell.ai brand logo" loading="lazy" />
               </Link>
 
               <p>Copyright &copy; 2023 Snorkell.ai</p>
@@ -85,8 +85,8 @@ export default function Footer () {
         </div>
 
         <div className="anime">
-          <Image src={AnimeOne} alt="Image" className="one" />
-          <Image src={AnimeTwo} alt="Image" className="two" />
+          <Image src={AnimeOne} alt="animate background" className="one" loading="lazy"/>
+          <Image src={AnimeTwo} alt="animate background" className="two" loading="lazy" />
         </div>
       </div>
     </footer>

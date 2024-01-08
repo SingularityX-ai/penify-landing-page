@@ -33,8 +33,8 @@ export default function BannerTop({ desc, page }: BannerTopProps) {
       </div>
 
       <div className="anime">
-        <Image src={AnimeOne} alt="Image" className="one" />
-        <Image src={AnimeTwo} alt="Image" className="two" />
+        <Image src={AnimeOne} alt="animate background" className="one" priority />
+        <Image src={AnimeTwo} alt="animate background" className="two" priority />
       </div>  
     </section>
   )

@@ -45,6 +45,7 @@ export default function Teams() {
                   <Image
                     src={usrImg}
                     alt={`Profile photo of ${team.devName}`}
+                    priority
                   />
                 </div>
 

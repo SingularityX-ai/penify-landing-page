@@ -32,7 +32,7 @@ const OverviewMid = forwardRef<HTMLDivElement>(function (_,ref) {
               <div>
                 <div className={`generate__content-btn ${activeTabIndex === 0 ? "generate__content-btn-active" : ""}`} onClick={() => handleTabClick(0)}>
                   <div className="thumb">
-                    <Image src={One} priority alt="Image" />
+                    <Image src={One} loading="lazy" alt="GitHub icon" />
                   </div>
 
                   <div className="content">
@@ -48,7 +48,7 @@ const OverviewMid = forwardRef<HTMLDivElement>(function (_,ref) {
 
                 <div className={`generate__content-btn ${activeTabIndex === 1 ? "generate__content-btn-active" : ""}`} onClick={() => handleTabClick(1)}>
                   <div className="thumb">
-                    <Image src={Two} priority alt="Image" />
+                    <Image src={Two} loading="lazy" alt="Visual Studio Code icon" />
                   </div>
 
                   <div className="content">
@@ -68,15 +68,15 @@ const OverviewMid = forwardRef<HTMLDivElement>(function (_,ref) {
           <div className="col-12 col-lg-6 col-xl-7">
             <div className="generate__thumb" data-aos="fade-up" data-aos-duration="600">
               <div className={`tab-content ${activeTabIndex === 0 ? "active" : ""}`}>
-                <Image src={gen01} alt="image" />
+                <Image src={gen01} alt="automated documentation illustration" loading="lazy" />
               </div>
 
               <div className={`tab-content ${activeTabIndex === 1 ? "active" : ""}`}>
-                <Image src={gen02} alt="image" />
+                <Image src={gen02} alt="coding assistant illustration" loading="lazy" />
               </div>
 
               <div className="anime">
-                <Image src={Anime} alt="Image" />
+                <Image src={Anime} alt="animate background" loading="lazy" />
               </div>
             </div>
           </div>
