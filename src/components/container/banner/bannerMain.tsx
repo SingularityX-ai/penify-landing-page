@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import heroIllustration from "public/images/banner/banner-one-thumb.png";
+import StatCount from "./statCount";
 
 type BannerMainProps = {
   onDemoClick: () => void;
@@ -19,7 +20,7 @@ export default function BannerMain({onDemoClick}: BannerMainProps) {
 
               <h1 className="h1">Smartly Automate Your Code Documentation with GenAI</h1>
 
-              <div className="section__content-cta">
+              <div className="section__content-cta mt-4 mb-3">
                 <Link href="https://github.com/apps/snorkell-ai" className="btn btn--primary">
                   Start free now
                 </Link>
@@ -27,6 +28,8 @@ export default function BannerMain({onDemoClick}: BannerMainProps) {
                   Request a demo
                 </button>
               </div>
+
+              <StatCount />
             </div>
           </div>
 
