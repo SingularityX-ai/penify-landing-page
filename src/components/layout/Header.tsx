@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import snorkellLogo from "public/asset/snorkell-dark-logo.svg";
+import StatCount from "../container/banner/statCount";
+import { axiosInstance } from "@/config/axiosConfig";
 
 interface HeaderProps {
   isNavOpen: boolean;
@@ -10,12 +12,20 @@ interface HeaderProps {
 
 export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [counter, setCounter] = useState({
+    repos: 0,
+    users: 0,
+  });
 
   // window resize
   useEffect(() => {
     const handleResize = () => setIsNavOpen(false);
-
     window.addEventListener("resize", handleResize);
+    axiosInstance
+        .get("v1/analytics/usage/count")
+        .then(({ data }) =>
+          setCounter(() => ({ repos: data.repos, users: data.users }))
+        );
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -32,8 +42,10 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
 
   return (
     <header className={`header header--dark ${isScrolled ? "header-active" : ""}`}>
+      {!isScrolled ? <StatCount repos={counter.repos} users={counter.users}/> : null}
       <div className="container">
         <div className="row">
+          
           <div className="col-lg-12">
             <div className="nav">
               <div className="nav__content">
