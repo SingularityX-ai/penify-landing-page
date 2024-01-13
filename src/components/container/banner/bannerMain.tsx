@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import heroIllustration from "public/images/banner/banner-one-thumb.png";
-import StatCount from "./statCount";
 
 type BannerMainProps = {
   onDemoClick: () => void;
@@ -29,7 +28,6 @@ export default function BannerMain({onDemoClick}: BannerMainProps) {
                 </button>
               </div>
 
-              <StatCount />
             </div>
           </div>
 
