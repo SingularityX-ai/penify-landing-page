@@ -17,11 +17,11 @@ export default function Layout({ children }: LayoutProps) {
         <title>Snorkell.ai | Automated GitHub Documentation Tool</title>
         <meta
           name="description"
-          content="Revolutionize code documentation with Snorkell.ai: Auto-generate crisp docs for GitHub projects, with intelligent tracking, multi-language support, and privacy."
+          content="Revolutionize human like code docstring with Snorkell.ai: Auto-generate crisp docs for GitHub projects, with intelligent tracking, multi-language support, and privacy."
         />
         <meta
           name="keywords"
-          content="Snorkell.ai, Automated Documentation, GitHub Integration, Source Code Documentation, Intelligent Tracking, Smart Generation, Programming Languages, Python, JavaScript, TypeScript, Java, Kotlin, Real-Time Documentation, Privacy-Focused"
+          content="Snorkell.ai, ai docstring, Automated Documentation, GitHub Integration, Source Code Documentation, Intelligent Tracking, Smart Generation, Programming Languages, Python, JavaScript, TypeScript, Java, Kotlin, Real-Time Documentation, Privacy-Focused"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
