@@ -5,7 +5,7 @@ const nextConfig = {
     GA_MEASUREMENT_ID: "G-NQRNJW5NS7",
   },
   images: {
-    unoptimized: false,
+    unoptimized: true,
   },
   reactStrictMode: true,
   output: 'export',
