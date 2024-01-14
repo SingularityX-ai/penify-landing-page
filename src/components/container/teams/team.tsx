@@ -1,30 +1,37 @@
 import Image from 'next/image';
-import usrImg from 'public/images/teams/one.png';
+import sumanImg from 'public/images/teams/suman.jpeg';
+import sunilImg from 'public/images/teams/sunil.jpeg';
+import popinImg from 'public/images/teams/popin.jpeg';
+import mayurImg from 'public/images/teams/mayur.jpeg';
 
 const TeamsContent = [
   {
-    devName: 'Stealth Founder - 1',
-    devRole: 'Software Engineer',
-    devSocial: null,
-    // devSocial: 'ssumansaurabh',
+    img: sumanImg,
+    devName: 'Suman Saurabh',
+    devRole: 'Co-Founder',
+    // devSocial: null,
+    devSocial: 'ssumansaurabh',
   },
   {
-    devName: 'Stealth Founder - 2',
-    devRole: 'Backend Engineer',
-    devSocial: null,
-    // devSocial: 'sunilagwl5',
+    img: sunilImg,
+    devName: 'Sunil Agarwal',
+    devRole: 'Co-Founder',
+    // devSocial: null,
+    devSocial: 'sunilagwl5',
   },
   {
+    img: popinImg,
     devName: 'Popin Bose Roy',
-    devRole: 'Product Management',
-    devSocial: null,
-    // devSocial: 'popinboseroy',
+    devRole: 'Co-Founder',
+    // devSocial: null,
+    devSocial: 'popinboseroy',
   },
   {
+    img: mayurImg,
     devName: 'Mayur Dayal',
     devRole: 'Frontend Developer',
-    devSocial: null,
-    // devSocial: 'mayur-dayal',
+    // devSocial: null,
+    devSocial: 'mayur-dayal',
   },
 ];
 
@@ -43,7 +50,9 @@ export default function Teams() {
               >
                 <div className='card-img-center'>
                   <Image
-                    src={usrImg}
+                    src={team.img}
+                    width={200}
+                    height={200}
                     alt={`Profile photo of ${team.devName}`}
                     priority
                   />
