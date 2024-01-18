@@ -11,18 +11,18 @@ export default function Footer () {
         <div className="row items-gap-two">
         <div className="col-12 col-sm-6 col-lg-3">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600">
-              <Link href="/" className="logo">
+              <Link href="/" className="logo" aria-label="Snorkell brand logo">
                 <Image src={snorkellLogo} alt="snorkell.ai brand logo" loading="lazy" />
               </Link>
 
               <p>Copyright &copy; 2023 Snorkell.ai</p>
 
               <div className="social">
-                <Link href="https://github.com/SingularityX-ai/" target="_blank">
+                <Link href="https://github.com/SingularityX-ai/" target="_blank" aria-label="Github URL">
                   <i className="fa-brands fa-github"></i>
                 </Link>
 
-                <Link href="https://www.linkedin.com/company/snorkell-ai/" target="_blank">
+                <Link href="https://www.linkedin.com/company/snorkell-ai/" target="_blank" aria-label="LinkedIn URL">
                   <i className="fa-brands fa-linkedin"></i>
                 </Link>
               </div>
@@ -34,11 +34,11 @@ export default function Footer () {
               <h6 className="h5">Our Products</h6>
               <ul>
                 <li>
-                  <Link href="https://github.com/apps/snorkell-ai" target="_blank">Doc Generator</Link>
+                  <Link href="https://github.com/apps/snorkell-ai" target="_blank" aria-label="Github App">Doc Generator</Link>
                 </li>
                 
                 <li>
-                  <Link href="https://marketplace.visualstudio.com/items?itemName=Snorkell.snorkell" target="_blank">Coding Assistant</Link>
+                  <Link href="https://marketplace.visualstudio.com/items?itemName=Snorkell.snorkell" target="_blank" aria-label="VsCode Plugin">Coding Assistant</Link>
                 </li>
               </ul>
             </div>
@@ -49,15 +49,15 @@ export default function Footer () {
               <h6 className="h5">About Us</h6>
               <ul>
                 <li>
-                  <Link href="/about-us" target="_self">About</Link>
+                  <Link href="/about-us" target="_self" aria-label="About Us" >About Us</Link>
                 </li>
                 
                 <li>
-                  <Link href="https://dashboard.snorkell.ai/auth/login" target="_blank">Sign In</Link>
+                  <Link href="https://dashboard.snorkell.ai/auth/login" target="_blank" aria-label="Sign In to Dashboard">Sign In</Link>
                 </li>
 
                 <li>
-                  <Link href="https://dashboard.snorkell.ai/auth/sign-up" target="_blank">Register</Link>
+                  <Link href="https://dashboard.snorkell.ai/auth/sign-up" target="_blank" aria-label="Register">Register</Link>
                 </li>
               </ul>
             </div>
@@ -68,15 +68,15 @@ export default function Footer () {
               <h6 className="h5">Support</h6>
               <ul>
                 <li>
-                  <Link href="https://production-gateway.snorkell.ai/api/privacy-policy" target="_blank">Privacy Policy</Link>
+                  <Link href="https://production-gateway.snorkell.ai/api/privacy-policy" target="_blank" aria-label="Privacy Policy">Privacy Policy</Link>
                 </li>
                 
                 <li>
-                  <Link href="https://production-gateway.snorkell.ai/api/toc" target="_blank">Terms & Conditions</Link>
+                  <Link href="https://production-gateway.snorkell.ai/api/toc" target="_blank" aria-label="Terms & Conditions">Terms & Conditions</Link>
                 </li>
 
                 <li>
-                  <Link href="/contact-us" target="_self">Helpdesk </Link>
+                  <Link href="/contact-us" target="_self" aria-label="Helpdesk">Helpdesk </Link>
                 </li>
               </ul>
             </div>

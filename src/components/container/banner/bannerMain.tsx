@@ -20,7 +20,7 @@ export default function BannerMain({onDemoClick}: BannerMainProps) {
               <h1 className="h1">Smartly Automate Human Like Code Docstring</h1>
 
               <div className="section__content-cta mt-4 mb-3">
-                <Link href="https://github.com/apps/snorkell-ai" className="btn btn--primary">
+                <Link href="https://github.com/apps/snorkell-ai" className="btn btn--primary" aria-label="Github App">
                   Start free now
                 </Link>
                 <button type="button" onClick={onDemoClick} className="btn btn--secondary">
