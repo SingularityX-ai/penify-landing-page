@@ -18,7 +18,7 @@ export default function Layout({ children }: LayoutProps) {
         <title>Snorkell.ai | Automated GitHub Documentation Tool</title>
         <meta
           name="description"
-          content="Revolutionize human like code docstring with Snorkell.ai: Auto-generate crisp docs for GitHub projects, with intelligent tracking, multi-language support, and privacy."
+          content="Automate human-like docstrings/documentation for Python, Java, TypeScript, JavaScript, Kotlin in GitHub, GitLab, Bitbucket."
         />
         <meta
           name="keywords"
