@@ -4,7 +4,7 @@ import heroIllustration from "public/images/banner/banner-one-thumb.png";
 
 type BannerMainProps = {
   onDemoClick: () => void;
-}
+};
 
 export default function BannerMain({onDemoClick}: BannerMainProps) {
   return (

@@ -6,7 +6,7 @@ import AnimeTwo from "public/images/anime-two.png";
 interface BannerTopProps {
   desc: string;
   page: string;
-}
+};
 
 export default function BannerTop({ desc, page }: BannerTopProps) {
   return (
