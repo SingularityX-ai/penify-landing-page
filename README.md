@@ -16,7 +16,7 @@ These instructions will get you a copy of the project for running on your local 
 
 Before you begin, ensure you have the following installed:
 
-- Node.js (>=18)
+- Node.js (>=20)
 - Modern browser (Google Chrome | Mozilla Firefox)
 
 ### Installation
