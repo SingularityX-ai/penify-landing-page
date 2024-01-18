@@ -1,6 +1,6 @@
 import { forwardRef, useState } from "react";
 import Image from "next/image";
-import gen01 from "public/asset/illustration-generator/placeholder 01.png";
+import gen01 from "public/asset/illustration-generator/placeholder 01.webp";
 import gen02 from "public/asset/illustration-generator/placeholder 02.png";
 import Anime from "public/images/anime-four.png";
 import One from "public/images/icons/overview-one.png";
