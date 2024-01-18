@@ -36,7 +36,7 @@ const OverviewMid = forwardRef<HTMLDivElement>(function (_,ref) {
                   </div>
 
                   <div className="content">
-                    <h5 className="h5">Automated Documentation</h5>
+                    <h4 className="h5">Automated Documentation</h4>
                     <p>Sync Snorkell.ai with GitHub to auto-generate/update docs for each pull request in your main branch.</p>
 
                     <a href="https://github.com/apps/snorkell-ai" className="tool_btn" target="_blank">
@@ -52,7 +52,7 @@ const OverviewMid = forwardRef<HTMLDivElement>(function (_,ref) {
                   </div>
 
                   <div className="content">
-                    <h5 className="h5">Coding Assistant</h5>
+                    <h4 className="h5">Coding Assistant</h4>
                     <p>Snorkell.ai: Free AI coding tool with real-time code explanations in 70+ languages, ensuring efficiency and quality. </p>
 
                     <a href="https://marketplace.visualstudio.com/items?itemName=Snorkell.snorkell" className="tool_btn" target="_blank">

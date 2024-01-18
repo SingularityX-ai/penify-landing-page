@@ -31,7 +31,7 @@ export default function Footer () {
 
           <div className="col-12 col-sm-6 col-lg-3">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-              <h5 className="h5">Our Products</h5>
+              <h6 className="h5">Our Products</h6>
               <ul>
                 <li>
                   <Link href="https://github.com/apps/snorkell-ai" target="_blank">Doc Generator</Link>
@@ -46,7 +46,7 @@ export default function Footer () {
 
           <div className="col-12 col-sm-6 col-lg-3">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
-              <h5 className="h5">About Us</h5>
+              <h6 className="h5">About Us</h6>
               <ul>
                 <li>
                   <Link href="/about-us" target="_self">About</Link>
@@ -65,7 +65,7 @@ export default function Footer () {
 
           <div className="col-12 col-sm-6 col-lg-3">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
-              <h5 className="h5">Support</h5>
+              <h6 className="h5">Support</h6>
               <ul>
                 <li>
                   <Link href="https://production-gateway.snorkell.ai/api/privacy-policy" target="_blank">Privacy Policy</Link>
