@@ -50,14 +50,14 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
             <div className="nav">
               <div className="nav__content">
                 <div className="nav__logo">
-                  <Link href="/">
+                  <Link href="/" aria-label="Snorkell brand logo">
                     <Image src={snorkellLogo} alt="snorkell.ai brand logo" priority />
                   </Link>
                 </div>
 
                 <div className={`nav__menu ${isNavOpen ? "nav__menu-active" : "" }`}>
                   <div className="nav__menu-logo d-flex d-xl-none">
-                    <Link href="/" className="text-center hide-nav">
+                    <Link href="/" className="text-center hide-nav" aria-label="Snorkell brand logo">
                       <Image src={snorkellLogo} alt="snorkell.ai brand logo" priority />
                     </Link>
 
@@ -68,34 +68,34 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
 
                   <ul className="nav__menu-items">
                     <li className="nav__menu-item">
-                      <Link href="/" className="nav__menu-link hide-nav">Home</Link>
+                      <Link href="/" className="nav__menu-link hide-nav" aria-label="Home">Home</Link>
                     </li>
 
                     <li className="nav__menu-item">
-                      <Link href="/about-us" className="nav__menu-link hide-nav">About Us</Link>
+                      <Link href="/about-us" className="nav__menu-link hide-nav" aria-label="About Us">About Us</Link>
                     </li>
 
                     <li className="nav__menu-item">
-                      <Link href="/?scrollTo=productOverview" scroll={false} className="nav__menu-link hide-nav">Product</Link>
+                      <Link href="/?scrollTo=productOverview" scroll={false} className="nav__menu-link hide-nav" aria-label="Product">Product</Link>
                     </li>
 
                     <li className="nav__menu-item">
-                      <Link href="/contact-us" className="nav__menu-link hide-nav">Contact Us</Link>
+                      <Link href="/contact-us" className="nav__menu-link hide-nav" aria-label="Contact Us">Contact Us</Link>
                     </li>
 
                     <li className="nav__menu-item d-block d-md-none">
-                      <Link href="https://dashboard.snorkell.ai/" className="btn btn--secondary" target="_blank">
+                      <Link href="https://dashboard.snorkell.ai/" className="btn btn--secondary" target="_blank" aria-label="Dashboard">
                         Dashboard
                       </Link>
                     </li>
                   </ul>
 
                   <div className="social">
-                    <Link href="https://github.com/SingularityX-ai/" target="_blank">
+                    <Link href="https://github.com/SingularityX-ai/" target="_blank" aria-label="Github">
                       <i className="fa-brands fa-github"></i>
                     </Link>
 
-                    <Link href="https://www.linkedin.com/company/snorkell-ai/" target="_blank">
+                    <Link href="https://www.linkedin.com/company/snorkell-ai/" target="_blank" aria-label="LinkedIn">
                       <i className="fa-brands fa-linkedin"></i>
                     </Link>
                   </div>
@@ -103,7 +103,7 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
 
                 <div className="nav__uncollapsed">
                   <div className="nav__uncollapsed-item d-none d-md-flex">
-                    <Link href="https://dashboard.snorkell.ai/" className="btn btn--secondary" target="_blank">
+                    <Link href="https://dashboard.snorkell.ai/" className="btn btn--secondary" target="_blank" aria-label="Dashboard">
                       Dashboard
                     </Link>
                   </div>

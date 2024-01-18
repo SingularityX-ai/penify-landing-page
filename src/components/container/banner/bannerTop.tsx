@@ -21,7 +21,7 @@ export default function BannerTop({ desc, page }: BannerTopProps) {
             <nav>
               <ol className="breadcrumb justify-content-center">
                 <li className="breadcrumb-item">
-                  <Link href="/">Home</Link>
+                  <Link href="/" aria-label="Home">Home</Link>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
                   {page}
