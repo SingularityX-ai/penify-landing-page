@@ -2,7 +2,6 @@ import BannerMain from "@/components/container/banner/bannerMain";
 import FAQ from "@/components/container/faq/FAQ";
 import OverviewMid from "@/components/container/overview/overviewMid";
 import OverviewTop from "@/components/container/overview/overviewTop";
-import Tour from "@/components/container/tour/Tour";
 import Layout from "@/components/layout/Layout";
 import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
@@ -39,7 +38,6 @@ export default function Home() {
       <BannerMain onDemoClick={scrollToTour} />
       <OverviewTop />
       <OverviewMid ref={productRef} />
-      <Tour ref={tourRef} />
       <FAQ />
     </Layout>
   );
