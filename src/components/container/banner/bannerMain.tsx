@@ -24,9 +24,6 @@ export default function BannerMain({onDemoClick}: BannerMainProps) {
                 <Link href="https://github.com/apps/snorkell-ai" className="btn btn--primary" aria-label="Github App">
                   Start free now
                 </Link>
-                <button type="button" onClick={onDemoClick} className="btn btn--secondary">
-                  Request a demo
-                </button>
               </div>
 
             </div>
