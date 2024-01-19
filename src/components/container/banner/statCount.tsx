@@ -7,7 +7,6 @@ const StatCount = React.memo(function StatCount({
   repos: number;
   users: number;
 }) {
-
   return (
     <div className="fw-medium bg-black text-center p-2">
       <i className="fa-solid fa-star me-2" style={{ color: "#ffbc00" }}></i>
@@ -20,6 +19,10 @@ const StatCount = React.memo(function StatCount({
         {Math.floor(repos / 100) * 100}
       </strong>
       + repositories.
+      {' '}
+      <a href="https://github.com/apps/snorkell-ai" target="_blank">
+        <button className="btn btn-success install-button-success">INSTALL</button>
+      </a>
     </div>
   );
 });

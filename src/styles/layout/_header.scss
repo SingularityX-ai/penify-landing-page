@@ -388,6 +388,18 @@
   }
 }
 
+.install-button-success{
+  background-color: green;
+  color: white;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 500
+}
+
+.install-button-success:hover {
+  background-color: darkgreen;
+  color: white;
+}
 /* ==== 
  --------- (4.1) header styles end ---------
  ==== */
