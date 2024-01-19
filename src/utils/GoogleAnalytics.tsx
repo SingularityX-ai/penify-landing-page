@@ -47,6 +47,8 @@ export default function GoogleAnalytics() {
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`}
         strategy="afterInteractive"
+        async
+        defer
       />
 
       <Script
