@@ -2,8 +2,12 @@ import { trackVideoStart } from "@/utils/gtag";
 import React, { forwardRef, useEffect, useRef } from "react";
 
 // used function expression for working of scrolling effect
-const Tour = forwardRef<HTMLDivElement>(function (_, ref) {
+const Tour = forwardRef<HTMLDivElement, { videoSrc: string }>(function (
+  { videoSrc },
+  ref
+) {
   const videoRef = useRef<HTMLDivElement>(null);
+  console.log(videoSrc);
 
   // whenever scrolled within video view, autoplay is true
   // whenever scrolled outside video view, autoplay is false
@@ -111,11 +115,11 @@ const Tour = forwardRef<HTMLDivElement>(function (_, ref) {
                   </svg>
                 </div>
               </div>
-
+              
               <div className="frame__mid" ref={videoRef}>
                 <iframe
                   loading="lazy"
-                  src="https://www.youtube.com/embed/s32GS0glydA?autoplay=true&loop=1&rel=0&fs=0&playlist=s32GS0glydA&controls=0&modestbranding=1"
+                  src={videoSrc}
                   height="480"
                   title="Snorkell Trailer"
                 ></iframe>

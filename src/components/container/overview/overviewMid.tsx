@@ -1,8 +1,8 @@
-import { forwardRef, useState } from "react";
-import Image from "next/image";
-import gen01 from "public/asset/illustration-generator/placeholder 01.webp";
+import { forwardRef, useRef, useState } from "react";
+import Tour from "../tour/Tour";
 
 const OverviewMid = forwardRef<HTMLDivElement>(function (_,ref) { 
+  const tourRef = useRef<HTMLDivElement>(null);
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   const handleTabClick = (index: number) => {
@@ -48,7 +48,7 @@ const OverviewMid = forwardRef<HTMLDivElement>(function (_,ref) {
           <div className="col-12 col-lg-6 col-xl-7">
             <div className="generate__thumb" data-aos="fade-up" data-aos-duration="600">
               <div className={`tab-content ${activeTabIndex === 0 ? "active" : ""}`}>
-                <Image src={gen01} alt="automated documentation illustration" loading="lazy" />
+                <Tour ref={tourRef} videoSrc="https://www.youtube.com/embed/3v4O6BBhaE0?si=SUCXOyU7YGwZbayA?autoplay=true&loop=1&rel=0&fs=0&controls=0&modestbranding=1"/>
               </div>
             </div>
           </div>

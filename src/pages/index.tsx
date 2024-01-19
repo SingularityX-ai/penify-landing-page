@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <BannerMain onDemoClick={scrollToTour} />
+      <BannerMain />
       <OverviewMid ref={productRef} />
       <FAQ />
     </Layout>
