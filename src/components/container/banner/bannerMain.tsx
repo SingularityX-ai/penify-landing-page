@@ -1,12 +1,13 @@
-import Image from "next/image";
 import Link from "next/link";
-import heroIllustration from "public/images/banner/banner-one-thumb.png";
+import Tour from "../tour/Tour";
+import { useRef } from "react";
 
 type BannerMainProps = {
   onDemoClick: () => void;
 }
 
 export default function BannerMain({onDemoClick}: BannerMainProps) {
+  const tourRef = useRef<HTMLDivElement>(null);
   return (
     <section className="section banner-one bg-img">
       <div className="container">
@@ -32,9 +33,7 @@ export default function BannerMain({onDemoClick}: BannerMainProps) {
           </div>
 
           <div className="col-12 col-lg-6">
-            <div className="banner-one__thumb text-start text-lg-end">
-              <Image src={heroIllustration} priority alt="hero illustration" />
-            </div>
+            <Tour ref={tourRef}/>
           </div>
         </div>
       </div>
