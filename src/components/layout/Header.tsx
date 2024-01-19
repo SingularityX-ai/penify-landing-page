@@ -70,6 +70,12 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
                     <li className="nav__menu-item">
                       <Link href="/" className="nav__menu-link hide-nav" aria-label="Home">Home</Link>
                     </li>
+                    <li className="nav__menu-item">
+                      <Link href="https://docs.snorkell.ai/" className="nav__menu-link hide-nav" aria-label="Docs" target="_blank">Docs</Link>
+                    </li>
+                    <li className="nav__menu-item">
+                      <Link href="https://blogs.snorkell.ai/" className="nav__menu-link hide-nav" aria-label="Blogs" target="_blank">Blogs</Link>
+                    </li>
 
                     <li className="nav__menu-item">
                       <Link href="/about-us" className="nav__menu-link hide-nav" aria-label="About Us">About Us</Link>

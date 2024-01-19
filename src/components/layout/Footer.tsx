@@ -29,12 +29,12 @@ export default function Footer () {
             </div>
           </div>
 
-          <div className="col-12 col-sm-6 col-lg-3">
+          <div className="col-12 col-sm-6 col-lg-2">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
               <h6 className="h5">Our Products</h6>
               <ul>
                 <li>
-                  <Link href="https://github.com/apps/snorkell-ai" target="_blank" aria-label="Github App">Doc Generator</Link>
+                  <Link href="https://github.com/apps/snorkell-ai" target="_blank" aria-label="Github App">Automated Documentation</Link>
                 </li>
                 
                 <li>
@@ -44,7 +44,22 @@ export default function Footer () {
             </div>
           </div>
 
-          <div className="col-12 col-sm-6 col-lg-3">
+          <div className="col-12 col-sm-6 col-lg-2">
+            <div className="footer__single" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+              <h6 className="h5">Resources</h6>
+              <ul>
+                <li>
+                  <Link href="https://docs.snorkell.ai/" target="_blank" aria-label="Privacy Policy">Docs</Link>
+                </li>
+                
+                <li>
+                  <Link href="https://blogs.snorkell.ai/" target="_blank" aria-label="Terms & Conditions">Blogs</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="col-12 col-sm-6 col-lg-2">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
               <h6 className="h5">About Us</h6>
               <ul>
@@ -63,7 +78,7 @@ export default function Footer () {
             </div>
           </div>
 
-          <div className="col-12 col-sm-6 col-lg-3">
+          <div className="col-12 col-sm-6 col-lg-2">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
               <h6 className="h5">Support</h6>
               <ul>
