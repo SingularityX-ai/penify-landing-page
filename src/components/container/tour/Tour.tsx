@@ -129,6 +129,7 @@ const Tour = forwardRef<HTMLDivElement>(function (_, ref) {
               </div>
 
               <div className="frame__mid" ref={videoRef}>
+              {autoplay ?(
                 <iframe
                   loading="lazy"
                   src={`https://www.youtube.com/embed/s32GS0glydA?autoplay=${Number(
@@ -137,6 +138,7 @@ const Tour = forwardRef<HTMLDivElement>(function (_, ref) {
                   height="480"
                   title="Snorkell Trailer"
                 ></iframe>
+                ): false}
               </div>
             </div>
           </div>

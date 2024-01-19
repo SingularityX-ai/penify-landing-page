@@ -48,10 +48,12 @@ export const ContactFormUi = ({
                 onSubmit={handleSubmit}>
                 <fieldset>
                   <div className="mb-4 form-floating">
+                  <label htmlFor="fullName">Enter Full Name</label>
                     <input
                       type="text"
-                      name="fullName"
+                      name="name"
                       id="fullName"
+                      aria-label="fullName"
                       className="form-control"
                       placeholder="Enter Full Name"
                       value={formData.fullName.value}
@@ -61,7 +63,7 @@ export const ContactFormUi = ({
                       required
                     />
 
-                    <label htmlFor="fullName">Enter Full Name</label>
+                    
 
                     {formData.fullName.isFocused && formData.fullName.error && <p>{formData.fullName.error}</p>}
                   </div>
@@ -71,6 +73,7 @@ export const ContactFormUi = ({
                       type="email"
                       name="email"
                       id="email"
+                      aria-label="email"
                       className="form-control"
                       placeholder="Enter Your Email"
                       value={formData.email.value}
