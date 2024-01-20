@@ -71,6 +71,9 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
                       <Link href="/" className="nav__menu-link hide-nav" aria-label="Home">Home</Link>
                     </li>
                     <li className="nav__menu-item">
+                      <Link href="/?scrollTo=exampleOverview" scroll={false} className="nav__menu-link hide-nav" aria-label="Examples">Examples</Link>
+                    </li>
+                    <li className="nav__menu-item">
                       <Link href="https://docs.snorkell.ai/" className="nav__menu-link hide-nav" aria-label="Docs" target="_blank">Docs</Link>
                     </li>
                     <li className="nav__menu-item">
@@ -80,14 +83,16 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
                     <li className="nav__menu-item">
                       <Link href="/about-us" className="nav__menu-link hide-nav" aria-label="About Us">About Us</Link>
                     </li>
-
-                    <li className="nav__menu-item">
-                      <Link href="/?scrollTo=productOverview" scroll={false} className="nav__menu-link hide-nav" aria-label="Product">Product</Link>
-                    </li>
-
                     <li className="nav__menu-item">
                       <Link href="/contact-us" className="nav__menu-link hide-nav" aria-label="Contact Us">Contact Us</Link>
                     </li>
+
+                    {isScrolled ?<li className="nav__menu-item">
+                      
+                      <Link href="https://github.com/apps/snorkell-ai" target="_blank" className="nav__menu-link hide-nav" aria-label="Contact Us">
+                        <button className="btn btn-success install-button-success">Install</button>
+                      </Link>
+                    </li>: false}
 
                     <li className="nav__menu-item d-block d-md-none">
                       <Link href="https://dashboard.snorkell.ai/" className="btn btn--secondary" target="_blank" aria-label="Dashboard">

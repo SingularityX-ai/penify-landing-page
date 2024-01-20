@@ -7,6 +7,10 @@
   padding: 192px 0px 180px;
   background-image: url("../../../public/images/banner/banner-one-bg.webp");
 
+  .scale-1-5 {
+    transform: scale(1.15);
+  }
+
   .banner-one__content {
     .h6 {
       color: $white;
