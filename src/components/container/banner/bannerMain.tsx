@@ -28,7 +28,7 @@ export default function BannerMain() {
             </div>
           </div>
 
-          <div className="col-12 col-lg-7">
+          <div className="col-12 col-lg-7 scale-1-5">
             <Tour
               ref={tourRef}
               videoSrc="https://www.youtube.com/embed/s32GS0glydA?autoplay=true&loop=1&rel=0&fs=0&playlist=s32GS0glydA&controls=0&modestbranding=1"

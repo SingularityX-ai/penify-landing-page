@@ -7,7 +7,6 @@ const Tour = forwardRef<HTMLDivElement, { videoSrc: string }>(function (
   ref
 ) {
   const videoRef = useRef<HTMLDivElement>(null);
-  console.log(videoSrc);
 
   // whenever scrolled within video view, autoplay is true
   // whenever scrolled outside video view, autoplay is false
