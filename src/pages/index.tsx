@@ -6,25 +6,19 @@ import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 
 export default function Home() {
-  const tourRef = useRef<HTMLDivElement>(null);
   const productRef = useRef<HTMLDivElement>(null);
 
   const router = useRouter();
 
-  const scrollToTour = () => {
-    if(tourRef.current) {
-      tourRef.current.scrollIntoView({behavior: "smooth"});
-    }
-  };
 
   const scrollToProduct = () => {
-    if (router.query.scrollTo === "productOverview" && productRef.current) {
+    if (router.query.scrollTo === "exampleOverview" && productRef.current) {
       productRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   useEffect(() => {
-    router.query.scrollTo !== "productOverview" && window.scrollTo(0, 0);
+    router.query.scrollTo !== "exampleOverview" && window.scrollTo(0, 0);
     
     scrollToProduct();
     
