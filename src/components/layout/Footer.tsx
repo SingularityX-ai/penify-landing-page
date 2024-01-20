@@ -28,14 +28,15 @@ export default function Footer () {
                 <Link href="https://twitter.com/Snorkell_ai" target="_blank" aria-label="Twitter URL">
                   <i className="fa-brands fa-twitter"></i>
                 </Link>
-                <Link href="https://www.reddit.com/user/snorkell_" target="_blank" aria-label="Twitter URL">
+                <Link href="https://www.reddit.com/user/snorkell_" target="_blank" aria-label="Reddit URL">
                   <i className="fa-brands fa-reddit"></i>
                 </Link>
-                <Link href="https://www.instagram.com/snorkell.ai/" target="_blank" aria-label="Twitter URL">
+                <Link href="https://www.instagram.com/snorkell.ai/" target="_blank" aria-label="Instagram URL">
                   <i className="fa-brands fa-instagram"></i>
                 </Link>
-                
-                
+                <Link href="https://www.youtube.com/@Snorkell-ai-ck6sg" target="_blank" aria-label="Youtube URL">
+                  <i className="fa-brands fa-youtube"></i>
+                </Link>
               </div>
             </div>
           </div>
