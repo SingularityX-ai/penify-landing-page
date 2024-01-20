@@ -25,6 +25,17 @@ export default function Footer () {
                 <Link href="https://www.linkedin.com/company/snorkell-ai/" target="_blank" aria-label="LinkedIn URL">
                   <i className="fa-brands fa-linkedin"></i>
                 </Link>
+                <Link href="https://twitter.com/Snorkell_ai" target="_blank" aria-label="Twitter URL">
+                  <i className="fa-brands fa-twitter"></i>
+                </Link>
+                <Link href="https://www.reddit.com/user/snorkell_" target="_blank" aria-label="Twitter URL">
+                  <i className="fa-brands fa-reddit"></i>
+                </Link>
+                <Link href="https://www.instagram.com/snorkell.ai/" target="_blank" aria-label="Twitter URL">
+                  <i className="fa-brands fa-instagram"></i>
+                </Link>
+                
+                
               </div>
             </div>
           </div>
