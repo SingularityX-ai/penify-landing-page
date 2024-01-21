@@ -1,12 +1,10 @@
 import { trackVideoStart } from "@/utils/gtag";
-import React, { forwardRef, useEffect, useRef } from "react";
+import React, { forwardRef, useEffect, useRef, useState } from "react";
 
 // used function expression for working of scrolling effect
-const Tour = forwardRef<HTMLDivElement, { videoSrc: string }>(function (
-  { videoSrc },
-  ref
-) {
+const Tour = forwardRef<HTMLDivElement>(function (_, ref) {
   const videoRef = useRef<HTMLDivElement>(null);
+  const [autoplay, setAutoplay] = useState(false);
 
   // whenever scrolled within video view, autoplay is true
   // whenever scrolled outside video view, autoplay is false
@@ -15,8 +13,10 @@ const Tour = forwardRef<HTMLDivElement, { videoSrc: string }>(function (
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            setAutoplay(true);
             trackVideoStart(true);
           } else {
+            setAutoplay(false);
             trackVideoStart(false);
           }
         });
@@ -46,9 +46,22 @@ const Tour = forwardRef<HTMLDivElement, { videoSrc: string }>(function (
   return (
     <section className="section tour" ref={ref}>
       <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-12 col-xl-8">
+            <div
+              className="section__header"
+              data-aos="fade-up"
+              data-aos-duration="600"
+            >
+              <h2 className="h2">
+                Take a Quick Tour of Automated Documentation Generation
+              </h2>
+            </div>
+          </div>
+        </div>
         <div className="row">
           <div className="col-12">
-            <div className="tour__frame hovered">
+            <div className="tour__frame">
               <div className="frame__top">
                 <div className="mac__btns">
                   <svg
@@ -114,14 +127,18 @@ const Tour = forwardRef<HTMLDivElement, { videoSrc: string }>(function (
                   </svg>
                 </div>
               </div>
-              
+
               <div className="frame__mid" ref={videoRef}>
+              {autoplay ?(
                 <iframe
                   loading="lazy"
-                  src={videoSrc}
+                  src={`https://www.youtube.com/embed/s32GS0glydA?autoplay=${Number(
+                    autoplay
+                  )}&loop=1&rel=0&fs=0&playlist=s32GS0glydA`}
                   height="480"
                   title="Snorkell Trailer"
                 ></iframe>
+                ): false}
               </div>
             </div>
           </div>

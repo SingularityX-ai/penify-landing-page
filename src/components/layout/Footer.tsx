@@ -40,7 +40,23 @@ export default function Footer () {
               </div>
             </div>
           </div>
-          <div className="col-12 col-sm-6 col-lg-3">
+
+          <div className="col-12 col-sm-6 col-lg-2">
+            <div className="footer__single" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+              <h6 className="h5">Our Products</h6>
+              <ul>
+                <li>
+                  <Link href="https://github.com/apps/snorkell-ai" target="_blank" aria-label="Github App">Automated Documentation</Link>
+                </li>
+                
+                <li>
+                  <Link href="https://marketplace.visualstudio.com/items?itemName=Snorkell.snorkell" target="_blank" aria-label="VsCode Plugin">Coding Assistant</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="col-12 col-sm-6 col-lg-2">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
               <h6 className="h5">Resources</h6>
               <ul>
@@ -55,7 +71,7 @@ export default function Footer () {
             </div>
           </div>
 
-          <div className="col-12 col-sm-6 col-lg-3">
+          <div className="col-12 col-sm-6 col-lg-2">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
               <h6 className="h5">About Us</h6>
               <ul>
@@ -74,7 +90,7 @@ export default function Footer () {
             </div>
           </div>
 
-          <div className="col-12 col-sm-6 col-lg-3">
+          <div className="col-12 col-sm-6 col-lg-2">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
               <h6 className="h5">Support</h6>
               <ul>
