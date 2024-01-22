@@ -27,7 +27,23 @@ export default function FAQ() {
                 <div id="collapseOne" className={`accordion-collapse collapse ${imgTab === 0 ? "show" : ""}`} aria-labelledby="headingOne" data-bs-parent="#accordion">
                   <div className="accordion-body">
                     <p style={{textTransform: "none"}}>
-                      Snorkell.ai automatically generates and updates your GitHub project documentation whenever a pull request is merged, ensuring your documentation is always current with your codebase.
+                      Snorkell.ai automatically generates and updates your GitHub project docstring whenever a pull request is merged, ensuring your docstring is always current with your codebase.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="accordion-item content__space" data-aos="fade-up" data-aos-duration="600">
+                <h5 className="accordion-header" id="headingFour">
+                  <button type="button" className={`${imgTab === 3 ? "" : "collapsed"} accordion-button`} onClick={() => setImgTab(imgTab === 3 ? -1 : 3)} data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    What is the difference b/w Snorkell.ai and PyDoc?
+                  </button>
+                </h5>
+
+                <div id="collapseFour" className={`accordion-collapse collapse ${imgTab === 3 ? "show" : ""}`} aria-labelledby="headingFour" data-bs-parent="#accordion">
+                  <div className="accordion-body">
+                    <p style={{textTransform: "none"}}>
+                      PyDoc is for Python only and can only generate Syntactic Docstring while Snorkell.ai generates human readable and understandable docstring for languages like - Python, JavaScript, Typescript, Java, and Kotlin.
                     </p>
                   </div>
                 </div>
@@ -36,7 +52,7 @@ export default function FAQ() {
               <div className="accordion-item" data-aos="fade-up" data-aos-duration="600">
                 <h5 className="accordion-header" id="headingTwo">
                   <button type="button" className={`${imgTab === 1 ? "" : "collapsed"} accordion-button`} onClick={() => setImgTab(imgTab === 1 ? -1 : 1)} data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    What programming languages are currently supported by Snorkell.ai for generating documentation?
+                    What programming languages are currently supported by Snorkell.ai for generating docstring?
                   </button>
                 </h5>
 
@@ -52,14 +68,14 @@ export default function FAQ() {
               <div className="accordion-item content__space" data-aos="fade-up" data-aos-duration="600">
                 <h5 className="accordion-header" id="headingThree">
                   <button type="button" className={`${imgTab === 2 ? "" : "collapsed"} accordion-button`} onClick={() => setImgTab(imgTab === 2 ? -1 : 2)} data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Does Snorkell.ai retain the code on a local server in order to generate the documentation?
+                    Does Snorkell.ai retain the code on a local server in order to generate the docstring?
                   </button>
                 </h5>
 
                 <div id="collapseThree" className={`accordion-collapse collapse ${imgTab === 2 ? "show" : ""}`} aria-labelledby="headingThree" data-bs-parent="#accordion">
                   <div className="accordion-body">
                     <p style={{textTransform: "none"}}>
-                      No, Snorkell.ai does not retain your code on local storage. Contrary to tools like Sonar, it retrieves the latest commit files and dynamically creates the documentation, maintaining the security of your code within your GitHub repository.
+                      No, Snorkell.ai does not retain your code on local storage. Contrary to tools like Sonar, it retrieves the latest commit files and dynamically creates the docstring, maintaining the security of your code within your GitHub repository.
                     </p>
                   </div>
                 </div>
@@ -68,14 +84,14 @@ export default function FAQ() {
               <div className="accordion-item content__space" data-aos="fade-up" data-aos-duration="600">
                 <h5 className="accordion-header" id="headingFour">
                   <button type="button" className={`${imgTab === 3 ? "" : "collapsed"} accordion-button`} onClick={() => setImgTab(imgTab === 3 ? -1 : 3)} data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    How does Snorkell.ai handle inaccuracies in the automatically generated documentation?
+                    How does Snorkell.ai handle inaccuracies in the automatically generated docstring?
                   </button>
                 </h5>
 
                 <div id="collapseFour" className={`accordion-collapse collapse ${imgTab === 3 ? "show" : ""}`} aria-labelledby="headingFour" data-bs-parent="#accordion">
                   <div className="accordion-body">
                     <p style={{textTransform: "none"}}>
-                      If the documentation produced by Snorkell.ai contains errors, users can review and suggest corrections through the generated pull request before it is merged. This ensures that any inaccuracies can be addressed, and the documentation remains accurate and reliable.
+                      If the docstring produced by Snorkell.ai contains errors, users can review and suggest corrections through the generated pull request before it is merged. This ensures that any inaccuracies can be addressed, and the docstring remains accurate and reliable.
                     </p>
                   </div>
                 </div>
