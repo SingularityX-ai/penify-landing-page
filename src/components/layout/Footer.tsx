@@ -25,26 +25,22 @@ export default function Footer () {
                 <Link href="https://www.linkedin.com/company/snorkell-ai/" target="_blank" aria-label="LinkedIn URL">
                   <i className="fa-brands fa-linkedin"></i>
                 </Link>
+                <Link href="https://twitter.com/Snorkell_ai" target="_blank" aria-label="Twitter URL">
+                  <i className="fa-brands fa-twitter"></i>
+                </Link>
+                <Link href="https://www.reddit.com/user/snorkell_" target="_blank" aria-label="Reddit URL">
+                  <i className="fa-brands fa-reddit"></i>
+                </Link>
+                <Link href="https://www.instagram.com/snorkell.ai/" target="_blank" aria-label="Instagram URL">
+                  <i className="fa-brands fa-instagram"></i>
+                </Link>
+                <Link href="https://www.youtube.com/@Snorkell-ai-ck6sg" target="_blank" aria-label="Youtube URL">
+                  <i className="fa-brands fa-youtube"></i>
+                </Link>
               </div>
             </div>
           </div>
-
-          <div className="col-12 col-sm-6 col-lg-2">
-            <div className="footer__single" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-              <h6 className="h5">Our Products</h6>
-              <ul>
-                <li>
-                  <Link href="https://github.com/apps/snorkell-ai" target="_blank" aria-label="Github App">Automated Documentation</Link>
-                </li>
-                
-                <li>
-                  <Link href="https://marketplace.visualstudio.com/items?itemName=Snorkell.snorkell" target="_blank" aria-label="VsCode Plugin">Coding Assistant</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="col-12 col-sm-6 col-lg-2">
+          <div className="col-12 col-sm-6 col-lg-3">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
               <h6 className="h5">Resources</h6>
               <ul>
@@ -59,7 +55,7 @@ export default function Footer () {
             </div>
           </div>
 
-          <div className="col-12 col-sm-6 col-lg-2">
+          <div className="col-12 col-sm-6 col-lg-3">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
               <h6 className="h5">About Us</h6>
               <ul>
@@ -78,7 +74,7 @@ export default function Footer () {
             </div>
           </div>
 
-          <div className="col-12 col-sm-6 col-lg-2">
+          <div className="col-12 col-sm-6 col-lg-3">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
               <h6 className="h5">Support</h6>
               <ul>
