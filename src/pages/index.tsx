@@ -12,12 +12,6 @@ export default function Home() {
 
   const router = useRouter();
 
-  const scrollToTour = () => {
-    if(tourRef.current) {
-      tourRef.current.scrollIntoView({behavior: "smooth"});
-    }
-  };
-
   const scrollToProduct = () => {
     if (router.query.scrollTo === "exampleOverview" && productRef.current) {
       productRef.current.scrollIntoView({ behavior: "smooth" });
@@ -35,7 +29,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <BannerMain onDemoClick={scrollToTour} />
+      <BannerMain />
       <Tour ref={tourRef} />
       <OverviewMid ref={productRef} />
       <FAQ />
