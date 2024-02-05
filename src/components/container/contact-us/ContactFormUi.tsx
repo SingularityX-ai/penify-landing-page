@@ -30,8 +30,19 @@ export const ContactFormUi = ({
                 <span> Let&apos;s talk.</span>
               </h2>
               <p className="mb-4 text-white">
-                We are here to help and answer any question you might have. We look forward to hearing from you.
+                <p className="text-white">
+                We are here to help and answer any question you might have. 
+                </p>
+                <p className="text-white">
+                We look forward to hearing from you.
+                </p>
+                <p className="text-white">
                 You can also mail us at <a href="mailto:support@snorkell.ai">support@snorkell.ai</a>
+                </p>
+                <p className="text-white">
+                You can also call at <a href="tel:+91-959-158-3843">+91-959-158-3843</a>
+                </p>
+                
               </p>
               <Image
                 src={ContactImg}
