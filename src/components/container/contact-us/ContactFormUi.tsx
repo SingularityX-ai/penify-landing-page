@@ -29,7 +29,7 @@ export const ContactFormUi = ({
                 Have something in mind?
                 <span> Let&apos;s talk.</span>
               </h2>
-              <p className="mb-4 text-white">
+              <div className="mb-4">
                 <p className="text-white">
                 We are here to help and answer any question you might have. 
                 </p>
@@ -43,7 +43,7 @@ export const ContactFormUi = ({
                 You can also call at <a href="tel:+91-959-158-3843">+91-959-158-3843</a>
                 </p>
                 
-              </p>
+              </div>
               <Image
                 src={ContactImg}
                 alt="customer support"
