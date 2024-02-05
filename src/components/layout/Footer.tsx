@@ -15,7 +15,7 @@ export default function Footer () {
                 <Image src={snorkellLogo} alt="snorkell.ai brand logo" loading="lazy" />
               </Link>
 
-              <p>Copyright &copy; 2023 Snorkell.ai</p>
+              <p>Copyright &copy; 2023 Snorkell Associates and Co.</p>
 
               <div className="social">
                 <Link href="https://github.com/SingularityX-ai/" target="_blank" aria-label="Github URL">
