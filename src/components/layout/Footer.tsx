@@ -85,6 +85,9 @@ export default function Footer () {
                 <li>
                   <Link href="https://production-gateway.snorkell.ai/api/toc" target="_blank" aria-label="Terms & Conditions">Terms & Conditions</Link>
                 </li>
+                <li>
+                  <Link href="https://production-gateway.snorkell.ai/api/refund-policy" target="_blank" aria-label="Refund and Cancellation Policy">Refund & Cancellation</Link>
+                </li>
 
                 <li>
                   <Link href="/contact-us" target="_self" aria-label="Helpdesk">Helpdesk </Link>
