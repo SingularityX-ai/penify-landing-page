@@ -37,10 +37,13 @@ export const ContactFormUi = ({
                 We look forward to hearing from you.
                 </p>
                 <p className="text-white">
-                You can also mail us at <a href="mailto:support@snorkell.ai">support@snorkell.ai</a>
+                Mail us: <a href="mailto:support@snorkell.ai">support@snorkell.ai</a>
                 </p>
                 <p className="text-white">
-                You can also call at <a href="tel:+91-959-158-3843">+91-959-158-3843</a>
+                Call us: <a href="tel:+91-959-158-3843">+91-959-158-3843</a>
+                </p>
+                <p className="text-white">
+                Office: Snorkell Associates and Co., Office No. 415 OK Plus Spaces, Near Apex Circle, Malviya Industrial Area, Jaipur - 302017, Rajasthan, India
                 </p>
                 
               </div>
