@@ -5,7 +5,7 @@ import Layout from "@/components/layout/Layout";
 export default function AboutUs () {
   return (
     <Layout>
-      <BannerTop desc="Our Teams" page="Our Teams" />
+      <BannerTop desc="About Us" page="About Us" />
       <Teams />
     </Layout>
   )
