@@ -23,33 +23,35 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               data-aos="fade-up"
               data-aos-duration="400"
             >
-              <h5 className="h5">Starter</h5>
+              <h5 className="h5">Freemium</h5>
               <div className="meta">
                 <div className="content">
-                  <h2 className="h2 title">$19</h2>
+                  <h2 className="h2 title">$0</h2>
                   <p>paid per month</p>
                 </div>
               </div>
               <hr />
+              <h5 className="h5 title">Private Repo</h5>
               <ul>
                 <li>
-                  <i className="fa-solid fa-check"></i>5 User seats
-                </li>
-                <li>
-                  <i className="fa-solid fa-check"></i>
-                  50,000 words per month
-                </li>
-                <li>
-                  <i className="fa-solid fa-check"></i>
-                  70+ AI writing tools
-                </li>
-                <li>
-                  <i className="fa-solid fa-check"></i>
-                  100+ Copywriting tool
+                  <i className="fa-solid fa-check"></i>3 Commits Daily
                 </li>
               </ul>
               <hr />
-              <Link href="/register" className="btn btn--septenary">
+              <h5 className="h5 title">Public Repo</h5>
+              <ul>
+                <li>
+                  <i className="fa-solid fa-check"></i>Unlimited Commits
+                </li>
+              </ul>
+              <hr />
+              <ul>
+                <li>
+                  <i className="fa-solid fa-check"></i>1 Full Repo Documentation
+                </li> 
+              </ul>
+              <hr />
+              <Link href="https://dashboard.snorkell.ai/auth/sign-up" target="_blank" className="btn btn--septenary">
                 Start for free
               </Link>
             </div>
@@ -64,30 +66,35 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               <h5 className="h5 yel">Basic</h5>
               <div className="meta">
                 <div className="content">
-                  <h2 className="h2 title">$39</h2>
-                  <p>paid per month</p>
+                  <h2 className="h2 title">$10</h2>
+                  <p>paid per month / repository</p>
                 </div>
               </div>
               <hr />
+              <h5 className="h5 title">Private Repo</h5>
               <ul>
                 <li>
-                  <i className="fa-solid fa-check"></i>5 User seats
+                  <i className="fa-solid fa-check"></i>Unlimited Commits for 1 Repo
                 </li>
+                {/* <li>
+                  <i className="fa-solid fa-check"></i>1 Full Repo
+                </li> */}
+              </ul>
+              <hr />
+              <h5 className="h5 title">Public Repo</h5>
+              <ul>
                 <li>
-                  <i className="fa-solid fa-check"></i>
-                  50,000 words per month
-                </li>
-                <li>
-                  <i className="fa-solid fa-check"></i>
-                  70+ AI writing tools
-                </li>
-                <li>
-                  <i className="fa-solid fa-check"></i>
-                  100+ Copywriting tool
+                  <i className="fa-solid fa-check"></i>Unlimited Commits
                 </li>
               </ul>
               <hr />
-              <Link href="/register" className="btn btn--septenary">
+              <ul>
+                <li>
+                  <i className="fa-solid fa-check"></i>3 Full Repo Documentation
+                </li> 
+              </ul>
+              <hr />
+              <Link href="https://dashboard.snorkell.ai/auth/sign-up" target="_blank" className="btn btn--septenary">
                 choose a plan
               </Link>
             </div>
@@ -102,30 +109,35 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               <h5 className="h5 pri">Pro</h5>
               <div className="meta">
                 <div className="content">
-                  <h2 className="h2 title">$59</h2>
-                  <p>paid per month</p>
+                  <h2 className="h2 title">$45</h2>
+                  <p>paid per month / Repository</p>
                 </div>
               </div>
               <hr />
+              <h5 className="h5 title">Private Repo</h5>
               <ul>
                 <li>
-                  <i className="fa-solid fa-check"></i>5 User seats
+                  <i className="fa-solid fa-check"></i>Unlimited Commits for 5 Repo
                 </li>
+                {/* <li>
+                  <i className="fa-solid fa-check"></i>1 Full Repo
+                </li> */}
+              </ul>
+              <hr />
+              <h5 className="h5 title">Public Repo</h5>
+              <ul>
                 <li>
-                  <i className="fa-solid fa-check"></i>
-                  50,000 words per month
-                </li>
-                <li>
-                  <i className="fa-solid fa-check"></i>
-                  70+ AI writing tools
-                </li>
-                <li>
-                  <i className="fa-solid fa-check"></i>
-                  100+ Copywriting tool
+                  <i className="fa-solid fa-check"></i>Unlimited Commits
                 </li>
               </ul>
               <hr />
-              <Link href="/register" className="btn btn--septenary">
+              <ul>
+                <li>
+                  <i className="fa-solid fa-check"></i>18 Full Repo Documentation
+                </li> 
+              </ul>
+              <hr />
+              <Link href="https://dashboard.snorkell.ai/auth/sign-up" target="_blank" className="btn btn--septenary">
                 choose a plan
               </Link>
             </div>
@@ -140,30 +152,29 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               <h5 className="h5 tri">Elite</h5>
               <div className="meta">
                 <div className="content">
-                  <h2 className="h2 title">$79</h2>
-                  <p>paid per month</p>
+                  <h2 className="h2 title">Contact Us For Details</h2>
                 </div>
               </div>
               <hr />
               <ul>
                 <li>
-                  <i className="fa-solid fa-check"></i>5 User seats
+                  <i className="fa-solid fa-check"></i>On Premise Support
                 </li>
                 <li>
                   <i className="fa-solid fa-check"></i>
-                  50,000 words per month
+                  GPT-4 and Mistral
                 </li>
                 <li>
                   <i className="fa-solid fa-check"></i>
-                  70+ AI writing tools
+                  Private GPT-Keys
                 </li>
                 <li>
                   <i className="fa-solid fa-check"></i>
-                  100+ Copywriting tool
+                  Advanced Billing and Analytics
                 </li>
               </ul>
               <hr />
-              <Link href="/register" className="btn btn--septenary">
+              <Link href="https://dashboard.snorkell.ai/auth/sign-up" target="_blank" className="btn btn--septenary">
                 choose a plan
               </Link>
             </div>
