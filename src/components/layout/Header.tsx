@@ -82,6 +82,10 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
                     </li>
 
                     <li className="nav__menu-item">
+                      <Link href="/?scrollTo=pricing" className="nav__menu-link hide-nav" aria-label="About Us">Pricing</Link>
+                    </li>
+
+                    <li className="nav__menu-item">
                       <Link href="/?scrollTo=exampleOverview" scroll={false} className="nav__menu-link hide-nav" aria-label="Examples">Examples</Link>
                     </li>
 
