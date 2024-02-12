@@ -170,8 +170,13 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
                 </li>
                 <li>
                   <i className="fa-solid fa-check"></i>
-                  Advanced Billing and Analytics
+                  Access to Experimental Features
                 </li>
+                <li>
+                  <i className="fa-solid fa-check"></i>
+                  24*7 Support
+                </li>
+                <li></li>
               </ul>
               <hr />
               <Link href="https://dashboard.snorkell.ai/auth/sign-up" target="_blank" className="btn btn--septenary">
