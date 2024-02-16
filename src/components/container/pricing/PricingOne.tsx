@@ -51,7 +51,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
                 </li> 
               </ul>
               <hr />
-              <Link href="https://dashboard.snorkell.ai/auth/sign-up" target="_blank" className="btn btn--septenary">
+              <Link href="https://dashboard.snorkell.ai/profile/payments" target="_blank" className="btn btn--septenary">
                 Start for free
               </Link>
             </div>
@@ -94,7 +94,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
                 </li> 
               </ul>
               <hr />
-              <Link href="https://dashboard.snorkell.ai/auth/sign-up" target="_blank" className="btn btn--septenary">
+              <Link href="https://dashboard.snorkell.ai/profile/payments" target="_blank" className="btn btn--septenary">
                 choose a plan
               </Link>
             </div>
@@ -137,7 +137,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
                 </li> 
               </ul>
               <hr />
-              <Link href="https://dashboard.snorkell.ai/auth/sign-up" target="_blank" className="btn btn--septenary">
+              <Link href="https://dashboard.snorkell.ai/profile/payments" target="_blank" className="btn btn--septenary">
                 choose a plan
               </Link>
             </div>
@@ -179,7 +179,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
                 <li></li>
               </ul>
               <hr />
-              <Link href="https://dashboard.snorkell.ai/auth/sign-up" target="_blank" className="btn btn--septenary">
+              <Link href="https://dashboard.snorkell.ai/profile/payments" target="_blank" className="btn btn--septenary">
                 choose a plan
               </Link>
             </div>
