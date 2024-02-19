@@ -11,6 +11,7 @@ export default function Home() {
   const tourRef = useRef<HTMLDivElement>(null);
   const productRef = useRef<HTMLDivElement>(null);
   const pricingRef = useRef<HTMLDivElement>(null);
+  const faqRef = useRef<HTMLDivElement>(null);
 
   const router = useRouter();
 
@@ -20,6 +21,9 @@ export default function Home() {
     }
     if (router.query.scrollTo === "pricing" && pricingRef.current) {
       pricingRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (router.query.scrollTo === "faq" && faqRef.current) {
+      faqRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -38,7 +42,7 @@ export default function Home() {
       <Tour ref={tourRef} />
       <OverviewMid ref={productRef} />
       <PricingOne ref={pricingRef}/>
-      <FAQ />
+      <FAQ ref={faqRef}/>
     </Layout>
   );
 }
