@@ -2,7 +2,7 @@ import React, { useState, forwardRef, useEffect } from "react";
 import Link from "next/link";
 import { axiosInstance } from "@/config/axiosConfig";
 
-let exchangeRateUSDToINR = 82; // Example static exchange rate
+let exchangeRateUSDToINR = 83; // Example static exchange rate
 
 const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
   const [currency, setCurrency] = useState("INR"); // Default currency
