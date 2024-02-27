@@ -100,6 +100,49 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               className="pricing-two__single"
               data-aos="fade-up"
               data-aos-duration="400"
+            >
+              <h5 className="h5">Freemium</h5>
+              <div className="meta">
+                <div className="content">
+                  <h2 className="h2 title">{showCurrencySymbol()}{convertPrices(0)}</h2>
+                  <p>paid per month</p>
+                </div>
+              </div>
+              <hr />
+              <h5 className="h5 title">Private Repo</h5>
+              <ul>
+                <li>
+                  <i className="fa-solid fa-check"></i>3 Commits Daily
+                </li>
+              </ul>
+              <hr />
+              <h5 className="h5 title">Public Repo</h5>
+              <ul>
+                <li>
+                  <i className="fa-solid fa-check"></i>Unlimited Commits
+                </li>
+              </ul>
+              <hr />
+              <ul>
+                <li>
+                  <i className="fa-solid fa-check"></i>1 Full Repo Documentation
+                </li>
+              </ul>
+              <hr />
+              <Link
+                href="https://dashboard.snorkell.ai/profile/payments"
+                target="_blank"
+                className="btn btn--septenary"
+              >
+                Start for free
+              </Link>
+            </div>
+          </div>
+          <div className="col-12 col-md-6 col-lg-6 col-xxl-3">
+            <div
+              className="pricing-two__single"
+              data-aos="fade-up"
+              data-aos-duration="400"
               data-aos-delay="200"
             >
               <h5 className="h5 yel">Basic</h5>
@@ -181,6 +224,52 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
                   <i className="fa-solid fa-check"></i>18 Full Repo
                   Documentation
                 </li>
+              </ul>
+              <hr />
+              <Link
+                href="https://dashboard.snorkell.ai/profile/payments"
+                target="_blank"
+                className="btn btn--septenary"
+              >
+                choose a plan
+              </Link>
+            </div>
+          </div>
+          <div className="col-12 col-md-6 col-lg-6 col-xxl-3">
+            <div
+              className="pricing-two__single"
+              data-aos="fade-up"
+              data-aos-duration="400"
+              data-aos-delay="600"
+            >
+              <h5 className="h5 tri">Elite</h5>
+              <div className="meta">
+                <div className="content">
+                  <h2 className="h2 title">Contact Us For Details</h2>
+                </div>
+              </div>
+              <hr />
+              <ul>
+                <li>
+                  <i className="fa-solid fa-check"></i>On Premise Support
+                </li>
+                <li>
+                  <i className="fa-solid fa-check"></i>
+                  GPT-4 and Mistral
+                </li>
+                <li>
+                  <i className="fa-solid fa-check"></i>
+                  Private GPT-Keys
+                </li>
+                <li>
+                  <i className="fa-solid fa-check"></i>
+                  Access to Experimental Features
+                </li>
+                <li>
+                  <i className="fa-solid fa-check"></i>
+                  24*7 Support
+                </li>
+                <li></li>
               </ul>
               <hr />
               <Link

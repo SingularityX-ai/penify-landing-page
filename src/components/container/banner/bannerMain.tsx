@@ -13,7 +13,7 @@ export default function BannerMain() {
                 <span>AI Documentation</span>
               </p>
 
-              <h1 className="h1">Effortlessly Generate Human like Docstrings in Seconds</h1>
+              <h1 className="h1">Let AI do the documentation. You write the code!</h1>
 
               <div className="section__content-cta mt-4 mb-3">
                 <Link

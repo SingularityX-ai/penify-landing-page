@@ -54,8 +54,13 @@ const Tour = forwardRef<HTMLDivElement>(function (_, ref) {
               data-aos-duration="600"
             >
               <h2 className="h2">
-                Take a Quick Tour of Automated Documentation Generation
+              &ldquo;Documented Repositories reduce Developer onboarding time by
+                200%&rdquo;
               </h2>
+              <hr></hr>
+              <h4 className="h4">
+                Take a Quick Tour on how Snorkell automates Documentation.
+              </h4>
             </div>
           </div>
         </div>
