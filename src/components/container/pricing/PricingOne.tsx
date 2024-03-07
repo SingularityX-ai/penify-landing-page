@@ -143,7 +143,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               </ul>
               <hr />
               <Link
-                href={`https://dashboard.snorkell.ai/profile/payments?currency=${router.query.currency}`}
+                href={`https://dashboard.snorkell.ai/profile/payments?currency=${router.query.currency ?? "INR"}`}
                 target="_blank"
                 className="btn btn--septenary"
                 >
@@ -193,7 +193,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               </ul>
               <hr />
               <Link
-                href={`https://dashboard.snorkell.ai/profile/payments?currency=${router.query.currency}`}
+                href={`https://dashboard.snorkell.ai/profile/payments?currency=${router.query.currency ?? "INR"}`}
                 target="_blank"
                 className="btn btn--septenary"
                 >
@@ -201,6 +201,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               </Link>
             </div>
           </div>
+          {/*
           <div className="col-12 col-md-6 col-lg-6 col-xxl-3">
             <div
               className="pricing-two__single pricing-two__single--alt"
@@ -224,9 +225,9 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
                 <li>
                   <i className="fa-solid fa-check"></i>Unlimited Commits for 5 Repo
                 </li>
-                {/* <li>
+                { <-- <li>
                   <i className="fa-solid fa-check"></i>1 Full Repo
-                </li> */}
+                </li>  ---> }
               </ul>
               <hr />
               <h5 className="h5 title">Public Repo</h5>
@@ -243,13 +244,14 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               </ul>
               <hr />
               <Link
-                href={`https://dashboard.snorkell.ai/profile/payments?currency=${router.query.currency}`}
+                href={`https://dashboard.snorkell.ai/profile/payments?currency=${router.query.currency ?? "INR"}`}
                 target="_blank"
                 className="btn btn--septenary">
                 choose a plan
               </Link>
             </div>
           </div>
+          */}
           <div className="col-12 col-md-6 col-lg-6 col-xxl-3">
             <div
               className="pricing-two__single"
@@ -288,7 +290,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               </ul>
               <hr />
               <Link
-                href={`https://dashboard.snorkell.ai/profile/payments?currency=${router.query.currency}`}
+                href={`https://dashboard.snorkell.ai/profile/payments?currency=${router.query.currency ?? "INR"}`}
                 target="_blank"
                 className="btn btn--septenary">
                 choose a plan
