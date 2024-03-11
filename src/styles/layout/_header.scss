@@ -388,17 +388,29 @@
   }
 }
 
-.install-button-success{
-  background-color: green;
-  color: white;
-  padding: 12px;
-  font-size: 15px;
-  font-weight: 500
-}
+.stats__counter {
+  padding: 14px;
+  border-radius: 4px;
+  background-color: #192337;
 
-.install-button-success:hover {
-  background-color: darkgreen;
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  .install-button-success {
+    max-width: 124px;
+    background-color: #16a34a;
+    color: white;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+
+    &:hover {
+      background-color: #15803d;
+    }
+  }
 }
 /* ==== 
  --------- (4.1) header styles end ---------

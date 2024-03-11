@@ -16,36 +16,48 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
     repos: 0,
     users: 0,
   });
+  const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
 
-  // window resize
-  useEffect(() => {
-    const handleResize = () => setIsNavOpen(false);
-    window.addEventListener("resize", handleResize);
-    axiosInstance
-        .get("v1/analytics/usage/count")
-        .then(({ data }) =>
-          setCounter(() => ({ repos: data.repos, users: data.users }))
-        );
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const handleSubMenu = (submenu: string) => {
+    setOpenSubMenu(submenu === openSubMenu ? null : submenu);
+  };
 
-  // window scrolled
+  const isSubMenuOpen = (submenu: string) => {
+    return submenu === openSubMenu ? "nav__dropdown-active" : "";
+  };
+
+  const isSubMenuButton = (submenu: string) => {
+    return submenu === openSubMenu ? "nav__menu-link--dropdown-active" : "";
+  };
+
   useEffect(() => {
+    const handleResize = () => {
+      setIsNavOpen(false);
+      setOpenSubMenu(null);
+    };
+
     const handleScroll = () => {
       const scrollPos = window.scrollY;
       setIsScrolled(scrollPos > 100);
     };
 
+    window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    // Fetch data on component mount
+    axiosInstance.get("v1/analytics/usage/count").then(({ data }) => setCounter(data));
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
     <header className={`header header--dark ${isScrolled ? "header-active" : ""}`}>
-      {!isScrolled ? <StatCount repos={counter.repos} users={counter.users}/> : null}
+      {!isScrolled ? <StatCount repos={counter.repos} users={counter.users} /> : null}
       <div className="container">
         <div className="row">
-          
           <div className="col-lg-12">
             <div className="nav">
               <div className="nav__content">
@@ -55,7 +67,7 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
                   </Link>
                 </div>
 
-                <div className={`nav__menu ${isNavOpen ? "nav__menu-active" : "" }`}>
+                <div className={`nav__menu ${isNavOpen ? "nav__menu-active" : ""}`}>
                   <div className="nav__menu-logo d-flex d-xl-none">
                     <Link href="/" className="text-center hide-nav" aria-label="Snorkell brand logo">
                       <Image src={snorkellLogo} alt="snorkell.ai brand logo" priority />
@@ -68,29 +80,55 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
 
                   <ul className="nav__menu-items">
                     <li className="nav__menu-item">
-                      <Link href="/" className="nav__menu-link hide-nav" aria-label="Home">Home</Link>
-                    </li>
-                    <li className="nav__menu-item">
-                      <Link href="https://docs.snorkell.ai/" className="nav__menu-link hide-nav" aria-label="Docs" target="_blank">Docs</Link>
-                    </li>
-                    <li className="nav__menu-item">
-                      <Link href="https://blogs.snorkell.ai/" className="nav__menu-link hide-nav" aria-label="Blogs" target="_blank">Blogs</Link>
+                      <Link href="/" className="nav__menu-link hide-nav" aria-label="Home">
+                        Home
+                      </Link>
                     </li>
 
                     <li className="nav__menu-item">
-                      <Link href="/about-us" className="nav__menu-link hide-nav" aria-label="About Us">About Us</Link>
+                      <Link href="/about-us" className="nav__menu-link hide-nav" aria-label="About Us">
+                        About Us
+                      </Link>
                     </li>
 
                     <li className="nav__menu-item">
-                      <Link href="/?scrollTo=pricing" className="nav__menu-link hide-nav" aria-label="About Us">Pricing</Link>
+                      <Link href="/?scrollTo=pricing" className="nav__menu-link hide-nav" aria-label="About Us">
+                        Pricing
+                      </Link>
+                    </li>
+
+                    <li className="nav__menu-item nav__menu-item--dropdown">
+                      <button className={`${isSubMenuButton("resources")} nav__menu-link nav__menu-link--dropdown`} onClick={() => handleSubMenu("resources")}>
+                        Resources
+                      </button>
+
+                      <div className={`${isSubMenuOpen("resources")} nav__dropdown`}>
+                        <ul>
+                          <li>
+                            <Link href="https://docs.snorkell.ai/" className="nav__dropdown-item hide-nav" target="_blank" rel="noopener noreferrer">
+                              Docs
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link href="https://blogs.snorkell.ai/" className="nav__dropdown-item hide-nav" target="_blank" rel="noopener noreferrer">
+                              Blogs
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link href="/?scrollTo=exampleOverview" className="nav__dropdown-item hide-nav">
+                              Examples
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
                     </li>
 
                     <li className="nav__menu-item">
-                      <Link href="/?scrollTo=exampleOverview" scroll={false} className="nav__menu-link hide-nav" aria-label="Examples">Examples</Link>
-                    </li>
-
-                    <li className="nav__menu-item">
-                      <Link href="/contact-us" className="nav__menu-link hide-nav" aria-label="Contact Us">Contact Us</Link>
+                      <Link href="/contact-us" className="nav__menu-link hide-nav" aria-label="Contact Us">
+                        Contact Us
+                      </Link>
                     </li>
 
                     <li className="nav__menu-item d-block d-md-none">
@@ -132,5 +170,5 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
 
       <div className={`${isNavOpen ? " backdrop-active" : ""} backdrop`} onClick={() => setIsNavOpen(false)}></div>
     </header>
-  )
+  );
 }

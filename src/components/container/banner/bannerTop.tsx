@@ -10,7 +10,7 @@ interface BannerTopProps {
 
 export default function BannerTop({ desc, page }: BannerTopProps) {
   return (
-    <section className="section cmn-banner">
+    <section className="section cmn-banner fix-margin-top">
       <div className="container">
         <div className="row">
           <div className="col-12">

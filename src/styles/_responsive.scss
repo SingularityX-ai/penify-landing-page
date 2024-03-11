@@ -1218,6 +1218,32 @@
   }
 }
 
+@media screen and (max-width: 664px) {
+  .banner-one {
+    padding-top: 240px;
+  }
+}
+
+.fix-margin-top {
+  @media screen and (max-width: 569px) {
+    margin-top: 235px;
+  }
+
+  @media screen and (min-width: 570px) and (max-width: 663px) {
+    margin-top: 202px;
+  }
+
+  @media screen and (min-width: 664px) and (max-width: 767px) {
+    margin-top: 164px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 152px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 180px;
+  }
+}
 /* ==== 
  --------- (6.0) responsive styles end ---------
  ==== */
