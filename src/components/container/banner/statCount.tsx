@@ -6,7 +6,7 @@ const StatCount = React.memo(function StatCount({ repos, users }: { repos: numbe
       <p className="fw-medium text-center">
         <i className="fa-solid fa-star me-2" style={{ color: "#ffbc00" }}></i>
         <span>
-          Trusted globally by <strong className="text-white fw-bold fs-5">{Math.floor(users / 10) * 10}</strong>
+          Trusted globally by <strong className="text-white fw-bold fs-5">{users}</strong>
         </span>
         <span>
           + users and installed on <strong className="text-white fw-bold fs-5">{Math.floor(repos / 100) * 100}</strong>+ repositories.
