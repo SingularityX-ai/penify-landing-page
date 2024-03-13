@@ -2,6 +2,8 @@
 
 Welcome to the repository for Snorkell.ai landing page v2, a sleek, modern and responsive landing page built with Next.js, TypeScript and Bootstrap.
 
+
+
 ## Tech Stack Used
 
 - **Next.js**: For server-side rendering and static site generation.
