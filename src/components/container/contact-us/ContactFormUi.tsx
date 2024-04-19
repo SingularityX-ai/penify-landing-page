@@ -65,10 +65,9 @@ export const ContactFormUi = ({
                 onSubmit={handleSubmit}>
                 <fieldset>
                   <div className="mb-4 form-floating">
-                  <label htmlFor="fullName">Enter Full Name</label>
                     <input
                       type="text"
-                      name="name"
+                      name="fullName"
                       id="fullName"
                       aria-label="fullName"
                       className="form-control"
@@ -79,8 +78,7 @@ export const ContactFormUi = ({
                       onBlur={() => handleBlur("fullName")}
                       required
                     />
-
-                    
+                    <label htmlFor="fullName">Enter Full Name</label>
 
                     {formData.fullName.isFocused && formData.fullName.error && <p>{formData.fullName.error}</p>}
                   </div>
