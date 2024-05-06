@@ -5,6 +5,11 @@ declare global {
   }
 }
 
+/**
+ * Sends a page view event to Google Analytics using the gtag function.
+ * @param url The URL of the page being viewed.
+ * @throws Will throw an error if the window object is not available or if the gtag function is not defined.
+ */
 export const pageView = (url: string) => {
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("config", process.env.GA_MEASUREMENT_ID, {
@@ -13,6 +18,11 @@ export const pageView = (url: string) => {
   }
 };
 
+/**
+ * Track scroll event and send data to Google Analytics.
+ * @param value - The value of the scroll event.
+ * @throws If window is not defined or gtag function is not available.
+ */
 export const trackScroll = (value: number) => {
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("event", "scroll", {
