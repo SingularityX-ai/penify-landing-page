@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import One from "public/images/icons/overview-one.png";
-import Two from "public/images/icons/overview-two.png";
+import One from "@public/images/icons/overview-one.png";
+import Two from "@public/images/icons/overview-two.png";
 
 export default function OverviewTop () {
   return (

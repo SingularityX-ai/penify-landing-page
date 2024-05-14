@@ -2,7 +2,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // font awesome 6
-import "public/font-awesome/css/all.min.css";
+import "@public/font-awesome/css/all.min.css";
 
 // aos
 import "aos/dist/aos.css";

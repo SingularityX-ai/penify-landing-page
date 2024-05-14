@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import Image from "next/image";
-import errorImg from "public/asset/not-found-dark.svg";
+import errorImg from "@public/asset/not-found-dark.svg";
 
 export default function Error() {
   return (

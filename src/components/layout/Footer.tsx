@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import AnimeOne from "public/images/footer-anime-one.png";
-import AnimeTwo from "public/images/footer-anime-two.png";
-import snorkellLogo from "public/asset/snorkell-dark-logo.svg";
+import AnimeOne from "@public/images/footer-anime-one.png";
+import AnimeTwo from "@public/images/footer-anime-two.png";
+import snorkellLogo from "@public/asset/snorkell-dark-logo.svg";
 import { Fragment } from "react";
 
 export default function Footer() {

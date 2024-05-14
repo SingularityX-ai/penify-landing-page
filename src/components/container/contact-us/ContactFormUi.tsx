@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ContactImg from "public/asset/illustration-contact/contact-us.svg";
+import ContactImg from "@public/asset/illustration-contact/contact-us.svg";
 import { FormData } from "./ContactFormLogic";
 
 type ContactFormUIProps = {

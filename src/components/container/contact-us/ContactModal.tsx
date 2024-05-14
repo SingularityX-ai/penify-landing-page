@@ -1,5 +1,5 @@
-import SuccessIcon from "public/asset/illustration-contact/success-submission.svg";
-import FailureIcon from "public/asset/illustration-contact/failure-submission.svg";
+import SuccessIcon from "@public/asset/illustration-contact/success-submission.svg";
+import FailureIcon from "@public/asset/illustration-contact/failure-submission.svg";
 import Image from "next/image";
 
 type ContactModalProps = {

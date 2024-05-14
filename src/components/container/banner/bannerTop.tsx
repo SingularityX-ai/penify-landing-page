@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import AnimeOne from "public/images/anime-one.png";
-import AnimeTwo from "public/images/anime-two.png";
+import AnimeOne from "@public/images/anime-one.png";
+import AnimeTwo from "@public/images/anime-two.png";
 
 interface BannerTopProps {
   desc: string;

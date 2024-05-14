@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import heroIllustration from "public/images/banner/usage.gif";
+import heroIllustration from "@public/images/banner/usage.gif";
 
 export default function BannerMain() {
   return (

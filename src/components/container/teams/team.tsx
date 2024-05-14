@@ -1,8 +1,8 @@
 import Image from "next/image";
-import sumanImg from "public/images/teams/suman.jpeg";
-import sunilImg from "public/images/teams/sunil.jpeg";
-import popinImg from "public/images/teams/popin.jpeg";
-import mayurImg from "public/images/teams/mayur.jpeg";
+import sumanImg from "@public/images/teams/suman.jpeg";
+import sunilImg from "@public/images/teams/sunil.jpeg";
+import popinImg from "@public/images/teams/popin.jpeg";
+import mayurImg from "@public/images/teams/mayur.jpeg";
 
 const TeamsContent = [
   {

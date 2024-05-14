@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import snorkellLogo from "public/asset/snorkell-dark-logo.svg";
+import snorkellLogo from "@public/asset/snorkell-dark-logo.svg";
 import StatCount from "../container/banner/statCount";
 import { axiosInstance } from "@/config/axiosConfig";
 
