@@ -64,7 +64,7 @@ export default function Teams() {
         </div>
       </div>
       <div className="container">
-        <h2 className="section-title text-center pb-2">Our Team</h2>
+        <h2 className="section-title text-center pb-4">Our Team</h2>
         <div className="row g-4">
           {TeamsContent.map((team, index) => (
             <div className="col-12 col-md-6 col-lg-3" key={index}>
@@ -77,8 +77,6 @@ export default function Teams() {
                 <div className="card-img-center">
                   <Image
                     src={team.img}
-                    width={200}
-                    height={200}
                     alt={`Profile photo of ${team.devName}`}
                     priority
                   />
