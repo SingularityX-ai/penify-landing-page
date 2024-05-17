@@ -51,7 +51,7 @@ export default function Teams() {
                 textAlign: "justify",
               }}
             >
-              At Snorkell.ai, we are creating a GitHub App to automate
+              At Penify.dev, we are creating a GitHub App to automate
               and streamline the documentation process for developers and teams.
               Powered by Large Language Models, it ensures that project
               docstrings is always up-to-date, consistent, and accurately

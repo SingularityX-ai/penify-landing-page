@@ -111,7 +111,7 @@ const Tour = forwardRef<HTMLDivElement>(function (_, ref) {
                 </div>
 
                 <div className="mac__title">
-                  Snorkell.ai Documentation Generator
+                  Penify.dev Documentation Generator
                 </div>
 
                 <div className="mac__code">
