@@ -37,7 +37,7 @@ const FAQ = forwardRef<HTMLDivElement>(function (_, ref) {
                     aria-expanded="true"
                     aria-controls="collapseOne"
                   >
-                    What is Penify.dev?
+                    What is Penify(previously Snorkell.ai)?
                   </button>
                 </h5>
 
@@ -51,7 +51,7 @@ const FAQ = forwardRef<HTMLDivElement>(function (_, ref) {
                 >
                   <div className="accordion-body">
                     <p style={{ textTransform: "none" }}>
-                      Penify.dev automatically generates and updates your
+                      Penify automatically generates and updates your
                       GitHub project docstring whenever a pull request is
                       merged, ensuring your docstring is always current with
                       your codebase.
@@ -77,7 +77,7 @@ const FAQ = forwardRef<HTMLDivElement>(function (_, ref) {
                     aria-expanded="false"
                     aria-controls="collapseFour"
                   >
-                    What is the difference b/w Penify.dev and PyDoc?
+                    What is the difference b/w Penify and PyDoc?
                   </button>
                 </h5>
 
@@ -92,7 +92,7 @@ const FAQ = forwardRef<HTMLDivElement>(function (_, ref) {
                   <div className="accordion-body">
                     <p style={{ textTransform: "none" }}>
                       PyDoc is for Python only and can only generate Syntactic
-                      Docstring while Penify.dev generates human readable and
+                      Docstring while Penify generates human readable and
                       understandable docstring for languages like - Python,
                       JavaScript, Typescript, Java, and Kotlin.
                     </p>
@@ -118,7 +118,7 @@ const FAQ = forwardRef<HTMLDivElement>(function (_, ref) {
                     aria-controls="collapseTwo"
                   >
                     What programming languages are currently supported by
-                    Penify.dev for generating docstring?
+                    Penify for generating docstring?
                   </button>
                 </h5>
 
@@ -132,7 +132,7 @@ const FAQ = forwardRef<HTMLDivElement>(function (_, ref) {
                 >
                   <div className="accordion-body">
                     <p style={{ textTransform: "none" }}>
-                      Penify.dev currently provides support for the following
+                      Penify currently provides support for the following
                       programming languages: Python, JavaScript, Typescript,
                       Java, and Kotlin.
                     </p>
@@ -157,7 +157,7 @@ const FAQ = forwardRef<HTMLDivElement>(function (_, ref) {
                     aria-expanded="false"
                     aria-controls="collapseThree"
                   >
-                    Does Penify.dev retain the code on a local server in order
+                    Does Penify retain the code on a local server in order
                     to generate the docstring?
                   </button>
                 </h5>
@@ -172,7 +172,7 @@ const FAQ = forwardRef<HTMLDivElement>(function (_, ref) {
                 >
                   <div className="accordion-body">
                     <p style={{ textTransform: "none" }}>
-                      No, Penify.dev does not retain your code on local
+                      No, Penify does not retain your code on local
                       storage. Contrary to tools like Sonar, it retrieves the
                       latest commit files and dynamically creates the docstring,
                       maintaining the security of your code within your GitHub
@@ -199,7 +199,7 @@ const FAQ = forwardRef<HTMLDivElement>(function (_, ref) {
                     aria-expanded="false"
                     aria-controls="collapseFour"
                   >
-                    How does Penify.dev handle inaccuracies in the
+                    How does Penify handle inaccuracies in the
                     automatically generated docstring?
                   </button>
                 </h5>
@@ -214,7 +214,7 @@ const FAQ = forwardRef<HTMLDivElement>(function (_, ref) {
                 >
                   <div className="accordion-body">
                     <p style={{ textTransform: "none" }}>
-                      If the docstring produced by Penify.dev contains errors,
+                      If the docstring produced by Penify contains errors,
                       users can review and suggest corrections through the
                       generated pull request before it is merged. This ensures
                       that any inaccuracies can be addressed, and the docstring
