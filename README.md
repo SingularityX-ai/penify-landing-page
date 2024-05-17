@@ -2,8 +2,6 @@
 
 Welcome to the repository for Snorkell.ai landing page v2, a sleek, modern and responsive landing page built with Next.js, TypeScript and Bootstrap.
 
-
-
 ## Tech Stack Used
 
 - **Next.js**: For server-side rendering and static site generation.
@@ -23,18 +21,19 @@ Before you begin, ensure you have the following installed:
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the repository and navigate to project directory:
 
 ```bash
 $ git clone https://github.com/SingularityX-ai/snorkell-landing-page.git
+$ cd snorkell-landing-page
 ```
 
 <br>
 
-2. Install NPM Packages:
+2. Install project dependencies:
 
 ```bash
-$ npm install
+$ yarn install
 ```
 
 <br>
@@ -42,7 +41,7 @@ $ npm install
 3. Run the development server:
 
 ```bash
-$ npm run dev
+$ yarn dev
 ```
 
 The site should now be running on `http://localhost:3000`
@@ -51,10 +50,10 @@ The site should now be running on `http://localhost:3000`
 
 ### Building for Production
 
-To build the project and run it in production, you can use the following commands:
+To build the project and run it in production, use the following commands:
 
 ```bash
-$ npm run build
+$ yarn build
 ```
 
 The above command generates an `out` directory which can be served using any static hosting service or using `serve`
@@ -62,8 +61,8 @@ The above command generates an `out` directory which can be served using any sta
 To install `serve` and server the production build, run:
 
 ```bash
-$ npm install -g serve@latest
-$ npm run prod-test
+$ yarn global add serve
+$ yarn prod-test
 ```
 
 By default, `serve` will listen on `http://localhost:3000`. Open your browser and go to this address to see our landing page in action.
