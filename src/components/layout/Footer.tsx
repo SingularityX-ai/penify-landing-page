@@ -34,7 +34,7 @@ export default function Footer() {
         icon: "fa-linkedin",
       },
       {
-        link: "https://www.instagram.com/snorkell.ai/",
+        link: "https://www.instagram.com/penify.dev/",
         title: "Instagram",
         icon: "fa-instagram",
       },
@@ -65,8 +65,8 @@ export default function Footer() {
         <div className="row items-gap-two">
           <div className="col-12 col-sm-6 col-lg-3">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600">
-              <Link href="/" className="logo" aria-label="Snorkell brand logo">
-                <Image src={snorkellLogo} alt="snorkell.ai brand logo" loading="lazy" />
+              <Link href="/" className="logo" aria-label="Penify brand logo">
+                <Image src={snorkellLogo} width="190" alt="penify.dev brand logo" loading="lazy" />
               </Link>
 
               <p>Copyright &copy; 2023 Snorkell Associates and Co.</p>
@@ -87,13 +87,13 @@ export default function Footer() {
               <h6 className="h5">Resources</h6>
               <ul>
                 <li>
-                  <Link href="https://docs.snorkell.ai/" target="_blank" aria-label="Privacy Policy">
+                  <Link href="https://docs.penify.dev/" target="_blank" aria-label="Privacy Policy">
                     Docs
                   </Link>
                 </li>
 
                 <li>
-                  <Link href="https://blogs.snorkell.ai/" target="_blank" aria-label="Terms & Conditions">
+                  <Link href="https://blogs.penify.dev/" target="_blank" aria-label="Terms & Conditions">
                     Blogs
                   </Link>
                 </li>
@@ -112,13 +112,13 @@ export default function Footer() {
                 </li>
 
                 <li>
-                  <Link href="https://dashboard.snorkell.ai/auth/login" target="_blank" aria-label="Sign In to Dashboard">
+                  <Link href="https://dashboard.penify.dev/auth/login" target="_blank" aria-label="Sign In to Dashboard">
                     Sign In
                   </Link>
                 </li>
 
                 <li>
-                  <Link href="https://dashboard.snorkell.ai/auth/sign-up" target="_blank" aria-label="Register">
+                  <Link href="https://dashboard.penify.dev/auth/sign-up" target="_blank" aria-label="Register">
                     Register
                   </Link>
                 </li>

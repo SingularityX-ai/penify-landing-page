@@ -14,18 +14,18 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Head>
-        <title>Snorkell.ai | Automated Documentation Generation</title>
+        <title>Penify.dev | Automated Documentation Generation</title>
         <meta
           name="description"
           content="Automate human-like docstring/documentation for Python, Java, TypeScript, JavaScript, Kotlin in GitHub, GitLab, Bitbucket."
         />
         <meta
           name="keywords"
-          content="Snorkell.ai, ai docstring, Automated Documentation, GitHub Integration, Source Code Documentation, Intelligent Tracking, Smart Generation, Programming Languages, Python, JavaScript, TypeScript, Java, Kotlin, Real-Time Documentation, Privacy-Focused"
+          content="Penify.dev, ai docstring, Automated Documentation, GitHub Integration, Source Code Documentation, Intelligent Tracking, Smart Generation, Programming Languages, Python, JavaScript, TypeScript, Java, Kotlin, Real-Time Documentation, Privacy-Focused"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://www.snorkell.ai/" />
+        <link rel="canonical" href="https://www.penify.dev/" />
       </Head>
 
         <div className={`my-app home-dark ${isNavOpen ? "body-active" : ""}`}>          

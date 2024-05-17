@@ -54,7 +54,7 @@ export const trackVideoStart = (value: boolean) => {
   if (typeof window !== "undefined" && window.gtag && value) {
     window.gtag("event", "video-view", {
       event_category: "Video",
-      event_label: "Snorkell.ai video tuts",
+      event_label: "Penify.dev video tuts",
     });
   }
 };

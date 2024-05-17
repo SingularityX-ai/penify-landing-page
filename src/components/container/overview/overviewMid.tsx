@@ -15,15 +15,27 @@ const overviewData = [
     icon: "fa-java",
   },
   {
-    title: "JavaScript/TypeScript",
+    title: "JavaScript",
+    example: "Javascript",
+    link: "https://github.com/Snorkell-ai/drawdb/pull/1/files",
+    icon: "fa-js",
+  },
+  {
+    title: "TypeScript",
     example: "TypeScript",
-    link: "https://github.com/sunilagwl5/Bus_Reservation_System/commit/95f650f89a046a0fb4bb08e962406bdf4226842d",
+    link: "https://github.com/Snorkell-ai/pokerogue/pull/1/files",
     icon: "fa-js",
   },
   {
     title: "Kotlin",
     example: "Kotlin",
-    link: "https://github.com/SingularityX-ai/kparser/pull/14/files",
+    link: "https://github.com/Snorkell-ai/Shizuku/pull/1/files",
+    icon: "fa-code",
+  },
+  {
+    title: "Csharp",
+    example: "Csharp",
+    link: "https://github.com/Snorkell-ai/xeno-rat/pull/7/files",
     icon: "fa-code",
   },
 ];
@@ -38,7 +50,7 @@ const OverviewMid = forwardRef<HTMLDivElement>(function (_, ref) {
               <div className="section__header text-center">
                 <h2 className="h2">
                   <span className="grd" style={{ textTransform: "none" }}>
-                    Every PR merge will automatically generate Docstring
+                    Every PR merge will automatically update Documentation without any human intervention
                   </span>
                 </h2>
               </div>

@@ -62,15 +62,15 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
             <div className="nav">
               <div className="nav__content">
                 <div className="nav__logo">
-                  <Link href="/" aria-label="Snorkell brand logo">
-                    <Image src={snorkellLogo} alt="snorkell.ai brand logo" priority />
+                  <Link href="/" aria-label="Penify brand logo">
+                    <Image src={snorkellLogo} width="140" alt="penify.dev brand logo" priority />
                   </Link>
                 </div>
 
                 <div className={`nav__menu ${isNavOpen ? "nav__menu-active" : ""}`}>
                   <div className="nav__menu-logo d-flex d-xl-none">
-                    <Link href="/" className="text-center hide-nav" aria-label="Snorkell brand logo">
-                      <Image src={snorkellLogo} alt="snorkell.ai brand logo" priority />
+                    <Link href="/" className="text-center hide-nav" aria-label="Penify brand logo">
+                      <Image src={snorkellLogo}  width="140" alt="penify.dev brand logo" priority />
                     </Link>
 
                     <button type="button" aria-label="close the menu" className="nav__menu-close" onClick={() => setIsNavOpen(false)}>
@@ -105,13 +105,13 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
                       <div className={`${isSubMenuOpen("resources")} nav__dropdown`}>
                         <ul>
                           <li>
-                            <Link href="https://docs.snorkell.ai/" className="nav__dropdown-item hide-nav" target="_blank" rel="noopener noreferrer">
+                            <Link href="https://docs.penify.dev/" className="nav__dropdown-item hide-nav" target="_blank" rel="noopener noreferrer">
                               Docs
                             </Link>
                           </li>
 
                           <li>
-                            <Link href="https://blogs.snorkell.ai/" className="nav__dropdown-item hide-nav" target="_blank" rel="noopener noreferrer">
+                            <Link href="https://blogs.penify.dev/" className="nav__dropdown-item hide-nav" target="_blank" rel="noopener noreferrer">
                               Blogs
                             </Link>
                           </li>
@@ -132,7 +132,7 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
                     </li>
 
                     <li className="nav__menu-item d-block d-md-none">
-                      <Link href="https://dashboard.snorkell.ai/" className="btn btn--secondary" target="_blank" aria-label="Dashboard">
+                      <Link href="https://dashboard.penify.dev/" className="btn btn--secondary" target="_blank" aria-label="Dashboard">
                         Dashboard
                       </Link>
                     </li>
@@ -151,7 +151,7 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
 
                 <div className="nav__uncollapsed">
                   <div className="nav__uncollapsed-item d-none d-md-flex">
-                    <Link href="https://dashboard.snorkell.ai/" className="btn btn--secondary" target="_blank" aria-label="Dashboard">
+                    <Link href="https://dashboard.penify.dev/" className="btn btn--secondary" target="_blank" aria-label="Dashboard">
                       Dashboard
                     </Link>
                   </div>

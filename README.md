@@ -1,6 +1,6 @@
 # Landing Page v2.0
 
-Welcome to the repository for Snorkell.ai landing page v2, a sleek, modern and responsive landing page built with Next.js, TypeScript and Bootstrap.
+Welcome to the repository for Penify.dev landing page v2, a sleek, modern and responsive landing page built with Next.js, TypeScript and Bootstrap.
 
 ## Tech Stack Used
 

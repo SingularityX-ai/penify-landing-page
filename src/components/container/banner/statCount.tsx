@@ -13,7 +13,7 @@ const StatCount = React.memo(function StatCount({ repos, users }: { repos: numbe
         </span>
       </p>
 
-      <a href="https://github.com/apps/snorkell-ai" target="_blank" rel="noopener noreferrer" className="btn btn-success install-button-success">
+      <a href="https://github.com/apps/penify-dev" target="_blank" rel="noopener noreferrer" className="btn btn-success install-button-success">
         INSTALL
       </a>
     </div>

@@ -17,7 +17,7 @@ export default function BannerMain() {
 
               <div className="section__content-cta mt-4 mb-3">
                 <Link
-                  href="https://github.com/apps/snorkell-ai"
+                  href="https://github.com/apps/penify-dev"
                   className="btn btn--primary"
                   aria-label="Github App"
                 >
