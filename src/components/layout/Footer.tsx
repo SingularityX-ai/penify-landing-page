@@ -42,7 +42,7 @@ export default function Footer() {
 
     supports: [
       {
-        link: "https://production-gateway.penify.dev/api/toc",
+        link: "https://production-gateway.snorkell.ai/api/toc",
         title: "Terms & Conditions",
       },
       {
@@ -50,7 +50,7 @@ export default function Footer() {
         title: "Privacy Policy",
       },
       {
-        link: "https://production-gateway.penify.dev/api/toc#fees-and-pricing",
+        link: "https://production-gateway.snorkell.ai/api/toc#fees-and-pricing",
         title: "Pricing Policy",
       },
       {
