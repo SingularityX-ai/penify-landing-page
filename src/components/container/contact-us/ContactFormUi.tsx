@@ -37,7 +37,7 @@ export const ContactFormUi = ({
                 We look forward to hearing from you.
                 </p>
                 <p className="text-white">
-                Mail us: <a href="mailto:support@snorkell.ai">support@snorkell.ai</a>
+                Mail us: <a href="mailto:support@penify.dev">support@penify.dev</a>
                 </p>
                 <p className="text-white">
                 Call us: <a href="tel:+91-959-158-3843">+91-959-158-3843</a>

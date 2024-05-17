@@ -256,7 +256,7 @@ const FAQ = forwardRef<HTMLDivElement>(function (_, ref) {
                     <p style={{ textTransform: "none" }}>
                       <a
                         className=""
-                        href="https://www.snorkell.ai/?scrollTo=pricing"
+                        href="https://www.penify.dev/?scrollTo=pricing"
                       >
                         Click here -
                       </a>{" "}
@@ -264,14 +264,14 @@ const FAQ = forwardRef<HTMLDivElement>(function (_, ref) {
                       <br></br>
                       <a
                         className=""
-                        href="https://www.snorkell.ai/?scrollTo=pricing"
+                        href="https://www.penify.dev/?scrollTo=pricing"
                       >
                         Click here
                       </a> - to the Terms and Conditions on pricing.
                       <br></br>
                       <a
                         className=""
-                        href="https://production-gateway.snorkell.ai/api/refund-policy"
+                        href="https://production-gateway.penify.dev/api/refund-policy"
                       >
                         Click here
                       </a> - To ge the Refund Policy details.
@@ -280,9 +280,9 @@ const FAQ = forwardRef<HTMLDivElement>(function (_, ref) {
                       {" "}
                       <a
                         className=""
-                        href="mailto: support@snorkell.ai"
+                        href="mailto: support@penify.dev"
                       >
-                        support@snorkell.ai
+                        support@penify.dev
                       </a>
                     </p>
                   </div>

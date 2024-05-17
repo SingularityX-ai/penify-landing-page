@@ -143,7 +143,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               </ul>
               <hr />
               <Link
-                href={`https://dashboard.snorkell.ai/profile/payments?currency=${router.query.currency ?? "INR"}`}
+                href={`https://dashboard.penify.dev/profile/payments?currency=${router.query.currency ?? "INR"}`}
                 target="_blank"
                 className="btn btn--septenary"
                 >
@@ -193,7 +193,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               </ul>
               <hr />
               <Link
-                href={`https://dashboard.snorkell.ai/profile/payments?currency=${router.query.currency ?? "INR"}`}
+                href={`https://dashboard.penify.dev/profile/payments?currency=${router.query.currency ?? "INR"}`}
                 target="_blank"
                 className="btn btn--septenary"
                 >
@@ -244,7 +244,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               </ul>
               <hr />
               <Link
-                href={`https://dashboard.snorkell.ai/profile/payments?currency=${router.query.currency ?? "INR"}`}
+                href={`https://dashboard.penify.dev/profile/payments?currency=${router.query.currency ?? "INR"}`}
                 target="_blank"
                 className="btn btn--septenary">
                 choose a plan
@@ -290,7 +290,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               </ul>
               <hr />
               <Link
-                href={`https://dashboard.snorkell.ai/profile/payments?currency=${router.query.currency ?? "INR"}`}
+                href={`https://dashboard.penify.dev/profile/payments?currency=${router.query.currency ?? "INR"}`}
                 target="_blank"
                 className="btn btn--septenary">
                 choose a plan

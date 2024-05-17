@@ -25,7 +25,7 @@ export default function Layout({ children }: LayoutProps) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://www.snorkell.ai/" />
+        <link rel="canonical" href="https://www.penify.dev/" />
       </Head>
 
         <div className={`my-app home-dark ${isNavOpen ? "body-active" : ""}`}>          

@@ -1,5 +1,5 @@
 module.exports = {
-    siteUrl: 'https://www.snorkell.ai',
+    siteUrl: 'https://www.penify.dev',
     generateRobotsTxt: true, // (optional)
     // ...other options
 }

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.snorkell.ai
+Host: https://www.penify.dev
 
 # Sitemaps
-Sitemap: https://www.snorkell.ai/sitemap.xml
+Sitemap: https://www.penify.dev/sitemap.xml
