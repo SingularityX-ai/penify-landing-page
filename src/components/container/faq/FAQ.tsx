@@ -94,7 +94,7 @@ const FAQ = forwardRef<HTMLDivElement>(function (_, ref) {
                       PyDoc is for Python only and can only generate Syntactic
                       Docstring while Penify generates human readable and
                       understandable docstring for languages like - Python,
-                      JavaScript, Typescript, Java, and Kotlin.
+                      JavaScript, Typescript, Java, Csharp and Kotlin.
                     </p>
                   </div>
                 </div>
