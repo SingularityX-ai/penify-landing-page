@@ -65,7 +65,7 @@ export default function Footer() {
         <div className="row items-gap-two">
           <div className="col-12 col-sm-6 col-lg-3">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600">
-              <Link href="/" className="logo" aria-label="Snorkell brand logo">
+              <Link href="/" className="logo" aria-label="Penify brand logo">
                 <Image src={snorkellLogo} alt="penify.dev brand logo" loading="lazy" />
               </Link>
 

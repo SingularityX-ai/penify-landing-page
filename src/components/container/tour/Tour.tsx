@@ -59,7 +59,7 @@ const Tour = forwardRef<HTMLDivElement>(function (_, ref) {
               </h2>
               <hr></hr>
               <h4 className="h4">
-                Take a Quick Tour on how Snorkell automates Documentation.
+                Take a Quick Tour on how Penify automates Documentation.
               </h4>
             </div>
           </div>
@@ -140,7 +140,7 @@ const Tour = forwardRef<HTMLDivElement>(function (_, ref) {
                     autoplay
                   )}&loop=1&rel=0&fs=0&playlist=s32GS0glydA`}
                   height="480"
-                  title="Snorkell Trailer"
+                  title="Penify Trailer"
                 ></iframe>
               </div>
             </div>
