@@ -63,14 +63,14 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
               <div className="nav__content">
                 <div className="nav__logo">
                   <Link href="/" aria-label="Penify brand logo">
-                    <Image src={snorkellLogo} alt="penify.dev brand logo" priority />
+                    <Image src={snorkellLogo} width="140" alt="penify.dev brand logo" priority />
                   </Link>
                 </div>
 
                 <div className={`nav__menu ${isNavOpen ? "nav__menu-active" : ""}`}>
                   <div className="nav__menu-logo d-flex d-xl-none">
                     <Link href="/" className="text-center hide-nav" aria-label="Penify brand logo">
-                      <Image src={snorkellLogo} alt="penify.dev brand logo" priority />
+                      <Image src={snorkellLogo}  width="140" alt="penify.dev brand logo" priority />
                     </Link>
 
                     <button type="button" aria-label="close the menu" className="nav__menu-close" onClick={() => setIsNavOpen(false)}>

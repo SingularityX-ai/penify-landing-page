@@ -66,7 +66,7 @@ export default function Footer() {
           <div className="col-12 col-sm-6 col-lg-3">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600">
               <Link href="/" className="logo" aria-label="Penify brand logo">
-                <Image src={snorkellLogo} alt="penify.dev brand logo" loading="lazy" />
+                <Image src={snorkellLogo} width="190" alt="penify.dev brand logo" loading="lazy" />
               </Link>
 
               <p>Copyright &copy; 2023 Snorkell Associates and Co.</p>
