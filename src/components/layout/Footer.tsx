@@ -46,7 +46,7 @@ export default function Footer() {
         title: "Terms & Conditions",
       },
       {
-        link: "https://production-gateway.penify.dev/api/privacy-policy",
+        link: "https://production-gateway.snorkell.ai/api/privacy-policy",
         title: "Privacy Policy",
       },
       {
@@ -54,7 +54,7 @@ export default function Footer() {
         title: "Pricing Policy",
       },
       {
-        link: "https://production-gateway.penify.dev/api/refund-policy",
+        link: "https://production-gateway.snorkell.ai/api/refund-policy",
         title: "Refund & Cancellation",
       },
     ],

@@ -271,7 +271,7 @@ const FAQ = forwardRef<HTMLDivElement>(function (_, ref) {
                       <br></br>
                       <a
                         className=""
-                        href="https://production-gateway.penify.dev/api/refund-policy"
+                        href="https://production-gateway.snorkell.ai/api/refund-policy"
                       >
                         Click here
                       </a> - To ge the Refund Policy details.
