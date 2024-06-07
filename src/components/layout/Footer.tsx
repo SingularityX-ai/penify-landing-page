@@ -2,14 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import AnimeOne from "@public/images/footer-anime-one.png";
 import AnimeTwo from "@public/images/footer-anime-two.png";
-import snorkellLogo from "@public/asset/snorkell-dark-logo.svg";
+import penifyLogo from "@public/asset/penify-dark-logo.svg";
 import { Fragment } from "react";
 
 export default function Footer() {
   const footerData = {
     socials: [
       {
-        link: "https://github.com/SingularityX-ai/",
+        link: "https://github.com/SingularityX-ai",
         title: "GitHub",
         icon: "fa-github",
       },
@@ -19,7 +19,7 @@ export default function Footer() {
         icon: "fa-twitter",
       },
       {
-        link: "https://www.youtube.com/@Snorkell-ai-ck6sg",
+        link: "https://www.youtube.com/@penify-dev",
         title: "Youtube",
         icon: "fa-youtube",
       },
@@ -29,7 +29,7 @@ export default function Footer() {
         icon: "fa-reddit",
       },
       {
-        link: "https://www.linkedin.com/company/snorkell-ai/",
+        link: "https://www.linkedin.com/company/penify-dev/",
         title: "LinkedIn",
         icon: "fa-linkedin",
       },
@@ -66,7 +66,7 @@ export default function Footer() {
           <div className="col-12 col-sm-6 col-lg-3">
             <div className="footer__single" data-aos="fade-up" data-aos-duration="600">
               <Link href="/" className="logo" aria-label="Penify brand logo">
-                <Image src={snorkellLogo} width="190" alt="penify.dev brand logo" loading="lazy" />
+                <Image src={penifyLogo} height={50} alt="penify.dev brand logo" loading="lazy" />
               </Link>
 
               <p>Copyright &copy; 2023 Snorkell Associates and Co.</p>

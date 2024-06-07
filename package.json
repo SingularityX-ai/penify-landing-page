@@ -16,7 +16,7 @@
     "prod:test": "run-s clean ts:check build serve"
   },
   "engines": {
-    "node": "20.x"
+    "node": ">=20.x"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",

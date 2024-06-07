@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import snorkellLogo from "@public/asset/snorkell-dark-logo.svg";
+import penifyLogo from "@public/asset/penify-dark-logo.svg";
 import StatCount from "../container/banner/statCount";
 import { axiosInstance } from "@/config/axiosConfig";
 
@@ -63,14 +63,14 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
               <div className="nav__content">
                 <div className="nav__logo">
                   <Link href="/" aria-label="Penify brand logo">
-                    <Image src={snorkellLogo} width="140" alt="penify.dev brand logo" priority />
+                    <Image src={penifyLogo} height={60} alt="penify.dev brand logo" priority />
                   </Link>
                 </div>
 
                 <div className={`nav__menu ${isNavOpen ? "nav__menu-active" : ""}`}>
                   <div className="nav__menu-logo d-flex d-xl-none">
                     <Link href="/" className="text-center hide-nav" aria-label="Penify brand logo">
-                      <Image src={snorkellLogo}  width="140" alt="penify.dev brand logo" priority />
+                      <Image src={penifyLogo}  width="140" alt="penify.dev brand logo" priority />
                     </Link>
 
                     <button type="button" aria-label="close the menu" className="nav__menu-close" onClick={() => setIsNavOpen(false)}>
@@ -139,11 +139,11 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
                   </ul>
 
                   <div className="social">
-                    <Link href="https://github.com/SingularityX-ai/" target="_blank" aria-label="Github">
+                    <Link href="https://github.com/SingularityX-ai" target="_blank" aria-label="Github">
                       <i className="fa-brands fa-github"></i>
                     </Link>
 
-                    <Link href="https://www.linkedin.com/company/snorkell-ai/" target="_blank" aria-label="LinkedIn">
+                    <Link href="https://www.linkedin.com/company/penify-dev/" target="_blank" aria-label="LinkedIn">
                       <i className="fa-brands fa-linkedin"></i>
                     </Link>
                   </div>
