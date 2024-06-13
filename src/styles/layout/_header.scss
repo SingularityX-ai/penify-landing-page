@@ -315,15 +315,15 @@
   }
 
   .nav__uncollapsed-item .btn {
-    border: 1px solid $septenary-color;
+    border: 1px solid #4569e7;
     color: $white;
     background-color: inherit;
     &::before {
-      background-color: $septenary-color;
+      background-color: #4569e7;
     }
     &:hover {
-      border: 1px solid $septenary-color;
-      color: $primary-color;
+      border: 1px solid #4569e7;
+      color: #fff;
     }
   }
 

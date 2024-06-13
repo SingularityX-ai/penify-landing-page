@@ -678,12 +678,12 @@
     }
 
     .accordion-button:not(.collapsed) {
-      color: $septenary-color;
+      color: #4569e7;
       background-color: transparent;
       border-radius: 10px 10px 0px 0px;
 
       &::after {
-        color: $quinary-color;
+        color: #4569e7;
         content: "\f068";
         font-family: "Font Awesome 6 Free";
       }
@@ -1621,17 +1621,23 @@
       position: absolute;
       inset: 0px;
       z-index: -1;
-      background-image: linear-gradient(180deg, #e0013f 0%, #111827 100%);
+      /*background-image: linear-gradient(180deg, #e0013f 0%, #111827 100%);*/
+      background-image: linear-gradient(180deg, #4569e7 0%, #111827 100%);
       transform: translateY(-100%);
       transition: all 0.4s ease-in;
     }
 
     .h5 {
-      color: #1aefd5;
       text-transform: uppercase;
       font-weight: 700;
       transition: $transition;
     }
+
+    .btn {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+
 
     &:hover {
       background-color: $theme-color;
@@ -1666,8 +1672,7 @@
 
       .btn {
         color: $white;
-        background-color: $tertiary-color;
-        border: 1px solid $quinary-color;
+        border: 1px solid $primary-color;
         &::before {
           width: 100%;
         }
@@ -1736,16 +1741,20 @@
     padding: 12px 26px;
   }
 
-  .yel {
-    color: #fbbc04 !important;
+  .text-freemium .h5 {
+    color: #1aefd5;
   }
 
-  .pri {
+  .text-basic .h5 {
+    color: #fbbc04;
+  }
+
+  .pri .h5 {
     color: #fd2ac2 !important;
   }
 
-  .tri {
-    color: #4569e7 !important;
+  .text-elite .h5 {
+    color: #4569e7;
   }
 }
 

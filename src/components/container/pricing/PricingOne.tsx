@@ -105,11 +105,12 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
           </div>
         </div>
         <div className="row items-gap">
-          <div className="col-12 col-md-6 col-lg-6 col-xxl-3">
+          <div className="col-12 col-md-6 col-xl-4">
             <div
-              className="pricing-two__single"
+              className="pricing-two__single text-freemium"
               data-aos="fade-up"
               data-aos-duration="400"
+              data-aos-delay="100"
               >
               <h5 className="h5">Freemium</h5>
               <div className="meta">
@@ -145,20 +146,20 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               <Link
                 href={`https://dashboard.penify.dev/profile/payments?currency=${router.query.currency ?? "INR"}`}
                 target="_blank"
-                className="btn btn--septenary"
+                className="btn btn--ocotonary"
                 >
                 Start for free
               </Link>
             </div>
           </div>
-          <div className="col-12 col-md-6 col-lg-6 col-xxl-3">
+          <div className="col-12 col-md-6 col-xl-4">
             <div
-              className="pricing-two__single"
+              className="pricing-two__single text-basic"
               data-aos="fade-up"
               data-aos-duration="400"
               data-aos-delay="200"
               >
-              <h5 className="h5 yel">Basic</h5>
+              <h5 className="h5">Basic</h5>
               <div className="meta">
                 <div className="content">
                   <h2 className="h2 title">
@@ -195,14 +196,14 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               <Link
                 href={`https://dashboard.penify.dev/profile/payments?currency=${router.query.currency ?? "INR"}`}
                 target="_blank"
-                className="btn btn--septenary"
+                className="btn btn--ocotonary"
                 >
                 choose a plan
               </Link>
             </div>
           </div>
           {/*
-          <div className="col-12 col-md-6 col-lg-6 col-xxl-3">
+          <div className="col-12 col-md-6 col-xl-4">
             <div
               className="pricing-two__single pricing-two__single--alt"
               data-aos="fade-up"
@@ -252,14 +253,14 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
             </div>
           </div>
           */}
-          <div className="col-12 col-md-6 col-lg-6 col-xxl-3">
+          <div className="col-12 col-md-6 col-xl-4">
             <div
-              className="pricing-two__single"
+              className="pricing-two__single text-elite"
               data-aos="fade-up"
               data-aos-duration="400"
-              data-aos-delay="600"
+              data-aos-delay="300"
               >
-              <h5 className="h5 tri">Elite</h5>
+              <h5 className="h5">Elite</h5>
               <div className="meta">
                 <div className="content">
                   <h2 className="h2 title">Contact Us For Details</h2>
@@ -292,7 +293,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               <Link
                 href={`https://dashboard.penify.dev/profile/payments?currency=${router.query.currency ?? "INR"}`}
                 target="_blank"
-                className="btn btn--septenary">
+                className="btn btn--ocotonary">
                 choose a plan
               </Link>
             </div>
