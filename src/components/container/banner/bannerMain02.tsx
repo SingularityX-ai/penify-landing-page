@@ -5,14 +5,14 @@ import One from "@public/images/banner/anime-one.png";
 import Two from "@public/images/banner/anime-two.png";
 import Three from "@public/images/banner/anime-three.png";
 import Four from "@public/images/banner/anime-four.png";
-import Five from "@public/images/banner/anime-five.png";
+// import Five from "@public/images/banner/anime-five.png";
 import { ReactTyped } from "react-typed";
 
 const strings: string[] = [
   "Pull Request",
   "Code",
-  "Architecture",
-  "API"
+  "API",
+  "Architecture"
 ];
 
 const BannerTwo = () => {
@@ -25,7 +25,7 @@ const BannerTwo = () => {
               className="banner-two__content"
               data-aos-duration="600"
             >
-              <h1 className="h1">Git Documentation Tool for</h1>
+              <h1 className="h1">Automate your Software Documentation</h1>
               <h2 className="h1">
                 <span id="textTyped">
                   <ReactTyped
@@ -39,7 +39,7 @@ const BannerTwo = () => {
                 </span>
               </h2>
               <p className="text-lg">
-                Full-stack Documentation tool to automate your all layers of Documentation.
+                Penify uses LLMs to generate Pull Request, Code, API and Architecture Documentation.
               </p>
               <div className="section__content-cta">
                 <Link
@@ -55,10 +55,10 @@ const BannerTwo = () => {
       </div>
       <div className="anime">
       <Image src={One} alt="Image" className="one" style={{borderRadius:'150px', width: '280px',height: '280px'}} />
-        <Image src={Two} alt="Image" className="two" style={{borderRadius:'110px', width: '280px'}}/>
+        <Image src={Two} alt="Image" className="two" style={{borderRadius:'85px', width: '350px'}}/>
         <Image src={Three} alt="Image" className="three" style={{width: '100px'}} />
         <Image src={Four} alt="Image" className="four" style={{borderRadius:'150px',  width: '80px'}} />
-        <Image src={Five} alt="Image" className="five" style={{borderRadius:'150px', width: '80px'}}/>
+        {/* <Image src={Five} alt="Image" className="five" style={{borderRadius:'150px', width: '80px'}}/> */}
       </div>
     </section>
   );
