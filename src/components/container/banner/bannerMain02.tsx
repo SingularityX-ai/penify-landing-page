@@ -40,7 +40,7 @@ const BannerTwo = () => {
                 </span>
               </h2>
               <p className="text-lg">
-                FullStack Documentation tool for your GIT repository. It increases Developer's productivity by 50%.
+                Full-stack Documentation tool to automate your all layers of Documentation.
               </p>
               <div className="section__content-cta">
                 <Link
