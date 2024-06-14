@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import ScrollProgress from "./ScrollProgress";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -10,7 +10,20 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    const handleLoad = () => setIsLoading(false);
+
+    if (document.readyState === "complete") {
+      setIsLoading(false);
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
+
+    return () => window.removeEventListener("load", handleLoad);
+  }, []);
+  
   return (
     <>
       <Head>
@@ -28,12 +41,18 @@ export default function Layout({ children }: LayoutProps) {
         <link rel="canonical" href="https://www.penify.dev/" />
       </Head>
 
-        <div className={`my-app home-dark ${isNavOpen ? "body-active" : ""}`}>          
+      {isLoading ? (
+        <div id="preloader">
+          <div id="loader"></div>
+        </div>
+      ) : (
+        <div className={`my-app home-dark ${isNavOpen ? "body-active" : ""}`}>
           <Header isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
           <main>{children}</main>
           <Footer />
           {/* <ScrollProgress /> */}
         </div>
+      )}
     </>
   );
 }
