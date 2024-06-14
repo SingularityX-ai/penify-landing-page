@@ -9,10 +9,10 @@ import Five from "@public/images/banner/anime-five.png";
 import { ReactTyped } from "react-typed";
 
 const strings: string[] = [
-  "Pull Request Documentation",
-  "Full Repository Documentation",
-  "Architecture Documentation",
-  "API Documentation"
+  "Pull Request",
+  "Code",
+  "Architecture",
+  "API"
 ];
 
 const BannerTwo = () => {
@@ -26,31 +26,29 @@ const BannerTwo = () => {
               data-aos="fade-up"
               data-aos-duration="600"
             >
-              <h1 className="h1">Best AI for Generating</h1>
+              <h1 className="h1">Git Documentation Tool for</h1>
               <h2 className="h1">
                 <span id="textTyped">
                   <ReactTyped
-                    backSpeed={40}
-                    typeSpeed={80}
+                    backSpeed={70}
+                    typeSpeed={120}
                     strings={strings}
-                    showCursor
+                    showCursor = {false}
                     loop
                     loopCount={Infinity}
-                  />
+                  /> Documentation
                 </span>
               </h2>
               <p className="text-lg">
-                Create human-quality blog posts, SEO articles, news, press
-                releases, and more in seconds
+                FullStack Documentation tool for your GIT repository. It increases Developer's productivity by 50%.
               </p>
               <div className="section__content-cta">
                 <Link
-                  href="https://github.com/apps/penify-dev"
+                  href="https://github.com/apps/penify-dev/installations/select_target"
                   className="btn btn--secondary"
                 >
                   Start free now
                 </Link>
-                <p>7-day trial. No credit card required.</p>
               </div>
             </div>
           </div>
