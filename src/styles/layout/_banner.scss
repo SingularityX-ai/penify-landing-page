@@ -52,24 +52,11 @@
   background-size: auto 70%;
   background-position: center center;
   background-repeat: no-repeat;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 25%;
-    left: 10%;
-    @include box(60px);
-    background: url("../../../public/images/banner/circle.png");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    z-index: -1;
-    animation: anime 12s ease-in-out infinite alternate-reverse;
-  }
 
   .banner-two__content {
     text-align: center;
     h2 {
-      background: linear-gradient(90.05deg, #e0013f 23.44%, #7600ab 99.98%);
+      background: linear-gradient(90.05deg, #84e6ec 23.44%, #7600ab 99.98%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -105,21 +92,21 @@
     img {
       position: absolute;
       z-index: -1;
-      animation: animeTwo 9s ease-in-out infinite;
+      // animation: animeTwo 9s ease-in-out infinite;
     }
 
     .one {
       top: 40%;
       left: calc(50% - 740px);
-      animation: animeTwo 9s ease-in-out infinite;
-      animation-delay: 1s;
+      // animation: animeTwo 9s ease-in-out infinite;
+      // animation-delay: 1s;
     }
 
     .two {
       top: 26%;
       left: calc(50% + 520px);
-      animation-delay: 2s;
-      animation: animeTwo 9s ease-in-out infinite;
+      // animation-delay: 2s;
+      // animation: animeTwo 9s ease-in-out infinite;
     }
 
     .three {
@@ -249,7 +236,6 @@
     img {
       position: absolute;
       z-index: -1;
-      animation: anime 10s ease infinite;
     }
 
     .one {

@@ -23,7 +23,6 @@ const BannerTwo = () => {
           <div className="col-12 col-xl-9">
             <div
               className="banner-two__content"
-              data-aos="fade-up"
               data-aos-duration="600"
             >
               <h1 className="h1">Git Documentation Tool for</h1>
@@ -55,11 +54,11 @@ const BannerTwo = () => {
         </div>
       </div>
       <div className="anime">
-        <Image src={One} alt="Image" className="one" />
-        <Image src={Two} alt="Image" className="two" />
-        <Image src={Three} alt="Image" className="three" />
-        <Image src={Four} alt="Image" className="four" />
-        <Image src={Five} alt="Image" className="five" />
+      <Image src={One} alt="Image" className="one" style={{borderRadius:'150px', width: '280px',height: '280px'}} />
+        <Image src={Two} alt="Image" className="two" style={{borderRadius:'110px', width: '280px'}}/>
+        <Image src={Three} alt="Image" className="three" style={{width: '100px'}} />
+        <Image src={Four} alt="Image" className="four" style={{borderRadius:'150px',  width: '80px'}} />
+        <Image src={Five} alt="Image" className="five" style={{borderRadius:'150px', width: '80px'}}/>
       </div>
     </section>
   );
