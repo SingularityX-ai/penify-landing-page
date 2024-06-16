@@ -1,6 +1,6 @@
 import BannerMain from "@/components/container/banner/bannerMain";
 import FAQ from "@/components/container/faq/FAQ";
-import OverviewMid from "@/components/container/overview/overviewMid";
+import Features from "@/components/container/features/features";
 import PricingOne from "@/components/container/pricing/PricingOne";
 import Tour from "@/components/container/tour/Tour";
 import Layout from "@/components/layout/Layout";
@@ -40,9 +40,9 @@ export default function Home() {
     <Layout>
       <BannerMain />
       <Tour ref={tourRef} />
-      <OverviewMid ref={productRef} />
-      <PricingOne ref={pricingRef}/>
-      <FAQ ref={faqRef}/>
+      <Features ref={productRef} />
+      <PricingOne ref={pricingRef} />
+      <FAQ ref={faqRef} />
     </Layout>
   );
 }
