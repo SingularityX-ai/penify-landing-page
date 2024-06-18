@@ -258,6 +258,15 @@
   }
 }
 
+.btn-fo {
+  background-color: $primary-color;
+  color: white;
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+  }
+}
+
 // scroll to top with progress
 
 $circular-size: 50px;

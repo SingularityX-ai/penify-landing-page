@@ -39,9 +39,16 @@ const BannerTwo = () => {
               <div className="section__content-cta">
                 <Link
                   href="https://github.com/apps/penify-dev/installations/select_target"
-                  className="btn btn--secondary"
+                  className="btn btn-fo"
                 >
                   Start free now
+                </Link>
+
+                <Link
+                  href="https://calendly.com/sumansaurabh-snorkell/intro-snorkell-i?month=2024-01"
+                  className="btn btn--secondary"
+                >
+                  Request a demo
                 </Link>
               </div>
             </div>
