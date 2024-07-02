@@ -3,11 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import prReview from "@public/images/features/prReview.png";
-import updateCode from "@public/images/features/updateCode.png";
-import diffDocs from "@public/images/features/diffDocs.png";
-import archDocs from "@public/images/features/archDocs.png";
-import apiDocs from "@public/images/features/apiDocs.png";
+import prReview from "@public/images/features/prReview.webp";
+import diffDocs from "@public/images/features/diffDocs.webp";
+import archDocs from "@public/images/features/archDocs.webp";
+import apiDocs from "@public/images/features/apiDocs.webp";
+import hosting from "@public/images/features/hosting.webp";
+import multiLanguage from "@public/images/features/multiLanguage.webp";
 import "swiper/css";
 import {
   IconArrowLeft,
@@ -21,18 +22,18 @@ const FEATURES_ITEMS = [
     "description": "Penify automates the creation of comprehensive summaries for Pull Requests and Code Reviews. It analyzes the changes made in the code, identifies key modifications, and generates a detailed summary. This tool ensures that all stakeholders have a clear understanding of the changes without having to dive deep into the code themselves.",
     img: prReview,
     link: {
-      title: null,
-      url: null,
+      title: "Pull Request Documentation",
+      url: "https://github.com/Snorkell-ai/pokerogue/pull/5",
     },
     count: "01",
   },
   {
     title: "Git Commit - Documentation Update",
     "description": "Penify ensure that when a pull request is merged into the 'main/master' branch, a new pull request is automatically generated to update the documentation corresponding to the modified code. It scans the changes made in the merged pull request, identifies any alterations that affect the documentation, and generates a Pull Request with updated Documentation. This ensures that documentation is always in sync with the codebase.",
-    img: updateCode,
+    img: diffDocs,
     link: {
-      title: null,
-      url: null,
+      title: "Git Commit Documentation",
+      url: "https://github.com/Snorkell-ai/pokerogue/pull/1/files",
     },
     count: "02",
   },
@@ -70,7 +71,7 @@ const FEATURES_ITEMS = [
   {
     title: "Automated Hosting",
     "description": "API Documentation and Architecture Documentation are hosted on a public URL. This allows you to share the documentation with your team members, stakeholders, and clients without any additional setup. The documentation is continuously updated to reflect the latest changes in the codebase, ensuring that everyone has access to the most up-to-date information.",
-    img: apiDocs,
+    img: hosting,
     link: {
       title: "Sample API Doc",
       url: "https://snorkell.apidocumentation.com/reference#tag/github_app/post/api/app/github/webhook",
@@ -80,7 +81,7 @@ const FEATURES_ITEMS = [
   {
     title: "Multiple Languages Support",
     "description": "Penify supports multiple programming languages, including Python, JavaScript, Java, Typscript, C, CSharp and Kotlin. It can analyze code written in different languages and generate comprehensive documentation for each of them. This feature ensures that Penify can be used across different projects and teams, regardless of the programming languages they use.",
-    img: apiDocs,
+    img: multiLanguage,
     link: {
       title: "Sample API Doc",
       url: "https://snorkell.apidocumentation.com/reference#tag/github_app/post/api/app/github/webhook",
