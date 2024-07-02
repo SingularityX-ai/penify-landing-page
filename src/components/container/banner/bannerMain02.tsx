@@ -2,11 +2,11 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactTyped } from "react-typed";
-import imgOne from "@public/images/banner/anime-one.png";
-import imgTwo from "@public/images/banner/anime-two.png";
-import pythonIcon from "@public/images/banner/python-logo.png";
-import jsIcon from "@public/images/banner/js-icon.png";
-import gitIcon from "@public/images/banner/github-icon.png";
+import imgOne from "@public/images/banner/anime-one.webp";
+import imgTwo from "@public/images/banner/anime-two.webp";
+import pythonIcon from "@public/images/banner/python-logo.webp";
+import jsIcon from "@public/images/banner/js-icon.webp";
+import gitIcon from "@public/images/banner/github-icon.webp";
 // import javaIcon from "@public/images/banner/java-icon.png";
 
 const strings: string[] = ["Pull Request", "Code", "API", "Architecture"];
@@ -18,7 +18,7 @@ const BannerTwo = () => {
         <div className="row justify-content-center">
           <div className="col-12 col-xl-9">
             <div className="banner-two__content" data-aos-duration="600">
-              <h1 className="h1">Automate your Software Documentation</h1>
+              <h1 className="h1">Automate your Software Documentation using LLMs</h1>
               <h2 className="h1">
                 <span id="textTyped">
                   <ReactTyped
