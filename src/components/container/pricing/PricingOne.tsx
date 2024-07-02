@@ -133,7 +133,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               <h5 className="h5 title">Public Repo</h5>
               <ul>
                 <li>
-                  <i className="fa-solid fa-check"></i>Unlimited Commits
+                  <i className="fa-solid fa-check"></i>40 Commits Faily
                 </li>
               </ul>
               <hr />

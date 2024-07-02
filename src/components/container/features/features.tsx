@@ -73,8 +73,8 @@ const FEATURES_ITEMS = [
     "description": "API Documentation and Architecture Documentation are hosted on a public URL. This allows you to share the documentation with your team members, stakeholders, and clients without any additional setup. The documentation is continuously updated to reflect the latest changes in the codebase, ensuring that everyone has access to the most up-to-date information.",
     img: hosting,
     link: {
-      title: "Sample API Doc",
-      url: "https://snorkell.apidocumentation.com/reference#tag/github_app/post/api/app/github/webhook",
+      title: null,
+      url: null
     },
     count: "05",
   },
@@ -83,8 +83,8 @@ const FEATURES_ITEMS = [
     "description": "Penify supports multiple programming languages, including Python, JavaScript, Java, Typscript, C, CSharp and Kotlin. It can analyze code written in different languages and generate comprehensive documentation for each of them. This feature ensures that Penify can be used across different projects and teams, regardless of the programming languages they use.",
     img: multiLanguage,
     link: {
-      title: "Sample API Doc",
-      url: "https://snorkell.apidocumentation.com/reference#tag/github_app/post/api/app/github/webhook",
+      title: null,
+      url: null,
     },
     count: "05",
   }
