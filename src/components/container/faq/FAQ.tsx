@@ -23,7 +23,7 @@ const FAQ_ITEMS = [
     title:
       "What programming languages are currently supported by Penify for generating docstrings?",
     description: `Penify currently supports the following programming languages: Python, 
-      JavaScript, TypeScript, Java, and Kotlin.`,
+      JavaScript, TypeScript, Java, C, CSharp and Kotlin.`,
     id: "Three",
     count: 2,
   },

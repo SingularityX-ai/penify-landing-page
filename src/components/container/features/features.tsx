@@ -18,7 +18,7 @@ import {
 const FEATURES_ITEMS = [
   {
     title: "Pull Request Documentation",
-    description: "Creates a summary of the Pull Request and Code review.",
+    "description": "Penify automates the creation of comprehensive summaries for Pull Requests and Code Reviews. It analyzes the changes made in the code, identifies key modifications, and generates a detailed summary. This tool ensures that all stakeholders have a clear understanding of the changes without having to dive deep into the code themselves.",
     img: prReview,
     link: {
       title: null,
@@ -27,8 +27,8 @@ const FEATURES_ITEMS = [
     count: "01",
   },
   {
-    title: "Automatic Documentation Update",
-    description: `When a pull request is merged into the 'main/master' branch, a new pull request is generated containing the updated documentation for the modified code`,
+    title: "Git Commit - Documentation Update",
+    "description": "Penify ensure that when a pull request is merged into the 'main/master' branch, a new pull request is automatically generated to update the documentation corresponding to the modified code. It scans the changes made in the merged pull request, identifies any alterations that affect the documentation, and generates a Pull Request with updated Documentation. This ensures that documentation is always in sync with the codebase.",
     img: updateCode,
     link: {
       title: null,
@@ -38,7 +38,7 @@ const FEATURES_ITEMS = [
   },
   {
     title: "Repository Documentation",
-    description: "Generates code documentation for the entire Git repository.",
+    description:  "This feature generates comprehensive code documentation for the entire Git repository. It thoroughly analyzes the codebase, including all files and directories, to create detailed and organized documentation.",
     img: diffDocs,
     link: {
       title: "Sample PR",
@@ -49,7 +49,7 @@ const FEATURES_ITEMS = [
   {
     title: "Architecture Documentation",
     description:
-      "Generates an architecture diagram of your repository and create an HTML page hosted at a URL that displays how each module in your repository interacts with the others.",
+      "This feature generates an architecture diagram of your repository and creates an HTML page hosted at a URL that displays how each module in your repository interacts with the others. It provides a high-level overview of the system's structure, highlighting the relationships and dependencies between different components. It is particularly useful for onboarding new team members and for conducting thorough code reviews.",
     img: archDocs,
     link: {
       title: "Sample Arch Doc",
@@ -59,7 +59,7 @@ const FEATURES_ITEMS = [
   },
   {
     title: "API Documentation",
-    description: "Generate an HTML page of your hosted Open APIs",
+    "description": "This feature generates an HTML page for your hosted Open APIs, providing a comprehensive and interactive documentation site. It details all available endpoints, request parameters, response formats, and authentication methods, and code blocks, making it easier for developers to integrate with your APIs. The documentation is auto-generated and continuously updated to reflect the latest changes in the API.",
     img: apiDocs,
     link: {
       title: "Sample API Doc",
@@ -67,6 +67,26 @@ const FEATURES_ITEMS = [
     },
     count: "05",
   },
+  {
+    title: "Automated Hosting",
+    "description": "API Documentation and Architecture Documentation are hosted on a public URL. This allows you to share the documentation with your team members, stakeholders, and clients without any additional setup. The documentation is continuously updated to reflect the latest changes in the codebase, ensuring that everyone has access to the most up-to-date information.",
+    img: apiDocs,
+    link: {
+      title: "Sample API Doc",
+      url: "https://snorkell.apidocumentation.com/reference#tag/github_app/post/api/app/github/webhook",
+    },
+    count: "05",
+  },
+  {
+    title: "Multiple Languages Support",
+    "description": "Penify supports multiple programming languages, including Python, JavaScript, Java, Typscript, C, CSharp and Kotlin. It can analyze code written in different languages and generate comprehensive documentation for each of them. This feature ensures that Penify can be used across different projects and teams, regardless of the programming languages they use.",
+    img: apiDocs,
+    link: {
+      title: "Sample API Doc",
+      url: "https://snorkell.apidocumentation.com/reference#tag/github_app/post/api/app/github/webhook",
+    },
+    count: "05",
+  }
 ];
 
 const Features = forwardRef<HTMLDivElement>(function (_, ref) {
@@ -93,13 +113,12 @@ const Features = forwardRef<HTMLDivElement>(function (_, ref) {
                 className="features__slider"
               >
                 {FEATURES_ITEMS.map(
-                  ({ title, description, img, link, count }) => (
+                  ({ title, description, img, link }) => (
                     <SwiperSlide key={`key-${crypto.randomUUID()}`}>
                       <div className="features__slider-single">
                         <div className="row items-gap">
                           <div className="col-12 col-md-6">
                             <div className="features__single-item">
-                              <span className="tag">Feature {count}</span>
                               <div className="content">
                                 <h2 className="h2">{title}</h2>
                                 <p>{description}</p>
