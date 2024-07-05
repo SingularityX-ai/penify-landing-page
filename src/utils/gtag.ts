@@ -7,16 +7,16 @@ declare global {
   }
 }
 
-
 function inHouseAnalytics(event: string, eventRef: string) {
-  const cId = localStorage.getItem('cId');
-  const email = localStorage.getItem('email');
+  const cId = localStorage.getItem("cId");
+  const email = localStorage.getItem("email");
   if (!cId && !email) {
     return;
   }
-  const campaignId = getQueryParameter("campaignId") || "-1";
-  const campaignType = getQueryParameter("campaignType") || "-1";
+  const campaignId = getQueryParameter("oid") || "-1";
+  const campaignType = getQueryParameter("ot") || "-1";
   const cIdInt = parseInt(cId || "-1");
+  const eId = parseInt(getQueryParameter("eid") || "-1")  ;
   const data = {
     eventType: event,
     cId: cIdInt,
@@ -24,12 +24,17 @@ function inHouseAnalytics(event: string, eventRef: string) {
     eventRef,
     campaignId,
     campaignType,
-  }
+    meta: JSON.stringify({
+      url: window.location.href,
+      referrer: document.referrer,
+      eId: eId,
+    }),
+  };
+
   try {
     axiosInstance.post("v1/analytics/track", data);
-  }
-  catch (error) {
-   console.log("unable to load inhouse analytics"); 
+  } catch (error) {
+    console.log("unable to load inhouse analytics");
   }
 }
 
@@ -39,24 +44,23 @@ export const pageView = (url: string) => {
       page_path: url,
     });
   }
-  inHouseAnalytics('pageView', url);
+  inHouseAnalytics("pageView", url);
 };
 
 export const getQueryParameter = (name: string) => {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(name);
-}
+};
 
 export const trackLinkClick = (url: string, email: string, cId: string) => {
-  window.gtag('event', 'click', {
-    event_category: 'link',
+  window.gtag("event", "click", {
+    event_category: "link",
     event_label: url,
     email_id: email, // Make sure to replace 'dimension1' with the actual index of your custom dimension
     c_id: cId, // Make sure to replace 'dimension2' with the actual index of your custom dimension
   });
-  inHouseAnalytics('linkClick', url);
+  inHouseAnalytics("linkClick", url);
 };
-
 
 export const trackScroll = (value: number) => {
   if (typeof window !== "undefined" && window.gtag) {
@@ -66,16 +70,16 @@ export const trackScroll = (value: number) => {
       value: value,
     });
   }
-  inHouseAnalytics('scroll', 'scrolled 50% on homepage');
+  inHouseAnalytics("scroll", "scrolled 50% on homepage");
 };
 
 /**
  * Tracks form submission using Google Analytics.
- * 
+ *
  * @param value - An array of strings representing the user input.
  * @throws Will throw an error if the 'window' object is not available or if 'window.gtag' is not defined.
  * @example
- * 
+ *
  * // Example usage:
  * trackFormSubmission(['user input 1', 'user input 2']);
  */
@@ -87,7 +91,7 @@ export const trackFormSubmission = (value: [string]) => {
       user: value,
     });
   }
-  inHouseAnalytics('formSubmission', 'contact us form submission');
+  inHouseAnalytics("formSubmission", "contact us form submission");
 };
 
 /**
@@ -104,5 +108,5 @@ export const trackVideoStart = (value: boolean) => {
       event_label: "Penify.dev video tuts",
     });
   }
-  inHouseAnalytics('videoView', 'Penify.dev video tuts');
+  inHouseAnalytics("videoView", "Penify.dev video tuts");
 };
