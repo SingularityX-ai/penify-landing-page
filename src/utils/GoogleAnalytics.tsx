@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
 import Script from "next/script";
 import { useEffect, useState } from "react";
-import { pageView, trackScroll } from "./gtag";
+import { getQueryParameter, pageView, trackLinkClick, trackScroll } from "./gtag";
 
 export default function GoogleAnalytics() {
   const router = useRouter();
   const [hasTrackedScroll, setHasTrackedScroll] = useState<boolean>(false);
-
+  console.log('GoogleAnalytics');
   useEffect(() => {
     const handleRouteChange = (url: string) => {
       pageView(url);
@@ -26,11 +26,34 @@ export default function GoogleAnalytics() {
       }
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const handleLinkClick = (event: any) => {
+      if (event.target.tagName === 'A') {
+        const email = localStorage.getItem('email');
+        const cId = localStorage.getItem('cId');
+        trackLinkClick(event.target.href, email || "", cId || "");
+      }
+    };
+
+    const email = getQueryParameter("email");
+    if (email) {
+      localStorage.setItem("email", email);
+      window.gtag('set', 'user_properties', { email_id: email });
+    }
+
+    const cId = getQueryParameter('cId');
+    if (cId) {
+      localStorage.setItem('cId', cId);
+      window.gtag('set', 'user_properties', { c_id: cId });
+    }
+
     // Record pageview for first page load
     pageView(window.location.pathname);
 
     // Record pageview on route change
     router.events.on("routeChangeComplete", handleRouteChange);
+
+    document.addEventListener('click', handleLinkClick);
 
     if (router.pathname === "/") {
       window.addEventListener("scroll", handleTrackScroll);
@@ -38,6 +61,7 @@ export default function GoogleAnalytics() {
 
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
+      document.removeEventListener('click', handleLinkClick);
       window.removeEventListener("scroll", handleTrackScroll);
     };
   }, [router.events, router.pathname, hasTrackedScroll]);

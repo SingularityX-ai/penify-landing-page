@@ -1,7 +1,36 @@
+import { axiosInstance } from "@/config/axiosConfig";
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 declare global {
   interface Window {
     gtag: any;
+  }
+}
+
+
+function inHouseAnalytics(event: string, eventRef: string) {
+  const cId = localStorage.getItem('cId');
+  const email = localStorage.getItem('email');
+  if (!cId && !email) {
+    return;
+  }
+  const campaignId = getQueryParameter("campaignId") || "-1";
+  const campaignType = getQueryParameter("campaignType") || "-1";
+  const cIdInt = parseInt(cId || "-1");
+  const data = {
+    eventType: event,
+    cId: cIdInt,
+    email,
+    eventRef,
+    campaignId,
+    campaignType,
+  }
+  console.log('inHouseAnalytics', data);
+  try {
+    axiosInstance.post("v1/analytics/track", data);
+  }
+  catch (error) {
+   console.log("unable to load inhouse analytics"); 
   }
 }
 
@@ -11,7 +40,24 @@ export const pageView = (url: string) => {
       page_path: url,
     });
   }
+  inHouseAnalytics('pageView', url);
 };
+
+export const getQueryParameter = (name: string) => {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+}
+
+export const trackLinkClick = (url: string, email: string, cId: string) => {
+  window.gtag('event', 'click', {
+    event_category: 'link',
+    event_label: url,
+    email_id: email, // Make sure to replace 'dimension1' with the actual index of your custom dimension
+    c_id: cId, // Make sure to replace 'dimension2' with the actual index of your custom dimension
+  });
+  inHouseAnalytics('linkClick', url);
+};
+
 
 export const trackScroll = (value: number) => {
   if (typeof window !== "undefined" && window.gtag) {
@@ -21,6 +67,7 @@ export const trackScroll = (value: number) => {
       value: value,
     });
   }
+  inHouseAnalytics('scroll', 'scrolled 50% on homepage');
 };
 
 /**
@@ -41,6 +88,7 @@ export const trackFormSubmission = (value: [string]) => {
       user: value,
     });
   }
+  inHouseAnalytics('formSubmission', 'contact us form submission');
 };
 
 /**
@@ -57,4 +105,5 @@ export const trackVideoStart = (value: boolean) => {
       event_label: "Penify.dev video tuts",
     });
   }
+  inHouseAnalytics('videoView', 'Penify.dev video tuts');
 };
