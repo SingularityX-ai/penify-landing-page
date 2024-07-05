@@ -6,7 +6,6 @@ import { getQueryParameter, pageView, trackLinkClick, trackScroll } from "./gtag
 export default function GoogleAnalytics() {
   const router = useRouter();
   const [hasTrackedScroll, setHasTrackedScroll] = useState<boolean>(false);
-  console.log('GoogleAnalytics');
   useEffect(() => {
     const handleRouteChange = (url: string) => {
       pageView(url);

@@ -25,7 +25,6 @@ function inHouseAnalytics(event: string, eventRef: string) {
     campaignId,
     campaignType,
   }
-  console.log('inHouseAnalytics', data);
   try {
     axiosInstance.post("v1/analytics/track", data);
   }
