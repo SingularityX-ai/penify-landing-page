@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Inter } from "next/font/google";
 import { useEffect, useState } from "react";
 // import ScrollProgress from "./ScrollProgress";
 import Header from "./Header";
@@ -7,6 +8,8 @@ import Footer from "./Footer";
 type LayoutProps = {
   children: React.ReactNode;
 };
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Layout({ children }: LayoutProps) {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -23,7 +26,7 @@ export default function Layout({ children }: LayoutProps) {
 
     return () => window.removeEventListener("load", handleLoad);
   }, []);
-  
+
   return (
     <>
       <Head>
@@ -46,7 +49,7 @@ export default function Layout({ children }: LayoutProps) {
           <div id="loader"></div>
         </div>
       ) : (
-        <div className={`my-app home-dark ${isNavOpen ? "body-active" : ""}`}>
+        <div className={`my-app home-dark ${isNavOpen ? "body-active" : ""} ${inter.className}`}>
           <Header isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
           <main>{children}</main>
           <Footer />

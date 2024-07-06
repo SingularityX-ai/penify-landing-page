@@ -6,7 +6,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: $theme-font;
+  // font-family: $theme-font;
 
   &::-moz-selection {
     color: #ffffff;
@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  font-family: $theme-font;
+  // font-family: $theme-font;
   font-size: 16px;
   line-height: 0px;
   font-weight: 400;
@@ -169,7 +169,7 @@ p {
   margin: 0px;
   font-weight: 700;
   color: $theme-color-dark;
-  font-family: $space-grotesk;
+  // font-family: $space-grotesk;
 }
 
 @media only screen and (min-width: 1400px) {
