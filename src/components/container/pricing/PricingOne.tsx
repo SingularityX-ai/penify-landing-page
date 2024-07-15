@@ -133,7 +133,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               <h5 className="h5 title">Public Repo</h5>
               <ul>
                 <li>
-                  <i className="fa-solid fa-check"></i>40 Commits Faily
+                  <i className="fa-solid fa-check"></i>40 Commits Daily
                 </li>
               </ul>
               <hr />
@@ -164,7 +164,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
                 <div className="content">
                   <h2 className="h2 title">
                     {showCurrencySymbol()}
-                    {convertPrices(10)}
+                    {convertPrices(18)}
                   </h2>
                   <p>paid per month / repository</p>
                 </div>
