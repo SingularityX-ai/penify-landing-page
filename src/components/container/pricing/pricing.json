@@ -1,0 +1,278 @@
+{
+  "features": [
+    {
+      "heading": "Code Documentation",
+      "subheadings": [
+        {
+          "name": "Full Repository Doc",
+          "tooltip": "Documentation generation for the code in entire repository"
+        },
+        {
+          "name": "CI/CD Update",
+          "tooltip": "Automated documentation updates through CI/CD pipeline"
+        }
+      ]
+    },
+    {
+      "heading": "API Documentation",
+      "subheadings": [
+        {
+          "name": "Doc Generation",
+          "tooltip": null
+        },
+        {
+          "name": "Hosting",
+          "tooltip": null
+        },
+        {
+          "name": "Commit to Repo",
+          "tooltip": "Commit the Documentation file to your repository"
+        },
+        {
+          "name": "CI/CD Update",
+          "tooltip": "Automated documentation updates when code is modified"
+        },
+        {
+          "name": "Authentication",
+          "tooltip": null
+        }
+      ]
+    },
+    {
+      "heading": "Architecture Documentation",
+      "subheadings": [
+        {
+          "name": "Doc Generation",
+          "tooltip": null
+        },
+        {
+          "name": "Hosting",
+          "tooltip": null
+        },
+        {
+          "name": "Commit to Repo",
+          "tooltip": "Commit the Documentation file to your repository"
+        },
+        {
+          "name": "CI/CD Update",
+          "tooltip": "Automated documentation updates when code is modified"
+        },
+        {
+          "name": "Authentication",
+          "tooltip": null
+        }
+      ]
+    },
+    {
+      "heading": "Pull Request Documentation",
+      "subheadings": [
+        {
+          "name": "PR Summary",
+          "tooltip": null
+        },
+        {
+          "name": "Add Labels to PR",
+          "tooltip": null
+        },
+        {
+          "name": "Improvement Suggestions",
+          "tooltip": null
+        },
+        {
+          "name": "Review PR",
+          "tooltip": null
+        },
+        {
+          "name": "Analyze",
+          "tooltip": null
+        },
+        {
+          "name": "Ask on PR",
+          "tooltip": null
+        },
+        {
+          "name": "Code Documentation on PR",
+          "tooltip": null
+        },
+        {
+          "name": "Find Similar Component",
+          "tooltip": null
+        },
+        {
+          "name": "In Code Suggestions and Improvement",
+          "tooltip": null
+        },
+        {
+          "name": "Custom LLMs",
+          "tooltip": null
+        }
+      ]
+    }
+  ],
+  "feature_values": [
+    {
+      "planName": "Free",
+      "price": 0,
+      "Public": {
+        "Code Documentation": {
+          "Full Repository Doc": {
+            "name": "10 Files per repo",
+            "tooltip": "maximum of 3 tries per repo"
+          },
+          "CI/CD Update": "10 commits/day"
+        },
+        "API Documentation": {
+          "Doc Generation": {
+            "name": "40 endpoints",
+            "tooltip": "maximum of 3 tries per repo"
+          },
+          "Hosting": "Not available",
+          "Commit to Repo": "Available",
+          "CI/CD Update": "Available",
+          "Authentication": "Not Available"
+        },
+        "Architecture Documentation": {
+          "Doc Generation": {
+            "name": "All files",
+            "tooltip": "maximum 3 tries per repo"
+          },
+          "Hosting": "Available",
+          "Commit to Repo": "Available",
+          "CI/CD Update": "Available",
+          "Authentication": "Not Available"
+        },
+        "Pull Request Documentation": {
+          "PR Summary": "Available",
+          "Add Labels to PR": "Available",
+          "Improvement Suggestions": "Available",
+          "Review PR": "Not available",
+          "Analyze": "Not available",
+          "Ask on PR": "Not available",
+          "Code Documentation on PR": "Not available",
+          "Find Similar Component": "Not available",
+          "In Code Suggestions and Improvement": "Not available",
+          "Custom LLMs": "Not available"
+        }
+      },
+      "Private": {
+        "Code Documentation": {
+          "Full Repository Doc": {
+            "name": "3 Files in repo",
+            "tooltip": "maximum of 1 try per repo"
+          },
+          "CI/CD Update": "5 commits/day"
+        },
+        "API Documentation": {
+          "Doc Generation": {
+            "name": "10 Endpoints",
+            "tooltip": "maximum of 1 try per repo"
+          },
+          "Hosting": "Not available",
+          "Commit to Repo": "Available",
+          "CI/CD Update": "Not available",
+          "Authentication": "Not available"
+        },
+        "Architecture Documentation": {
+          "Doc Generation": {
+            "name": "All files",
+            "tooltip": "maximum 1 try per repo"
+          },
+          "Hosting": "Not available",
+          "Commit to Repo": "Available",
+          "CI/CD Update": "Not available",
+          "Authentication": "Not available"
+        },
+        "Pull Request Documentation": {
+          "PR Summary": "Available",
+          "Add Labels to PR": "Not available",
+          "Improvement Suggestions": "Not available",
+          "Review PR": "Not available",
+          "Analyze": "Not available",
+          "Ask on PR": "Not available",
+          "Code Documentation on PR": "Not available",
+          "Find Similar Component": "Not available",
+          "In Code Suggestions and Improvement": "Not available",
+          "Custom LLMs": "Not available"
+        }
+      }
+    },
+    {
+      "planName": "Premium",
+      "price": 18,
+      "Premium": {
+        "Code Documentation": {
+          "Full Repository Doc": "Everything that is in Public",
+          "CI/CD Update": "Unlimited"
+        },
+        "API Documentation": {
+          "Doc Generation": "Everything that is in Public",
+          "Hosting": "Everything that is in Public",
+          "Commit to Repo": "Everything that is in Public",
+          "CI/CD Update": "Everything that is in Public",
+          "Authentication": "Everything that is in Public"
+        },
+        "Architecture Documentation": {
+          "Doc Generation": "Everything that is in Public",
+          "Hosting": "Everything that is in Public",
+          "Commit to Repo": "Everything that is in Public",
+          "CI/CD Update": "Everything that is in Public",
+          "Authentication": "Everything that is in Public"
+        },
+        "Pull Request Documentation": {
+          "PR Summary": "Available",
+          "Add Labels to PR": "Available",
+          "Improvement Suggestions": "Available",
+          "Review PR": "Available",
+          "Analyze": "Available",
+          "Ask on PR": "Not Available",
+          "Code Documentation on PR": "Not Available",
+          "Find Similar Component": "Not Available",
+          "In Code Suggestions and Improvement": "Not Available",
+          "Custom LLMs": "Not Available"
+        }
+      }
+    },
+    {
+      "planName": "Pro",
+      "price": 25,
+      "Pro": {
+        "Code Documentation": {
+          "Full Repository Doc": {
+            "name": "All files",
+            "tooltip": "maximum of 3 tries per repo per month"
+          },
+          "CI/CD Update": "Unlimited"
+        },
+        "API Documentation": {
+          "Doc Generation": {
+            "name": "All Endpoints",
+            "tooltip": "maximum of 3 tries per repo per month"
+          },
+          "Hosting": "Free with Authentication",
+          "Commit to Repo": "Available",
+          "CI/CD Update": "Available",
+          "Authentication": "Available"
+        },
+        "Architecture Documentation": {
+          "Doc Generation": "3 tries per repo per month",
+          "Hosting": "Free with Authentication",
+          "Commit to Repo": "Available",
+          "CI/CD Update": "Available",
+          "Authentication": "Available"
+        },
+        "Pull Request Documentation": {
+          "PR Summary": "Available",
+          "Add Labels to PR": "Available",
+          "Improvement Suggestions": "Available",
+          "Review PR": "Available",
+          "Analyze": "Available",
+          "Ask on PR": "Available",
+          "Code Documentation on PR": "Available",
+          "Find Similar Component": "Available",
+          "In Code Suggestions and Improvement": "Available",
+          "Custom LLMs": "Not Available"
+        }
+      }
+    }
+  ]
+}
