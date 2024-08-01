@@ -1689,6 +1689,23 @@
 }
 
 // 15. pricing
+.pricing-bsc {
+  background-position: left bottom;
+  background-image: url("../../../public/images/pricing-bg.png");
+
+  button.btn.dropdown-toggle {
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--bs-btn-bg);
+  }
+
+  .dropdown ul {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+  }
+}
+
 .pricing-two {
   background-position: left bottom;
   background-image: url("../../../public/images/pricing-bg.png");

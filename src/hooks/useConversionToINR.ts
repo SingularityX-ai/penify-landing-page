@@ -37,31 +37,21 @@ export const useConversionToINR = () => {
     if (currencyFromQuery && currencyFromQuery !== currency) {
       setCurrency(currencyFromQuery);
     }
-  }, [router.query.currency, currency]);
+  }, [router.query.currency]);
 
   const toggleDropdown = useCallback(() => {
     setIsDropdownOpen((prev) => !prev);
   }, []);
 
-  const updateCurrency = useCallback(
-    (newCurrency: CurrencyType) => {
-      setCurrency(newCurrency);
-      setIsDropdownOpen(false);
-
-      router.push(
-        {
-          pathname: router.pathname,
-          query: { ...router.query, currency: newCurrency },
-        },
-        undefined,
-        {
-          shallow: true,
-          scroll: false,
-        }
-      );
-    },
-    [router]
-  );
+  const updateCurrency = useCallback((newCurrency: CurrencyType) => {
+    setCurrency(newCurrency);
+    setIsDropdownOpen(false);
+    
+    // Update URL without causing navigation
+    const url = new URL(window.location.href);
+    url.searchParams.set('currency', newCurrency);
+    window.history.pushState({}, '', url.toString());
+  }, []);
 
   const getCurrencySymbol = useCallback(() => {
     return currency === "USD" ? "$" : "₹";
