@@ -1,0 +1,19 @@
+.bsc-toggle-switch {
+  margin: 0 1rem;
+
+  .form-check-input {
+    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e") !important;
+    width: 2.5rem;
+    height: 1.25rem;
+    background-color: #0d6dfd;
+
+    border-radius: 2em;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+
+    &:focus {
+      border: none;
+    }
+  }
+}
