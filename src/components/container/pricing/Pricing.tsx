@@ -1,22 +1,28 @@
 import { useConversionToINR } from "@/hooks/useConversionToINR";
 import { PricingDropdown } from "./pricingDropdown/pricingDropdown";
-import { useEffect } from "react";
+import { PricingCards } from "./pricingCard/pricingCards";
+import { PricingTable } from "./pricingTable/pricingTable";
+import { forwardRef } from "react";
 
-export const Pricing = () => {
-  const { currency, updateCurrency, isDropdownOpen, toggleDropdown } =
-    useConversionToINR();
-
-  useEffect(() => console.log(currency), [currency]);
+const Pricing = forwardRef<HTMLDivElement>(function (_, ref) {
+  const {
+    currency,
+    updateCurrency,
+    isDropdownOpen,
+    toggleDropdown,
+    getCurrencySymbol,
+    convertPrice,
+  } = useConversionToINR();
 
   return (
-    <section className="section pricing-bsc bg-img">
+    <section className="section pricing-bsc bg-img" ref={ref}>
       <div className="container">
         <div
           className="section__header"
           data-aos="fade-up"
           data-aos-duration="400"
         >
-          <h2>Ready to Get Started</h2>
+          <h2>Choose a plan that suits you.</h2>
 
           <PricingDropdown
             currency={currency}
@@ -25,7 +31,16 @@ export const Pricing = () => {
             toggleDropdown={toggleDropdown}
           />
         </div>
+
+        <PricingCards
+          convertPrice={convertPrice}
+          getCurrencySymbol={getCurrencySymbol}
+        />
+
+        <PricingTable />
       </div>
     </section>
   );
-};
+});
+
+export default Pricing;

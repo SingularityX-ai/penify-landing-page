@@ -1,7 +1,7 @@
 import BannerTwo from "@/components/container/banner/bannerMain02";
 import FAQ from "@/components/container/faq/FAQ";
 import Features from "@/components/container/features/features";
-import PricingOne from "@/components/container/pricing/PricingOne";
+import Pricing from "@/components/container/pricing/Pricing";
 import Tour from "@/components/container/tour/Tour";
 import Layout from "@/components/layout/Layout";
 import { useRouter } from "next/router";
@@ -29,9 +29,9 @@ export default function Home() {
 
   useEffect(() => {
     router.query.scrollTo !== "exampleOverview" && window.scrollTo(0, 0);
-    
+
     scrollToProduct();
-    
+
     router.events.on("routeChangeComplete", scrollToProduct);
     return () => router.events.off("routeChangeComplete", scrollToProduct);
   }, [router.query]);
@@ -41,7 +41,7 @@ export default function Home() {
       <BannerTwo />
       <Tour ref={tourRef} />
       <Features ref={productRef} />
-      <PricingOne ref={pricingRef} />
+      <Pricing ref={pricingRef} />
       <FAQ ref={faqRef} />
     </Layout>
   );
