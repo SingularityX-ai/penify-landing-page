@@ -45,7 +45,7 @@ export default function Header({ isNavOpen, setIsNavOpen }: HeaderProps) {
     window.addEventListener("scroll", handleScroll);
 
     // Fetch data on component mount
-    axiosInstance.get("v1/analytics/usage/count").then(({ data }) => setCounter(data));
+    axiosInstance.get("/v1/analytics/usage/count").then(({ data }) => setCounter(data));
 
     return () => {
       window.removeEventListener("resize", handleResize);

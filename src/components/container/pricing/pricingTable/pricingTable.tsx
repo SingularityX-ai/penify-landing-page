@@ -66,7 +66,7 @@ export const PricingTable = () => {
                     >
                       <div className="accordion-body" style={{ padding: "0" }}>
                         <table
-                          className="table table-striped m-0"
+                          className="table m-0"
                           style={{
                             tableLayout: "fixed",
                             width: "100%",
@@ -76,18 +76,16 @@ export const PricingTable = () => {
                             {tableData.subheading.map(
                               (subheadingData, subheadingIndex) => (
                                 <tr key={`sub-row-${subheadingIndex}`}>
-                                  <th
-                                    style={{
-                                      fontWeight: "600",
-                                      textAlign: "start",
-                                    }}
-                                  >
+                                  <th className="inner-row-head">
                                     {subheadingData.title}
                                   </th>
 
                                   {subheadingData.contents.map(
                                     (content, contentIndex) => (
-                                      <td key={`content-${contentIndex}`}>
+                                      <td
+                                        key={`content-${contentIndex}`}
+                                        className="inner-row-data"
+                                      >
                                         {content.title}{" "}
                                         {content.tooltip && (
                                           <Tooltip text={content.tooltip} />

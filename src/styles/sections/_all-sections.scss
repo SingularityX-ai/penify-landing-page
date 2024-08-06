@@ -1837,6 +1837,24 @@
         color: #fff;
       }
     }
+
+    .inner-row-head {
+      font-weight: 600;
+      text-align: start;
+      background: var(--bs-table-striped-bg);
+
+      &:not(:last-child) {
+        border-right-width: 1px;
+      }
+    }
+
+    .inner-row-data {
+      background: var(--bs-table-striped-bg);
+
+      &:not(:last-child) {
+        border-right-width: 1px;
+      }
+    }
   }
 }
 
