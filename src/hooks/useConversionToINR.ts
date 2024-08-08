@@ -6,6 +6,7 @@ export type CurrencyType = "USD" | "INR";
 
 const exchangeRateUSDToINR = 83;
 
+
 export const useConversionToINR = () => {
   const router = useRouter();
   const [currency, setCurrency] = useState<CurrencyType>(
@@ -16,6 +17,7 @@ export const useConversionToINR = () => {
   const [isAnnualBilling, setIsAnnualBilling] = useState(false);
 
   useEffect(() => {
+    
     const fetchExchangeRate = async () => {
       try {
         const { data } = await axiosInstance.get<number>(
