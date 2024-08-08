@@ -1,54 +1,20 @@
-import React, { useState, forwardRef, useEffect } from "react";
+import React, { forwardRef } from "react";
 import Link from "next/link";
-import { axiosInstance } from "@/config/axiosConfig";
+import { useConversionToINR } from "@/hooks/useConversionToINR";
+import { PricingDropdown } from "./pricingDropdown/pricingDropdown";
 import { useRouter } from "next/router";
-
-let exchangeRateUSDToINR = 83; // Example static exchange rate
 
 const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
   const router = useRouter();
-  const [currency, setCurrency] = useState(router.query.currency || "INR"); // Default currency
-  const [showDropdown, setShowDropdown] = useState(false);
-  const toggleDropdown = () => setShowDropdown(!showDropdown);
 
-  const showCurrencySymbol = () => {
-    return currency === "USD" ? "$" : "₹";
-  };
-
-  const convertPrices = (priceInUSD: number) => {
-    const value = currency === "USD" ? priceInUSD : priceInUSD * exchangeRateUSDToINR;
-    return value.toFixed(0);
-  };
-
-  useEffect(() => {
-    axiosInstance
-      .get("/v1/analytics/conversionRates")
-      .then(({ data }) => (exchangeRateUSDToINR = data))
-      .catch((error) => {
-        console.error("Error fetching conversion rates", error);
-        exchangeRateUSDToINR = 82; // Example static exchange rate
-      });
-  }, []);
-
-  const updateCurrency = (currency: string) => {
-    setCurrency(currency);
-    setShowDropdown(false);
-
-    router.push(
-      {
-        pathname: router.pathname,
-        query: { ...router.query, currency },
-      },
-      undefined,
-      { shallow: true, scroll: false }
-    );
-  };
-
-  useEffect(() => {
-    if (router.query.currency && router.query.currency !== currency) {
-      setCurrency(router.query.currency);
-    }
-  }, [router.query.currency]);
+  const {
+    currency,
+    isDropdownOpen,
+    toggleDropdown,
+    updateCurrency,
+    getCurrencySymbol,
+    convertPrice,
+  } = useConversionToINR();
 
   return (
     <section className="section pricing-two bg-img" ref={ref}>
@@ -59,51 +25,19 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               className="section__header"
               data-aos="fade-up"
               data-aos-duration="400"
-              >
+            >
               <h2 className="h2">Ready to Get Started?</h2>
+
+              <PricingDropdown
+                currency={currency}
+                updateCurrency={updateCurrency}
+                isDropdownOpen={isDropdownOpen}
+                toggleDropdown={toggleDropdown}
+              />
             </div>
           </div>
         </div>
-        <div className="row justify-content-center">
-          <div className="col-12 col-xl-6">
-            <div
-              className="section__header"
-              data-aos="fade-up"
-              data-aos-duration="400"
-              >
-              <div className="dropdown">
-                <button
-                  className="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  onClick={toggleDropdown}
-                  >
-                  Selected Currency: {currency}
-                </button>
-                {showDropdown && (
-                  <ul
-                    className="dropdown-menu show"
-                    style={{ display: "inline-block" }}
-                    >
-                    <li>
-                      <a
-                        className="dropdown-item"
-                        onClick={() => updateCurrency("USD")}>
-                        USD
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="dropdown-item"
-                        onClick={() => updateCurrency("INR")}>
-                        INR
-                      </a>
-                    </li>
-                  </ul>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div className="row items-gap">
           <div className="col-12 col-md-6 col-xl-4">
             <div
@@ -111,13 +45,13 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               data-aos="fade-up"
               data-aos-duration="400"
               data-aos-delay="100"
-              >
+            >
               <h5 className="h5">Freemium</h5>
               <div className="meta">
                 <div className="content">
                   <h2 className="h2 title">
-                    {showCurrencySymbol()}
-                    {convertPrices(0)}
+                    {getCurrencySymbol()}
+                    {convertPrice(0)}
                   </h2>
                   <p>paid per month</p>
                 </div>
@@ -144,10 +78,12 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               </ul>
               <hr />
               <Link
-                href={`https://dashboard.penify.dev/profile/payments?currency=${router.query.currency ?? "INR"}`}
+                href={`https://dashboard.penify.dev/profile/payments?currency=${
+                  router.query.currency ?? "INR"
+                }`}
                 target="_blank"
                 className="btn btn--ocotonary"
-                >
+              >
                 Start for free
               </Link>
             </div>
@@ -158,13 +94,13 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               data-aos="fade-up"
               data-aos-duration="400"
               data-aos-delay="200"
-              >
+            >
               <h5 className="h5">Basic</h5>
               <div className="meta">
                 <div className="content">
                   <h2 className="h2 title">
-                    {showCurrencySymbol()}
-                    {convertPrices(18)}
+                    {getCurrencySymbol()}
+                    {convertPrice(18)}
                   </h2>
                   <p>paid per month / repository</p>
                 </div>
@@ -173,7 +109,8 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               <h5 className="h5 title">Private Repo</h5>
               <ul>
                 <li>
-                  <i className="fa-solid fa-check"></i>Unlimited Commits for 1 Repo
+                  <i className="fa-solid fa-check"></i>Unlimited Commits for 1
+                  Repo
                 </li>
                 {/* <li>
                   <i className="fa-solid fa-check"></i>1 Full Repo
@@ -194,10 +131,12 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               </ul>
               <hr />
               <Link
-                href={`https://dashboard.penify.dev/profile/payments?currency=${router.query.currency ?? "INR"}`}
+                href={`https://dashboard.penify.dev/profile/payments?currency=${
+                  router.query.currency ?? "INR"
+                }`}
                 target="_blank"
                 className="btn btn--ocotonary"
-                >
+              >
                 choose a plan
               </Link>
             </div>
@@ -259,7 +198,7 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               data-aos="fade-up"
               data-aos-duration="400"
               data-aos-delay="300"
-              >
+            >
               <h5 className="h5">Elite</h5>
               <div className="meta">
                 <div className="content">
@@ -291,9 +230,12 @@ const PricingOne = forwardRef<HTMLDivElement>(function (_, ref) {
               </ul>
               <hr />
               <Link
-                href={`https://dashboard.penify.dev/profile/payments?currency=${router.query.currency ?? "INR"}`}
+                href={`https://dashboard.penify.dev/profile/payments?currency=${
+                  router.query.currency ?? "INR"
+                }`}
                 target="_blank"
-                className="btn btn--ocotonary">
+                className="btn btn--ocotonary"
+              >
                 choose a plan
               </Link>
             </div>
