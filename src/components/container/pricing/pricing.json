@@ -26,7 +26,7 @@
     },
     {
       "planName": "enterprise",
-      "planPrice": 650,
+      "planPrice": -1,
       "description": [
         "Same as Pro with additional unlimited tries per repo per month",
         "Full access to all features, including custom LLMs and unlimited tries per month"

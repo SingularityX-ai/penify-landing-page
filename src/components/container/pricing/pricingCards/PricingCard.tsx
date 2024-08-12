@@ -29,11 +29,20 @@ export const PricingCards = ({
                 <h5 className={`h5 text-${planName}`}>{planName}</h5>
 
                 <div className="price-text">
-                  <h2 className="h2 title">
-                    {getCurrencySymbol()}
-                    {convertPrice(planPrice)}
-                  </h2>
-                  <p>paid per month</p>
+                  {planPrice > 0 ? (
+                    <>
+                    <h2 className="h2 title">
+                      {getCurrencySymbol()}
+                      {convertPrice(planPrice)}
+                    </h2>
+                    <p>paid per month</p>
+                    </>
+                  ) : (
+                    <h2 className="h2 title">
+                      Contact Us - support@penify.dev
+                    </h2>
+                  )}
+                  
                 </div>
 
                 <ul className="plan-desc">
