@@ -10,7 +10,7 @@ export default function Header() {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(false);
 
   return (
-    <nav className="fixed start-0 top-0 z-20 w-full border-b border-gray-200">
+    <nav className="sticky start-0 top-0 z-20 w-full border-b border-gray-100 bg-white">
       <div className="container mx-auto flex flex-wrap items-center justify-between p-4">
         <Link href="/">
           <Image
