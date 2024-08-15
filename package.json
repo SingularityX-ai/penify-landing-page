@@ -12,7 +12,8 @@
     "@tabler/icons-react": "^3.12.0",
     "next": "^14.2.5",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-lite-youtube-embed": "^2.4.0"
   },
   "devDependencies": {
     "@types/node": "^22.2.0",
