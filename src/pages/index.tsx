@@ -6,6 +6,7 @@ import Banner from "@/components/Banner/Banner";
 import FAQ from "@/components/FAQ/FAQ";
 import Features from "@/components/Features/Features";
 import Tour from "@/components/Tour/Tour";
+import Hero from "@/components/Hero/Hero";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +34,7 @@ export default function Home() {
       <Banner />
       <Header />
       <main>
+        <Hero />
         <Tour />
         <Features />
         <FAQ />

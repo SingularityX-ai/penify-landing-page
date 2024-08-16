@@ -15,6 +15,11 @@
   }
 }
 
+/* hide react-flow sponsor label */
+.react-flow__panel.react-flow__attribution {
+  display: none;
+}
+
 /* preloader loading screen */
 #preloader {
   position: fixed;
