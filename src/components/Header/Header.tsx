@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "public/penify-logo.svg";
 import { useState } from "react";
+import { Scroller as ScrollerLink } from "../Scroller/Scroller";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -49,15 +50,19 @@ export default function Header() {
           }`}
         >
           <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium lg:mt-0 lg:flex-row lg:space-x-8 lg:border-0 lg:bg-white lg:p-0">
-            {menus.map(({ title, href, children }, menuIndex) => (
+            {menus.map(({ title, href, scroller, children }, menuIndex) => (
               <li key={`menu-${menuIndex}`} className="lg:relative">
                 {href ? (
-                  <Link
-                    href={href}
-                    className="block rounded px-3 py-2 hover:bg-gray-200 lg:bg-transparent hover:bg-transparent lg:p-0 lg:text-gray-900 hover:lg:text-blue-700 capitalize transition-colors ease-in duration-150"
-                  >
-                    {title}
-                  </Link>
+                  scroller ? (
+                    <ScrollerLink id={href.slice(1)} title={title} />
+                  ) : (
+                    <Link
+                      href={href}
+                      className="block rounded px-3 py-2 hover:bg-gray-200 lg:bg-transparent hover:bg-transparent lg:p-0 lg:text-gray-900 hover:lg:text-blue-700 capitalize transition-colors ease-in duration-150"
+                    >
+                      {title}
+                    </Link>
+                  )
                 ) : (
                   <>
                     <button

@@ -6,6 +6,7 @@ interface SubMenuTypes {
 interface MenuTypes {
   title: string;
   href: string | null;
+  scroller: boolean;
   children: null | SubMenuTypes[];
 }
 
@@ -13,21 +14,25 @@ export const menus: MenuTypes[] = [
   {
     title: "Features",
     href: "/features",
+    scroller: true,
     children: null,
   },
   {
     title: "Pricing",
     href: "/pricing",
+    scroller: true,
     children: null,
   },
   {
     title: "How it works?",
     href: "/how-it-works",
+    scroller: true,
     children: null,
   },
   {
     title: "Resources",
     href: null,
+    scroller: false,
     children: [
       {
         title: "Docs",
@@ -42,11 +47,13 @@ export const menus: MenuTypes[] = [
   {
     title: "why us?",
     href: "/about-us",
+    scroller: false,
     children: null,
   },
   {
     title: "Support",
     href: "/support-page",
+    scroller: false,
     children: null,
   },
 ];
