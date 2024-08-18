@@ -10,18 +10,18 @@ export default function Features() {
       <Element
         name="features"
         id="features"
-        className="w-full pt-24 pb-28 overflow-hidden"
+        className="w-full py-8 overflow-hidden md:py-16 xl:py-24"
       >
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h3 className="m-2 mb-4 inline-flex rounded-full bg-green-200 px-3 py-1 text-xs md:text-sm font-semibold text-green-600">
+          <div className="mx-auto max-w-3xl pb-12 text-center md:pb-16">
+            <h3 className="m-2 mb-4 inline-flex rounded-full bg-green-200 px-3 py-1 text-xs font-semibold text-green-600 md:text-sm">
               Reach goals that matter
             </h3>
 
-            <h1 className="text-lg md:text-2xl lg:text-3xl font-bold mb-4">
+            <h1 className="mb-4 text-2xl font-bold text-slate-200 md:text-3xl xl:text-4xl">
               One product, unlimited solutions
             </h1>
-            <p className="text-sm md:text-base lg:text-lg text-gray-400">
+            <p className="text-sm text-slate-400 md:text-base lg:text-lg">
               Streamline documentation across your entire development lifecycle
               with AI-powered automation for code, APIs, and architecture.
             </p>
@@ -35,7 +35,7 @@ export default function Features() {
                   key={`feature-items-${featureIndex}`}
                 >
                   <div
-                    className={`w-full mb-8 md:col-span-5 md:mb-0 lg:col-span-6 ${
+                    className={`mb-8 w-full md:col-span-5 md:mb-0 lg:col-span-6 ${
                       featureIndex % 2 === 0 ? "md:order-1" : ""
                     }`}
                   >
@@ -51,7 +51,7 @@ export default function Features() {
                   <div className="w-full md:col-span-7 md:max-w-none lg:col-span-6">
                     <div className="md:pr-4 lg:pr-12 xl:pr-16">
                       <div className="flex items-center flex-wrap gap-x-2 gap-y-1 mb-2">
-                        <h2 className="text-lg md:text-xl lg:text-2xl font-semibold">
+                        <h2 className="text-xl font-semibold text-slate-200 md:text-2xl xl:text-3xl">
                           {title}
                         </h2>
 
@@ -60,21 +60,21 @@ export default function Features() {
                             href={href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="rounded-lg bg-blue-700 px-3 py-1 text-xs font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 inline-flex items-center justify-center gap-x-1 "
+                            className="inline-flex items-center justify-center gap-x-1 rounded-lg bg-blue-700 px-3 py-1 text-xs font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 md:text-sm"
                           >
                             <IconExternalLink width={14} />
                             View Demo
                           </Link>
                         )}
                       </div>
-                      <p className="mb-4 text-sm md:text-base text-gray-400">
+                      <p className="mb-4 text-sm text-slate-400 md:text-base lg:text-lg">
                         {text}
                       </p>
 
-                      <ul className="-mb-2 text-sm md:text-base text-gray-400">
+                      <ul className="-mb-2 text-sm text-slate-400 md:text-base">
                         {children.map((child, childIndex) => (
                           <li
-                            className="mb-2 ps-5 relative feature-list"
+                            className="feature-list relative mb-2 ps-5"
                             key={`feature-child-${childIndex}`}
                           >
                             {child}
