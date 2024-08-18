@@ -30,7 +30,7 @@ export default function Home() {
       <div className="loader"></div>
     </div>
   ) : (
-    <div className={inter.className}>
+    <div className={`app-wrapper ${inter.className} bg-themeBg`}>
       <Banner />
       <Header />
       <main>

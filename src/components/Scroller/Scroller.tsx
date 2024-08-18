@@ -46,7 +46,7 @@ export function Scroller({ id, title }: ScrollerProps) {
       smooth={true}
       duration={500}
       onClick={() => handleClick(id)}
-      className="block rounded px-3 py-2 hover:bg-gray-200 lg:bg-transparent hover:bg-transparent lg:p-0 lg:text-gray-900 hover:lg:text-blue-700 capitalize transition-colors ease-in duration-150 cursor-pointer"
+      className="block cursor-pointer rounded px-3 py-2 text-sm capitalize text-gray-800 transition-colors duration-150 ease-in hover:bg-gray-200 hover:text-blue-700 md:text-base lg:text-lg lg:bg-transparent lg:p-0 lg:text-white lg:hover:bg-transparent hover:lg:text-blue-700"
     >
       {title}
     </Link>
