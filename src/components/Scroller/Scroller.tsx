@@ -18,7 +18,7 @@ export function Scroller({ id, title }: ScrollerProps) {
             const yCoordinate =
               element.getBoundingClientRect().top + window.scrollY;
             scroll.scrollTo(yCoordinate, {
-              duration: 800,
+              duration: 200,
               delay: 0,
               smooth: "easeInOutQuart",
             });
@@ -31,7 +31,7 @@ export function Scroller({ id, title }: ScrollerProps) {
         const yCoordinate =
           element.getBoundingClientRect().top + window.pageYOffset;
         scroll.scrollTo(yCoordinate, {
-          duration: 800,
+          duration: 200,
           delay: 0,
           smooth: "easeInOutQuart",
         });
