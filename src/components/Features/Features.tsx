@@ -10,7 +10,7 @@ export default function Features() {
       <Element
         name="features"
         id="features"
-        className="w-full py-8 overflow-hidden md:py-16 xl:py-24"
+        className="w-full py-8 overflow-hidden md:py-16 xl:py-24 bg-bannerBg"
       >
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-16">
