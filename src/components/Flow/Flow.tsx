@@ -36,7 +36,6 @@ export default function Flow() {
   );
 
   return (
-    <div className="h-full">
       <ReactFlow
         nodes={nodes}
         onNodesChange={onNodesChange}
@@ -46,10 +45,10 @@ export default function Flow() {
         defaultEdgeOptions={{ animated: true }}
         zoomOnScroll={false}
         panOnDrag={false}
+        className="min-h-64"
         // nodeTypes={{custom: TextNode}}
       >
         <Controls showZoom={false} showFitView={true} showInteractive={false} />
       </ReactFlow>
-    </div>
   );
 }
