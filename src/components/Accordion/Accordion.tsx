@@ -1,5 +1,5 @@
 import { IconChevronDown } from "@tabler/icons-react";
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface AccordionProps {
   title: string;
@@ -21,10 +21,10 @@ export default function Accordion({
   }, []);
 
   return (
-    <div className="w-full px-8 py-6 bg-white border-2 border-gray-200  rounded-xl shadow-lg mb-4">
+    <div className="mb-4 w-full rounded-xl border border-slate-400 bg-transparent px-6 py-4 shadow-lg md:mb-6 md:px-8 md:py-6">
       <button
         type="button"
-        className="flex flex-wrap justify-between -m-2 w-full"
+        className="-m-2 flex w-full flex-wrap justify-between"
         onClick={(event) => {
           event.preventDefault();
           setIsAccordionOpen((prev) => !prev);
@@ -32,14 +32,14 @@ export default function Accordion({
         aria-expanded={isAccordionOpen}
         aria-controls={`accordion-text-${id}`}
       >
-        <div className="flex-1 p-2">
-          <h3 className="text-lg font-medium text-start">{title}</h3>
+        <div className="flex-1 py-2">
+          <h2 className="text-start text-sm font-semibold text-slate-200 md:text-base xl:text-lg">{title}</h2>
 
           <div
             id={`accordion-text-${id}`}
             role="region"
             aria-labelledby={`accordion-title-${id}`}
-            className={`grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out ${
+            className={`grid overflow-hidden text-xs text-slate-400 transition-all duration-300 ease-in-out md:text-sm lg:text-base ${
               isAccordionOpen
                 ? "grid-rows-[1fr] opacity-100"
                 : "grid-rows-[0fr] opacity-0"
@@ -54,9 +54,9 @@ export default function Accordion({
           </div>
         </div>
 
-        <div className="w-auto p-2">
+        <div className="w-auto py-2">
           <IconChevronDown
-            className={`transform origin-center transition duration-200 ease-out ${
+            className={`h-4 w-4 origin-center transform text-slate-200 transition duration-200 ease-out md:h-6 md:w-6 ${
               isAccordionOpen ? "rotate-180" : ""
             }`}
           />

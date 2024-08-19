@@ -4,11 +4,11 @@ import { faqsItems } from "@/utils/faqItems";
 
 export default function FAQ() {
   return (
-    <section className="w-full pt-24 pb-28 overflow-hidden">
+    <section className="w-full overflow-hidden py-8 md:py-16 xl:py-24">
       <div className="container mx-auto px-4">
-        <h2 className="mb-16 text-2xl text-center font-semibold">
+        <h1 className="mb-16 text-center text-2xl font-bold text-slate-200 md:text-3xl xl:text-4xl">
           Frequently Asked Questions
-        </h2>
+        </h1>
 
         <div className="mb-6 flex flex-wrap">
           {faqsItems.map(({ title, text, active }, faqIndex) => (
@@ -22,11 +22,11 @@ export default function FAQ() {
           ))}
         </div>
 
-        <p className="text-center font-medium">
+        <p className="text-center text-sm font-medium text-slate-200 md:text-base lg:text-lg">
           <span>Still have any questions?</span>
           <Link
             href="/support"
-            className="font-semibold text-blue-600  hover:text-blue-700 ms-2"
+            className="ms-2 font-semibold text-blue-600 hover:text-blue-700"
           >
             Contact Us
           </Link>
