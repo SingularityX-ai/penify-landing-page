@@ -1,69 +1,81 @@
-import { Edge, Node } from "@xyflow/react";
+import { Edge, Node, Position } from "@xyflow/react";
 
 export const initialNodes: Node[] = [
   {
-    id: "1",
-    type: "custom",
+    id: "source",
+    type: "source",
     position: { x: 80, y: 0 },
     data: { label: "Penify" },
   },
   {
+    id: "1",
+    type: "target",
+    position: { x: -160, y: -55 },
+    data: {
+      label: "Pull Request Documentation",
+      handlePos: Position.Top,
+      color: "indigo",
+    },
+  },
+  {
     id: "2",
-    position: { x: -118, y: -24 },
-    data: { label: "Pull Request Documentation" },
+    type: "target",
+    position: { x: 162, y: 102 },
+    data: {
+      label: "Repository Code Documentation",
+      handlePos: Position.Bottom,
+      color: "violet",
+    },
   },
   {
     id: "3",
-    position: { x: 154, y: 82 },
-    data: { label: "Repository Code Documentation" },
+    type: "target",
+    position: { x: -108, y: 200 },
+    data: {
+      label: "Architectural Documentation",
+      handlePos: Position.Left,
+      color: "pink",
+    },
   },
   {
     id: "4",
-    position: { x: -60, y: 120 },
-    data: { label: "Architectural Documentation" },
-  },
-  {
-    id: "5",
-    position: { x: 140, y: -100 },
-    data: { label: "API Documentation" },
+    type: "target",
+    position: { x: 208, y: -124 },
+    data: {
+      label: "API Documentation",
+      handlePos: Position.Right,
+      color: "teal",
+    },
   },
 ];
 
 export const initialEdges: Edge[] = [
   {
-    id: "e2-e1",
-    source: "1",
+    id: "e1-core",
+    source: "source",
+    target: "1",
+    sourceHandle: "top-connector",
+    animated: true,
+  },
+  {
+    id: "e2-core",
+    source: "source",
     target: "2",
-    style: {
-      strokeWidth: 2,
-      stroke: "#1d4ed8",
-    },
+    sourceHandle: "btm-connector",
+    animated: true,
   },
   {
-    id: "e3-e1",
-    source: "1",
+    id: "e3-core",
+    source: "source",
     target: "3",
-    style: {
-      strokeWidth: 2,
-      stroke: "#1d4ed8",
-    },
+    sourceHandle: "left-connector",
+    animated: true,
   },
   {
-    id: "e4-e1",
-    source: "1",
+    id: "e4-core",
+    source: "source",
     target: "4",
-    style: {
-      strokeWidth: 2,
-      stroke: "#1d4ed8",
-    },
-  },
-  {
-    id: "e5-e1",
-    source: "1",
-    target: "5",
-    style: {
-      strokeWidth: 2,
-      stroke: "#1d4ed8",
-    },
+    sourceHandle: "right-connector",
+    animated: true,
   },
 ];
