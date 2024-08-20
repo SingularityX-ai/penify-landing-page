@@ -1,14 +1,14 @@
 import Banner from "@/components/Banner/Banner";
+import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import Support from "@/components/Support/Support";
 import { Inter } from "next/font/google";
 import { useEffect, useState } from "react";
 import { Bounce, ToastContainer } from "react-toastify";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function SupportPage() {
+export default function ContactUsPage() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function SupportPage() {
       <Banner />
       <Header />
       <main>
-        <Support />
+        <Contact />
         <ToastContainer
           position="top-right"
           autoClose={3500}

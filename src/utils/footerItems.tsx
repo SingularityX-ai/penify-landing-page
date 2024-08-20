@@ -65,7 +65,7 @@ export const footerItems: FooterItemsTypes[] = [
     children: [
       {
         title: "Help center",
-        href: "/support-page",
+        href: "/contact-us",
         mode: null,
       },
       {

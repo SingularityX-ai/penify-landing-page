@@ -17,7 +17,7 @@ export function Breadcrumb({ title }: BreadcrumbProps) {
   const paths = router.asPath.split("/").filter((path) => path);
 
   const pathExtractor: PathExtractorType = {
-    "support-page": "Contact Us",
+    "contact-us": "Contact Us",
   };
 
   return (

@@ -3,7 +3,7 @@ import { Breadcrumb } from "../Breadcrumb/Breadcrumb";
 import Link from "next/link";
 import { ContactForm } from "./ContactForm/ContactForm";
 
-export default function Support() {
+export default function Contact() {
   return (
     <section className="w-full overflow-hidden">
       <Breadcrumb title="Contact Us" />

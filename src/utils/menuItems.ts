@@ -51,8 +51,8 @@ export const menus: MenuTypes[] = [
     children: null,
   },
   {
-    title: "Support",
-    href: "/support-page",
+    title: "Contact Us",
+    href: "/contact-us",
     scroller: false,
     children: null,
   },
