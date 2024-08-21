@@ -18,6 +18,7 @@ export function Breadcrumb({ title }: BreadcrumbProps) {
 
   const pathExtractor: PathExtractorType = {
     "contact-us": "Contact Us",
+    "about-us": "About Us",
   };
 
   return (

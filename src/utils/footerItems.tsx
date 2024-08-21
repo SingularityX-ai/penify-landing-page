@@ -44,7 +44,7 @@ export const footerItems: FooterItemsTypes[] = [
     title: "Quick Links",
     children: [
       {
-        title: "Why us?",
+        title: "About Us",
         href: "/about-us",
         mode: null,
       },

@@ -45,7 +45,7 @@ export const menus: MenuTypes[] = [
     ],
   },
   {
-    title: "why us?",
+    title: "About Us",
     href: "/about-us",
     scroller: false,
     children: null,
