@@ -7,6 +7,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Fragment, useEffect } from "react";
 import AOS from "aos";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -30,6 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
 
       <Component {...pageProps} />
+      <SpeedInsights />
     </Fragment>
   );
 }
