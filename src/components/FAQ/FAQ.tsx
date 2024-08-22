@@ -25,7 +25,7 @@ export default function FAQ() {
         <p className="text-center text-sm font-medium text-slate-200 md:text-base lg:text-lg" data-aos="fade-up" data-aos-duration="800">
           <span>Still have any questions?</span>
           <Link
-            href="/support"
+            href="/contact-us"
             className="ms-2 font-semibold text-blue-600 hover:text-blue-700"
           >
             Contact Us
