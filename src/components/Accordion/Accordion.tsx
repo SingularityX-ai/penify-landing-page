@@ -21,7 +21,7 @@ export default function Accordion({
   }, []);
 
   return (
-    <div className="mb-4 w-full rounded-xl border border-slate-400 bg-transparent px-6 py-4 shadow-lg md:mb-6 md:px-8 md:py-6">
+    <div className="mb-4 w-full rounded-xl border border-slate-400 bg-transparent px-6 py-4 shadow-lg md:mb-6 md:px-8 md:py-6" data-aos="fade-up" data-aos-duration="800">
       <button
         type="button"
         className="-m-2 flex w-full flex-wrap justify-between"

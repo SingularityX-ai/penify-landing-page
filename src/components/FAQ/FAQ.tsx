@@ -6,7 +6,7 @@ export default function FAQ() {
   return (
     <section className="w-full overflow-hidden py-8 md:py-16 xl:py-24">
       <div className="container mx-auto px-4">
-        <h1 className="mb-16 text-center text-2xl font-bold text-slate-200 md:text-3xl xl:text-4xl">
+        <h1 className="mb-16 text-center text-2xl font-bold text-slate-200 md:text-3xl xl:text-4xl" data-aos="fade-up" data-aos-duration="800">
           Frequently Asked Questions
         </h1>
 
@@ -22,7 +22,7 @@ export default function FAQ() {
           ))}
         </div>
 
-        <p className="text-center text-sm font-medium text-slate-200 md:text-base lg:text-lg">
+        <p className="text-center text-sm font-medium text-slate-200 md:text-base lg:text-lg" data-aos="fade-up" data-aos-duration="800">
           <span>Still have any questions?</span>
           <Link
             href="/support"

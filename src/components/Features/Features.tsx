@@ -13,7 +13,11 @@ export default function Features() {
         className="w-full py-8 overflow-hidden md:py-16 xl:py-24 bg-bannerBg"
       >
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl pb-12 text-center md:pb-16">
+          <div
+            className="mx-auto max-w-3xl pb-12 text-center md:pb-16"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+          >
             <h3 className="m-2 mb-4 inline-flex rounded-full bg-green-200 px-3 py-1 text-xs font-semibold text-green-600 md:text-sm">
               Reach goals that matter
             </h3>
@@ -38,6 +42,10 @@ export default function Features() {
                     className={`mb-8 w-full md:col-span-5 md:mb-0 lg:col-span-6 ${
                       featureIndex % 2 === 0 ? "md:order-1" : ""
                     }`}
+                    data-aos={
+                      featureIndex % 2 === 0 ? "zoom-in-left" : "zoom-in-right"
+                    }
+                    data-aos-duration="800"
                   >
                     <Image
                       src={img}
@@ -48,7 +56,13 @@ export default function Features() {
                     />
                   </div>
 
-                  <div className="w-full md:col-span-7 md:max-w-none lg:col-span-6">
+                  <div
+                    className="w-full md:col-span-7 md:max-w-none lg:col-span-6"
+                    data-aos={
+                      featureIndex % 2 === 0 ? "fade-right" : "fade-left"
+                    }
+                    data-aos-duration="800"
+                  >
                     <div className="md:pr-4 lg:pr-12 xl:pr-16">
                       <div className="flex items-center flex-wrap gap-x-2 gap-y-1 mb-2">
                         <h2 className="text-xl font-semibold text-slate-200 md:text-2xl xl:text-3xl">
