@@ -4,11 +4,12 @@ import archDocs from "public/images/features/archDocs.webp";
 import apiDocs from "public/images/features/apiDocs.webp";
 import hosting from "public/images/features/hosting.webp";
 import multiLanguage from "public/images/features/multiLanguage.webp";
+import { StaticImageData } from "next/image";
 
 interface FeaturesTypes {
   title: string;
   text: string;
-  img: any;
+  img: StaticImageData;
   href: string | null;
   children: string[];
 }

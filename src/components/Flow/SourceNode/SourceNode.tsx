@@ -1,6 +1,10 @@
 import { Handle, Position } from "@xyflow/react";
 
-export function SourceNode({ data }: any) {
+interface SourceNodeProps {
+  label: string;
+}
+
+export function SourceNode({ data }: { data: SourceNodeProps }) {
   return (
     <div className="flex h-24 w-24 items-center justify-center rounded-full bg-blue-500 shadow-lg">
       <div className="text-white font-bold">{data.label}</div>

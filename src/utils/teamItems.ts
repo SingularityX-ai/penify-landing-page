@@ -2,9 +2,10 @@ import suman from "public/images/teams/suman.webp";
 import sunil from "public/images/teams/sunil.webp";
 import popin from "public/images/teams/popin.webp";
 import mayur from "public/images/teams/mayur.webp";
+import { StaticImageData } from "next/image";
 
 interface TeamItemsType {
-  img: any;
+  img: StaticImageData;
   username: string;
   role: string;
   linkedIn: string;

@@ -7,13 +7,13 @@ const colors = {
   teal: "bg-teal-500",
 };
 
-interface DataProps {
+interface TargetNodeProps {
   label: string;
+  handlePos: Position;
   color: keyof typeof colors;
-  handlePos: any;
 }
 
-export function TargetNode({ data }: { data: DataProps }) {
+export function TargetNode({ data }: { data: TargetNodeProps }) {
   const { label, color, handlePos } = data;
 
   return (

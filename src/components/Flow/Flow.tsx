@@ -9,7 +9,6 @@ import {
   OnEdgesChange,
   OnNodeDrag,
   OnNodesChange,
-  Position,
   ReactFlow,
   ReactFlowProvider,
   useReactFlow,
