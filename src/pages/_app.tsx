@@ -1,12 +1,18 @@
+import "aos/dist/aos.css";
 import "@/styles/globals.css";
 import "@xyflow/react/dist/style.css";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
+import AOS from "aos";
 
 export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <Fragment>
       <Head>
