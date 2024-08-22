@@ -11,7 +11,11 @@ export default function Contact() {
       <div className="w-full overflow-hidden py-8 md:py-16 xl:py-24">
         <div className="container mx-auto px-4">
           <div className="md:grid md:grid-cols-12">
-            <div className="col-span-6">
+            <div
+              className="col-span-6"
+              data-aos="fade-right"
+              data-aos-duration="800"
+            >
               <h2 className="mb-4 text-xl font-bold text-slate-200 md:mb-6 md:text-2xl lg:text-3xl">
                 Get In Touch
               </h2>
@@ -72,7 +76,12 @@ export default function Contact() {
                 </div>
               </dl>
             </div>
-            <div className="col-span-6">
+            <div
+              className="col-span-6"
+              data-aos="fade-left"
+              data-aos-duration="800"
+              data-aos-delay="100"
+            >
               <ContactForm />
             </div>
           </div>

@@ -12,10 +12,18 @@ export default function About() {
       <div className="w-full overflow-hidden py-8 md:py-16 xl:py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto mb-6 max-w-4xl md:mb-12">
-            <h2 className="mb-4 text-xl font-bold text-slate-200 md:mb-6 md:text-2xl lg:text-3xl">
+            <h2
+              className="mb-4 text-xl font-bold text-slate-200 md:mb-6 md:text-2xl lg:text-3xl"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
               Our Mission
             </h2>
-            <p className="text-sm text-slate-400 md:mb-8 md:text-base lg:text-lg">
+            <p
+              className="text-sm text-slate-400 md:mb-8 md:text-base lg:text-lg"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
               At Penify.dev, we are creating a GitHub App to automate and
               streamline the documentation process for developers and teams.
               Powered by Large Language Models, it ensures that project
@@ -28,7 +36,11 @@ export default function About() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <h2 className="mb-4 text-xl font-bold text-slate-200 md:mb-6 md:text-2xl lg:text-3xl">
+            <h2
+              className="mb-4 text-xl font-bold text-slate-200 md:mb-6 md:text-2xl lg:text-3xl"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
               Meet Our Team
             </h2>
 
@@ -38,6 +50,9 @@ export default function About() {
                   <div
                     className="bg-bannerBg group relative rounded-lg"
                     key={`team-member-${teamItemIndex}`}
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                    data-aos-delay="50"
                   >
                     <Image
                       src={img}
