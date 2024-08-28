@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://snorkell-landing-page-v2.vercel.app/
+
+# Sitemaps
+Sitemap: https://snorkell-landing-page-v2.vercel.app/sitemap.xml
