@@ -58,7 +58,7 @@ export default function Header() {
                   ) : (
                     <Link
                       href={href}
-                      className="block rounded px-3 py-2 text-sm capitalize text-gray-800 transition-colors duration-150 ease-in hover:bg-gray-200 hover:text-blue-700 md:text-base lg:text-lg lg:bg-transparent lg:p-0 lg:text-white lg:hover:bg-transparent hover:lg:text-blue-700"
+                      className="block rounded px-3 py-2 text-sm capitalize text-gray-800 transition-colors duration-150 ease-in hover:bg-gray-200 hover:text-blue-600 md:text-base lg:text-lg lg:bg-transparent lg:p-0 lg:text-white lg:hover:bg-transparent hover:lg:text-blue-400"
                     >
                       {title}
                     </Link>
@@ -67,7 +67,7 @@ export default function Header() {
                   <>
                     <button
                       type="button"
-                      className="flex w-full items-center justify-between px-3 py-2 text-sm text-gray-800 transition-all duration-200 ease-in hover:bg-gray-200 hover:text-blue-700 md:text-base lg:text-lg lg:w-auto lg:border-0 lg:p-0 lg:text-white lg:hover:bg-transparent lg:hover:text-blue-700"
+                      className="flex w-full items-center justify-between px-3 py-2 text-sm text-gray-800 transition-all duration-200 ease-in hover:bg-gray-200 hover:text-blue-600 md:text-base lg:text-lg lg:w-auto lg:border-0 lg:p-0 lg:text-white lg:hover:bg-transparent lg:hover:text-blue-400"
                       aria-expanded={isSubMenuOpen}
                       onClick={() => setIsSubMenuOpen((prev) => !prev)}
                     >

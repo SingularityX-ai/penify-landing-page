@@ -39,14 +39,14 @@ export default function Footer() {
                           href={href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block transition-all duration-200 ease-in hover:translate-x-2 hover:text-blue-700 hover:underline"
+                          className="inline-block transition-all duration-200 ease-in hover:translate-x-2 hover:text-blue-400 hover:underline"
                         >
                           {title}
                         </Link>
                       ) : (
                         <Link
                           href={href}
-                          className="inline-block transition-all duration-200 ease-in hover:translate-x-2 hover:text-blue-700 hover:underline"
+                          className="inline-block transition-all duration-200 ease-in hover:translate-x-2 hover:text-blue-400 hover:underline"
                         >
                           {title}
                         </Link>
@@ -61,7 +61,7 @@ export default function Footer() {
 
         <hr className="my-6 border-slate-600 sm:mx-auto lg:my-8" />
 
-        <div className="sm:flex sm:flex-wrap sm:items-center sm:justify-center md:justify-between" data-aos="fade-up" data-aos-duration="800">
+        <div className="sm:flex sm:flex-wrap sm:items-center sm:justify-center md:justify-between" data-aos="fade-up" data-aos-duration="400">
           <p className="text-sm text-slate-400 sm:text-center md:text-base xl:text-lg">
             © 2023 Snorkell Associates and Co. All Rights Reserved.
           </p>
