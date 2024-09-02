@@ -22,45 +22,47 @@ export default function Accordion({
       data-aos="fade-up"
       data-aos-duration="800"
     >
-      <button
-        type="button"
-        className="-m-2 flex w-full flex-wrap justify-between"
-        onClick={() => setIsAccordionOpen((prev) => !prev)}
-        aria-expanded={isAccordionOpen}
-        aria-controls={`accordion-text-${id}`}
-      >
-        <div className="flex-1 py-2">
-          <h2 className="text-start text-sm font-semibold text-slate-200 md:text-base xl:text-lg">
-            {title}
-          </h2>
-
-          <div
-            id={`accordion-text-${id}`}
-            role="region"
-            aria-labelledby={`accordion-title-${id}`}
-            className={`grid overflow-hidden text-xs text-slate-400 transition-all duration-300 ease-in-out md:text-sm lg:text-base ${
-              isAccordionOpen
-                ? "grid-rows-[1fr] opacity-100"
-                : "grid-rows-[0fr] opacity-0"
-            }`}
-          >
-            <div className="overflow-hidden">
-              <p
-                className="py-4 pb-2 text-start"
-                dangerouslySetInnerHTML={{ __html: text }}
-              />
-            </div>
+      <div>
+        <button
+          type="button"
+          className="-m-2 flex w-full flex-wrap justify-between"
+          onClick={() => setIsAccordionOpen((prev) => !prev)}
+          aria-expanded={isAccordionOpen}
+          aria-controls={`accordion-text-${id}`}
+        >
+          <div className="flex-1 py-2">
+            <h2 className="text-start text-sm font-semibold text-slate-200 md:text-base xl:text-lg">
+              {title}
+            </h2>
           </div>
-        </div>
 
-        <div className="w-auto py-2">
-          <IconChevronDown
-            className={`h-4 w-4 origin-center transform text-slate-200 transition duration-200 ease-out md:h-6 md:w-6 ${
-              isAccordionOpen ? "rotate-180" : ""
-            }`}
+          <div className="w-auto py-2">
+            <IconChevronDown
+              className={`h-4 w-4 origin-center transform text-slate-200 transition duration-200 ease-out md:h-6 md:w-6 ${
+                isAccordionOpen ? "rotate-180" : ""
+              }`}
+            />
+          </div>
+        </button>
+      </div>
+
+      <div
+        id={`accordion-text-${id}`}
+        role="region"
+        aria-labelledby={`accordion-title-${id}`}
+        className={`grid overflow-hidden text-xs text-slate-400 transition-all duration-300 ease-in-out md:text-sm lg:text-base ${
+          isAccordionOpen
+            ? "grid-rows-[1fr] opacity-100"
+            : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <p
+            className="py-4 pb-2 text-start pr-7"
+            dangerouslySetInnerHTML={{ __html: text }}
           />
         </div>
-      </button>
+      </div>
     </div>
   );
 }

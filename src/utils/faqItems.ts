@@ -31,13 +31,20 @@ export const faqsItems: FaqsItemsTypes[] = [
   {
     title: "Details on Fees and Pricing?",
     text: `
-                <a href="/pricing">Click here</a> to get details on pricing. <br />
-    
-                <a href="https://production-gateway.snorkell.ai/api/toc#fees-and-pricing" target="_blank" rel="noopener noreferrer">Click here</a> to view details on the Pricing Policy. <br />
+      <a href="/pricing" style="color: #5eead4; text-decoration: underline">Click here</a> 
+      to get details on pricing. <br />
 
-                <a href="https://production-gateway.snorkell.ai/api/refund-policy" target="_blank" rel="noopener noreferrer">Click here</a> to view the Refund and Cancellation Policy. <br /> <br />
+      <a href="https://production-gateway.snorkell.ai/api/toc#fees-and-pricing" target="_blank" rel="noopener noreferrer"
+          style="color: #5eead4; text-decoration: underline">Click here</a>
+      to view details on the Pricing Policy. <br />
 
-                If you have any questions, you can always email us at <a href="mailto:support@penify.dev">support@penify.dev</a>
-        `,
+      <a href="https://production-gateway.snorkell.ai/api/refund-policy" target="_blank" rel="noopener noreferrer"
+          style="color: #5eead4; text-decoration: underline">Click here</a>
+      to view the Refund and Cancellation Policy. <br />
+      <br />
+
+      If you have any questions, you can always email us at
+      <a href="mailto:support@penify.dev" style="color: #3b82f6">support@penify.dev</a>    
+    `,
   },
 ];
