@@ -60,7 +60,9 @@ export function THead({ currency, getCurrency }: THeadProps) {
                 </p>
 
                 <Link
-                  href={`https://dashboard.penify.dev/profile/payments?currency=${"USD"}`}
+                  href={`https://dashboard.penify.dev/profile/payments${
+                    new URL(window.location.href).search || "?currency=USD"
+                  }`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center rounded-lg bg-blue-700 px-5 py-2 text-center text-xs font-medium text-white transition-all duration-200 ease-in hover:bg-blue-800 focus:outline-none focus:ring-blue-300 md:text-sm"

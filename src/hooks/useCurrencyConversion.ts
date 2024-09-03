@@ -34,7 +34,7 @@ export function useCurrencyConversion() {
         case "USD":
           return priceInUSD;
         case "INR":
-          return Math.round((priceInUSD * exchangeRate));
+          return Math.round(priceInUSD * exchangeRate);
         default:
           return priceInUSD;
       }
@@ -42,7 +42,13 @@ export function useCurrencyConversion() {
     [currency, exchangeRate]
   );
 
-  const handleCurrencyChange = (code: CurrencyOptions) => setCurrency(code);
+  const handleCurrencyChange = useCallback((code: CurrencyOptions) => {
+    setCurrency(code);
+
+    const url = new URL(window.location.href);
+    url.searchParams.set("currency", code);
+    window.history.pushState({}, "", url.toString());
+  }, []);
 
   return {
     currency,
