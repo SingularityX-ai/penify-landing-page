@@ -1,0 +1,721 @@
+{
+  "plans": [
+    {
+      "title": "Freemium",
+      "price": "0"
+    },
+    {
+      "title": "Premium",
+      "price": "18"
+    },
+    {
+      "title": "Pro",
+      "price": "25"
+    },
+    {
+      "title": "Enterprise",
+      "price": null
+    }
+  ],
+  "data": [
+    {
+      "category": "Code Documentation",
+      "features": [
+        {
+          "title": "Full Repository Code Documentation",
+          "contents": [
+            {
+              "title": "10 Files/Repo",
+              "tooltip": "Max of 3 tries per repo"
+            },
+            {
+              "title": "3 Files/Repo",
+              "tooltip": "Max of 1 try per repo"
+            },
+            {
+              "title": "10 Files/Repo",
+              "tooltip": "Max of 3 tries per repo"
+            },
+            {
+              "title": "All Files",
+              "tooltip": "Max 3 tries per repo per month"
+            },
+            {
+              "title": "All Files",
+              "tooltip": "Max 3 tries per repo per month"
+            }
+          ]
+        },
+        {
+          "title": "CI/CD Code Documentation Update",
+          "contents": [
+            {
+              "title": "10 Commits/Day",
+              "tooltip": null
+            },
+            {
+              "title": "5 Commits/Day",
+              "tooltip": null
+            },
+            {
+              "title": "Unlimited",
+              "tooltip": null
+            },
+            {
+              "title": "Unlimited",
+              "tooltip": null
+            },
+            {
+              "title": "Unlimited",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "ChangeLog",
+          "contents": [
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        }
+      ],
+      "active": true
+    },
+    {
+      "category": "Pull Request Documentation",
+      "features": [
+        {
+          "title": "PR Summary",
+          "contents": [
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "Add labels to PR",
+          "contents": [
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "Improvement suggestions",
+          "contents": [
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "Review PR",
+          "contents": [
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "Analyze",
+          "contents": [
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "Ask on PR",
+          "contents": [
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "Code doc on PR",
+          "contents": [
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "Find similiar component",
+          "contents": [
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "Code Suggestion and Improvements",
+          "contents": [
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "Custom LLMs",
+          "contents": [
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        }
+      ],
+      "active": false
+    },
+    {
+      "category": "API Documentation",
+      "features": [
+        {
+          "title": "Documentation Generation",
+          "contents": [
+            {
+              "title": "40 Swagger Endpoints",
+              "tooltip": "max of 3 tries per repo"
+            },
+            {
+              "title": "10 Swagger Endpoints",
+              "tooltip": "max of 1 try per repo"
+            },
+            {
+              "title": "40 Swagger Endpoints",
+              "tooltip": "max of 3 tries per repo"
+            },
+            {
+              "title": "All Swagger Endpoints",
+              "tooltip": "max of 3 tries per repo per month"
+            },
+            {
+              "title": "All Swagger Endpoints",
+              "tooltip": "max of 3 tries per repo per month"
+            }
+          ]
+        },
+        {
+          "title": "Hosting",
+          "contents": [
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Free with Authentication",
+              "tooltip": null
+            },
+            {
+              "title": "Free with Authentication",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "Commit the Doc file",
+          "contents": [
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "CI/CD Update",
+          "contents": [
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "Authentication",
+          "contents": [
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "Sample Code",
+          "contents": [
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "Postman Compatible",
+          "contents": [
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        }
+      ],
+      "active": false
+    },
+    {
+      "category": "Architecture Documentation",
+      "features": [
+        {
+          "title": "Documentation Generation",
+          "contents": [
+            {
+              "title": "All files",
+              "tooltip": "max of 3 tries per repo"
+            },
+            {
+              "title": "All files",
+              "tooltip": "max of 1 try per repo"
+            },
+            {
+              "title": "All files",
+              "tooltip": "max of 3 tries per repo"
+            },
+            {
+              "title": "All files",
+              "tooltip": "max of 3 tries per repo per month"
+            },
+            {
+              "title": "All endpoints",
+              "tooltip": "unlimited tries per repo per month"
+            }
+          ]
+        },
+        {
+          "title": "Hosting",
+          "contents": [
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Free with Authentication",
+              "tooltip": null
+            },
+            {
+              "title": "Free with Authentication",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "Commit the Doc file",
+          "contents": [
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "CI/CD Update",
+          "contents": [
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "ReadMe Update",
+          "contents": [
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "ChangeLog",
+          "contents": [
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        },
+        {
+          "title": "Authentication",
+          "contents": [
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "-",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            },
+            {
+              "title": "Available",
+              "tooltip": null
+            }
+          ]
+        }
+      ],
+      "active": false
+    }
+  ]
+}

@@ -8,7 +8,7 @@ export function useCurrencyConversion() {
     return (saved as CurrencyOptions) || "USD";
   });
 
-  const [exchangeRate, setExchangeRate] = useState<number>(0);
+  const [exchangeRate, setExchangeRate] = useState<number>(82);
 
   useEffect(() => {
     const fetchExchangeRate = async () => {
@@ -34,7 +34,7 @@ export function useCurrencyConversion() {
         case "USD":
           return priceInUSD;
         case "INR":
-          return (priceInUSD * exchangeRate).toFixed();
+          return Math.round((priceInUSD * exchangeRate));
         default:
           return priceInUSD;
       }
