@@ -1,6 +1,7 @@
 import { Element } from "react-scroll";
 import { CurrencyDropdown } from "./CurrencyDropdown/CurrencyDropdown";
 import { useCurrencyConversion } from "@/hooks/useCurrencyConversion";
+import { PlansTable } from "./PlansTable/PlansTable";
 
 export default function Pricing() {
   const { currency, handleCurrencyChange, getCurrency} = useCurrencyConversion();
@@ -23,6 +24,8 @@ export default function Pricing() {
             </h1>
 
             <CurrencyDropdown currency={currency} handleCurrencyChange={handleCurrencyChange} />
+
+            <PlansTable currency={currency} getCurrency={getCurrency} />
           </header>
         </div>
       </Element>
