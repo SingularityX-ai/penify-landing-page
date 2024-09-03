@@ -8,6 +8,7 @@ import Head from "next/head";
 import { Fragment, useEffect } from "react";
 import AOS from "aos";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -55,6 +56,16 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      {/* Hubspot analytics */}
+      <Script
+        type="text/javascript"
+        id="hs-script-loader"
+        async
+        defer
+        src="//js-na1.hs-scripts.com/44651459.js"
+        strategy="afterInteractive"
+      />
 
       <Component {...pageProps} />
       <SpeedInsights />
