@@ -71,6 +71,11 @@ function FlowContent() {
       //translateExtent={}
       preventScrolling={false}
       className="min-h-64"
+      nodesDraggable={false}
+      panOnDrag={false}
+      zoomOnScroll={false}
+      zoomOnPinch={false}
+      zoomOnDoubleClick={false}
     >
       <Background variant={BackgroundVariant.Dots} />
       <Controls showZoom={false} showFitView={false} showInteractive={false} />

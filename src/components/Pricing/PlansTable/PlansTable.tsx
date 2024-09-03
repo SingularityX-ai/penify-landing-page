@@ -16,7 +16,7 @@ export function PlansTable({ currency, getCurrency }: PlansTableProps) {
 
         <tbody>
           {PRICING.data.map(({ category, features, active }, dataIndex) => (
-            <tr>
+            <tr key={`pricing-category-index-${dataIndex}`}>
               <td colSpan={6} className="p-0">
                 <Accordion
                   title={category}

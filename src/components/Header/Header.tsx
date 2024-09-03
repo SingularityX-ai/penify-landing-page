@@ -51,7 +51,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Get Started
+            Dashboard
           </Link>
 
           <button
