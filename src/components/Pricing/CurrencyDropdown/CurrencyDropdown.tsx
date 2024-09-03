@@ -48,7 +48,7 @@ export function CurrencyDropdown({
   }, [currency]);
 
   return (
-    <div className="w-fit flex flex-col items-center">
+    <div className="w-fit flex flex-col items-center relative">
       <button
         type="button"
         className="inline-flex items-center rounded-lg bg-slate-700 px-5 py-3 text-center text-xs font-medium text-white transition-all duration-200 ease-in hover:bg-slate-800 focus:outline-none md:text-sm xl:text-base"
@@ -64,7 +64,7 @@ export function CurrencyDropdown({
           isDropdownOpen
             ? "my-2 translate-y-0 opacity-100 duration-300 ease-out"
             : "-translate-y-2 opacity-0 duration-200 ease-in"
-        } z-10 w-full transform divide-y divide-gray-100 rounded-lg bg-white font-normal shadow max-w-32`}
+        } z-10 w-full transform divide-y divide-gray-100 rounded-lg bg-white font-normal shadow max-w-32 absolute top-11`}
       >
         <ul
           className={`py-2 text-xs font-medium md:text-sm lg:text-base ${

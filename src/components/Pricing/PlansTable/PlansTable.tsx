@@ -10,7 +10,7 @@ interface PlansTableProps {
 
 export function PlansTable({ currency, getCurrency }: PlansTableProps) {
   return (
-    <div className="relative w-full overflow-x-auto shadow-md sm:rounded-lg">
+    <div className="relative w-full overflow-x-auto shadow-md sm:rounded-lg mt-24">
       <table className="w-full table-fixed text-sm text-slate-400">
         <THead currency={currency} getCurrency={getCurrency} />
 
