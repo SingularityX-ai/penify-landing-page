@@ -7,6 +7,7 @@ import FAQ from "@/components/FAQ/FAQ";
 import Features from "@/components/Features/Features";
 import Tour from "@/components/Tour/Tour";
 import Hero from "@/components/Hero/Hero";
+import Pricing from "@/components/Pricing/Pricing";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export default function Home() {
         <Hero />
         <Tour />
         <Features />
+        <Pricing />
         <FAQ />
       </main>
       <Footer />
