@@ -21,7 +21,7 @@ export function ContactForm() {
     // make api call
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_ENDPOINT}/contact`,
+        "https://production-gateway.snorkell.ai/api/contact",
         {
           method: "POST",
           headers: {

@@ -101,7 +101,7 @@ export default function App({ Component, pageProps }: AppProps) {
         strategy="afterInteractive"
       />
 
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""} />
+      <GoogleTagManager gtmId="G-NQRNJW5NS7" />
 
       <Component {...pageProps} />
       <SpeedInsights />

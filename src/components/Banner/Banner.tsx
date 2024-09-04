@@ -17,7 +17,7 @@ export default function Banner() {
     const getCount = async () => {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_ENDPOINT}/v1/analytics/usage/count`
+          "https://production-gateway.snorkell.ai/api/v1/analytics/usage/count"
         );
         const { users, repos } = await response.json();
         setCounter({ users, repos });
