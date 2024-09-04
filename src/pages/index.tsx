@@ -8,6 +8,7 @@ import Features from "@/components/Features/Features";
 import Tour from "@/components/Tour/Tour";
 import Hero from "@/components/Hero/Hero";
 import Pricing from "@/components/Pricing/Pricing";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,23 @@ export default function Home() {
     }
 
     return () => window.removeEventListener("load", handleLoad);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollDepth = window.scrollY / document.body.offsetHeight;
+
+      if (scrollDepth >= 0.7 && scrollDepth < 0.72) {
+        sendGTMEvent({
+          event_category: "scroll depth",
+          event_label: "scrolled 70% on homepage",
+        });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return isLoading ? (
