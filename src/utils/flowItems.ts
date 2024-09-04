@@ -1,72 +1,52 @@
-import { Edge, Node, Position } from "@xyflow/react";
+import { Edge, Node } from "@xyflow/react";
+import { CylinderNode, DiamondNode, HexagonNode, CircleNode, GitRepoNode, KnowledgeBaseNode } from './customNodeTypes.tsx';
+
+
+export const nodeTypes = {
+  cylinder: CylinderNode,
+  diamond: DiamondNode,
+  hexagon: HexagonNode,
+  circle: CircleNode,
+  gitRepo: GitRepoNode,
+  knowledgeBaseNode: KnowledgeBaseNode,
+};
 
 export const initialNodes: Node[] = [
   {
     id: "gitRepo",
-    type: "codeRepository",
+    type: "gitRepo",
     position: { x: -200, y: 0 },
-    data: { 
-      label: "Git Repository",
-      shape: "cylinder" // Representing a database or storage
-    },
-  },
-  {
-    id: "penify",
-    type: "aiAgent",
-    position: { x: 0, y: 0 },
-    data: { 
-      label: "Penify Agent",
-      shape: "diamond" // Representing a decision or process point
-    },
+    data: { label: "Git Repository" },
   },
   {
     id: "knowledgeBase",
-    type: "dataStore",
-    position: { x: 200, y: 0 },
-    data: { 
-      label: "Knowledge Nexus",
-      shape: "hexagon" // Representing a central hub of information
-    },
+    type: "cylinder",
+    position: { x: 100, y: -10 },
+    data: { label: "Knowledge Base" },
   },
   {
     id: "pullRequestDoc",
-    type: "insightPortal",
+    type: "circle",
     position: { x: 400, y: -100 },
-    data: { 
-      label: "Merge Maestro",
-      color: "indigo",
-      shape: "circle" // Representing an output or endpoint
-    },
+    data: { label: "Merge Maestro", color: "indigo" },
   },
   {
     id: "codeDoc",
-    type: "codeCompendium",
+    type: "circle",
     position: { x: 400, y: -33 },
-    data: { 
-      label: "Code Chronicles",
-      color: "violet",
-      shape: "circle"
-    },
+    data: { label: "Code Chronicles", color: "violet" },
   },
   {
     id: "apiDoc",
-    type: "interfaceIlluminator",
+    type: "circle",
     position: { x: 400, y: 33 },
-    data: { 
-      label: "API Atlas",
-      color: "teal",
-      shape: "circle"
-    },
+    data: { label: "API Atlas", color: "teal" },
   },
   {
     id: "archDoc",
-    type: "blueprintBeacon",
+    type: "circle",
     position: { x: 400, y: 100 },
-    data: { 
-      label: "Architecture Almanac",
-      color: "pink",
-      shape: "circle"
-    },
+    data: { label: "Architecture Almanac", color: "pink" },
   },
 ];
 
@@ -74,19 +54,17 @@ export const initialEdges: Edge[] = [
   {
     id: "e-repo-penify",
     source: "gitRepo",
-    target: "penify",
-    animated: true,
-    type: "smoothstep",
-    label: "Installs",
-    // sourceHandle: "top-connector",
-  },
-  {
-    id: "e-penify-kb",
-    source: "penify",
     target: "knowledgeBase",
     animated: true,
     type: "smoothstep",
-    label: "Builds",
+    label: "Install's Penify",
+    style: { stroke: '#ffffff', strokeWidth: 2 },  // White color, no background
+    labelStyle: { fill: '#ffffff', fontWeight: 700, baselineShift: "super", fontSize: "15"},  // White label
+    labelBgStyle: { fill: 'transparent' },  // Transparent label background
+    labelShowBg: true,
+    labelBgPadding: [8, 4],
+    labelBgBorderRadius: 4,
+    
   },
   {
     id: "e-kb-pullreq",

@@ -15,7 +15,7 @@ import {
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { SourceNode } from "./SourceNode/SourceNode";
 import { TargetNode } from "./TargetNode/TargetNode";
-import { initialEdges, initialNodes } from "@/utils/flowItems";
+import { initialEdges, initialNodes, nodeTypes } from "@/utils/flowItems";
 
 function FlowContent() {
   const { fitView } = useReactFlow();
@@ -75,7 +75,7 @@ function FlowContent() {
       edges={edges}
       onNodesChange={onNodesChange}
       onEdgesChange={onEdgesChange}
-      nodeTypes={NodeTypes}
+      nodeTypes={nodeTypes}
       // edgeTypes={}
       nodeOrigin={[0, 0]}
       // onNodeDragStop={onNodeDragStop}

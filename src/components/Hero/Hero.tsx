@@ -14,7 +14,7 @@ export default function Hero() {
             </div>
 
             <h1 className="mb-4 md:mb-6 font-bold text-2xl md:text-3xl lg:text-4xl text-slate-200">
-              Automated Documentation for Every Step of the Process
+              Automate your Software Documentation 
             </h1>
 
             <p className="mb-6 md:mb-8 text-sm text-slate-400 md:text-base lg:text-lg">
