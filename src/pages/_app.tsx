@@ -9,11 +9,28 @@ import { Fragment, useEffect } from "react";
 import AOS from "aos";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, sendGTMEvent } from "@next/third-parties/google";
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     AOS.init();
+  }, []);
+
+  useEffect(() => {
+    const handleLinkClick = (event: MouseEvent) => {
+      const target = event.target as HTMLAnchorElement;
+
+      if (target.tagName === "A") {
+        sendGTMEvent({
+          event_category: "link",
+          event_label: target.href || target,
+        });
+      }
+    };
+
+    document.addEventListener("click", handleLinkClick);
+
+    return () => document.removeEventListener("click", handleLinkClick);
   }, []);
 
   return (
