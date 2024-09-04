@@ -1,3 +1,4 @@
+import { sendGTMEvent } from "@next/third-parties/google";
 import { IconBrandTelegram } from "@tabler/icons-react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Bounce, toast } from "react-toastify";
@@ -47,6 +48,12 @@ export function ContactForm() {
         transition: Bounce,
       });
 
+      sendGTMEvent({
+        event_category: "Contact Form",
+        event_label: "contact us form submission",
+        user: data.email,
+      });
+
       reset();
     } catch (err) {
       console.error("Error: ", err);
@@ -69,7 +76,10 @@ export function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="mx-auto max-w-lg px-4 py-6">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="mx-auto max-w-lg px-4 py-6"
+    >
       <div className="mb-6 md:mb-4">
         <label
           htmlFor="name"
