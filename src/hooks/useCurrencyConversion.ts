@@ -5,7 +5,7 @@ export type CurrencyOptions = "USD" | "INR";
 export function useCurrencyConversion() {
   const [currency, setCurrency] = useState<CurrencyOptions>(() => {
     const saved = localStorage.getItem("selected-currency");
-    return (saved as CurrencyOptions) || "USD";
+    return saved ? (JSON.parse(saved) as CurrencyOptions) : "USD";
   });
 
   const [exchangeRate, setExchangeRate] = useState<number>(82);

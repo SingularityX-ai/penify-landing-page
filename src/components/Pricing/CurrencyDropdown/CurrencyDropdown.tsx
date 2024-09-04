@@ -55,7 +55,7 @@ export function CurrencyDropdown({
         onClick={() => setIsDropdownOpen((prev) => !prev)}
         aria-expanded={isDropdownOpen}
       >
-        Select Currency
+        Selected Currency: <span className="font-semibold ms-1">{currency}</span>
       </button>
 
       <div
