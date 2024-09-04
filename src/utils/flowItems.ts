@@ -2,80 +2,118 @@ import { Edge, Node, Position } from "@xyflow/react";
 
 export const initialNodes: Node[] = [
   {
-    id: "source",
-    type: "source",
-    position: { x: 80, y: 0 },
-    data: { label: "Penify" },
+    id: "gitRepo",
+    type: "codeRepository",
+    position: { x: -200, y: 0 },
+    data: { 
+      label: "Git Repository",
+      shape: "cylinder" // Representing a database or storage
+    },
   },
   {
-    id: "1",
-    type: "target",
-    position: { x: -160, y: -55 },
-    data: {
-      label: "Pull Request Documentation",
-      handlePos: Position.Top,
+    id: "penify",
+    type: "aiAgent",
+    position: { x: 0, y: 0 },
+    data: { 
+      label: "Penify Agent",
+      shape: "diamond" // Representing a decision or process point
+    },
+  },
+  {
+    id: "knowledgeBase",
+    type: "dataStore",
+    position: { x: 200, y: 0 },
+    data: { 
+      label: "Knowledge Nexus",
+      shape: "hexagon" // Representing a central hub of information
+    },
+  },
+  {
+    id: "pullRequestDoc",
+    type: "insightPortal",
+    position: { x: 400, y: -100 },
+    data: { 
+      label: "Merge Maestro",
       color: "indigo",
+      shape: "circle" // Representing an output or endpoint
     },
   },
   {
-    id: "2",
-    type: "target",
-    position: { x: 162, y: 102 },
-    data: {
-      label: "Repository Code Documentation",
-      handlePos: Position.Bottom,
+    id: "codeDoc",
+    type: "codeCompendium",
+    position: { x: 400, y: -33 },
+    data: { 
+      label: "Code Chronicles",
       color: "violet",
+      shape: "circle"
     },
   },
   {
-    id: "3",
-    type: "target",
-    position: { x: -108, y: 200 },
-    data: {
-      label: "Architectural Documentation",
-      handlePos: Position.Left,
-      color: "pink",
-    },
-  },
-  {
-    id: "4",
-    type: "target",
-    position: { x: 208, y: -124 },
-    data: {
-      label: "API Documentation",
-      handlePos: Position.Right,
+    id: "apiDoc",
+    type: "interfaceIlluminator",
+    position: { x: 400, y: 33 },
+    data: { 
+      label: "API Atlas",
       color: "teal",
+      shape: "circle"
+    },
+  },
+  {
+    id: "archDoc",
+    type: "blueprintBeacon",
+    position: { x: 400, y: 100 },
+    data: { 
+      label: "Architecture Almanac",
+      color: "pink",
+      shape: "circle"
     },
   },
 ];
 
 export const initialEdges: Edge[] = [
   {
-    id: "e1-core",
-    source: "source",
-    target: "1",
-    sourceHandle: "top-connector",
+    id: "e-repo-penify",
+    source: "gitRepo",
+    target: "penify",
     animated: true,
+    type: "smoothstep",
+    label: "Installs",
+    // sourceHandle: "top-connector",
   },
   {
-    id: "e2-core",
-    source: "source",
-    target: "2",
-    sourceHandle: "btm-connector",
+    id: "e-penify-kb",
+    source: "penify",
+    target: "knowledgeBase",
     animated: true,
+    type: "smoothstep",
+    label: "Builds",
   },
   {
-    id: "e3-core",
-    source: "source",
-    target: "3",
-    sourceHandle: "left-connector",
+    id: "e-kb-pullreq",
+    source: "knowledgeBase",
+    target: "pullRequestDoc",
     animated: true,
+    type: "straight",
   },
   {
-    id: "e4-core",
-    source: "source",
-    target: "4",
-    sourceHandle: "right-connector",
+    id: "e-kb-code",
+    source: "knowledgeBase",
+    target: "codeDoc",
     animated: true,
+    type: "straight",
+  },
+  {
+    id: "e-kb-api",
+    source: "knowledgeBase",
+    target: "apiDoc",
+    animated: true,
+    type: "straight",
+  },
+  {
+    id: "e-kb-arch",
+    source: "knowledgeBase",
+    target: "archDoc",
+    animated: true,
+    type: "straight",
   },
 ];
