@@ -58,60 +58,38 @@ export const GitRepoNode: React.FC<NodeProps<any>> = ({ data }) => (
   </div>
 );
 
-export const CylinderNode: React.FC<NodeProps<any>> = ({ data }) => (
+export const CylinderNode: React.FC<NodeProps<NodeData>> = ({ data }) => (
   <div style={{
-    width: 100,
-    height: 120,
-    position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
-    background: '#4a90e2',
-    borderRadius: '0 0 50% 50% / 0 0 20% 20%',
-    overflow: 'visible',
   }}>
-    <svg
-      style={{
-        position: 'absolute',
-        top: '-20px',
-        left: 0,
-        width: '100%',
-        height: '40px',
-        zIndex: 1,
-      }}
-    >
-      <ellipse
-        cx="50"
-        cy="20"
-        rx="50"
-        ry="20"
-        fill="#4a90e2"
-        stroke="#4a90e2"
-        strokeWidth="2"
-      />
-    </svg>
-    <div style={{
-      fontSize: '52px',
-      marginTop: '20px',
-      zIndex: 2,
+    <div style={{ 
+      ...nodeStyles, 
+      width: 100, 
+      height: 120, 
+      borderRadius: '50% / 20%', 
+      display: 'flex', 
+      alignItems: 'center', 
+      justifyContent: 'center',
+      background: '#4a90e2',
+      border: '0px solid #3a7bc8',
       position: 'relative',
+      overflow: 'hidden'
     }}>
-      📚
+      <div style={{ fontSize: '52px', marginBottom: '8px', zIndex: 2 }}>📚</div>
+      <Handle type="target" position={Position.Left} style={{ background: '#555' }} />
+      <Handle type="source" position={Position.Right} style={{ background: '#555' }} />
     </div>
     <div style={{
-      color: '#333',
-      fontWeight: 'bold',
-      fontSize: '12px',
-      textAlign: 'center',
       marginTop: '8px',
-      maxWidth: '120px',
-      wordWrap: 'break-word',
+      fontSize: '22px',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      color: '#fff',
     }}>
       {data.label}
     </div>
-    <Handle type="target" position={Position.Left} style={{ background: '#555' }} />
-    <Handle type="source" position={Position.Right} style={{ background: '#555' }} />
   </div>
 );
 
