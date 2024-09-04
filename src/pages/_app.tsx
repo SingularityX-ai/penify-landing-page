@@ -10,11 +10,27 @@ import AOS from "aos";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import { GoogleTagManager, sendGTMEvent } from "@next/third-parties/google";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
   useEffect(() => {
     AOS.init();
   }, []);
+
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      sendGTMEvent({
+        event_category: "pageView",
+        page_path: url,
+      });
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => router.events.off("routeChangeComplete", handleRouteChange);
+  }, [router.events]);
 
   useEffect(() => {
     const handleLinkClick = (event: MouseEvent) => {
