@@ -92,20 +92,21 @@ export const CylinderNode: React.FC<NodeProps<any>> = ({ data }) => (
       />
     </svg>
     <div style={{
-      fontSize: '32px',
+      fontSize: '52px',
       marginTop: '20px',
-      marginBottom: '8px',
       zIndex: 2,
       position: 'relative',
     }}>
       📚
     </div>
     <div style={{
-      color: 'white',
+      color: '#333',
       fontWeight: 'bold',
+      fontSize: '12px',
       textAlign: 'center',
-      zIndex: 2,
-      position: 'relative',
+      marginTop: '8px',
+      maxWidth: '120px',
+      wordWrap: 'break-word',
     }}>
       {data.label}
     </div>
