@@ -9,6 +9,7 @@ import { Fragment, useEffect } from "react";
 import AOS from "aos";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -66,6 +67,8 @@ export default function App({ Component, pageProps }: AppProps) {
         src="//js-na1.hs-scripts.com/44651459.js"
         strategy="afterInteractive"
       />
+
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""} />
 
       <Component {...pageProps} />
       <SpeedInsights />
