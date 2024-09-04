@@ -27,6 +27,8 @@ export default function Hero() {
               <Link
                 href="https://github.com/apps/penify-dev/installations/select_target"
                 className="rounded-lg bg-blue-700 px-5 py-3 text-center text-xs md:text-sm xl:text-base font-medium text-white transition-all duration-200 ease-in hover:bg-blue-800 focus:outline-none focus:ring-blue-300"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Get Started
               </Link>
@@ -34,12 +36,14 @@ export default function Hero() {
               <Link
                 href="https://calendly.com/sumansaurabh-snorkell/intro-snorkell-i"
                 className="rounded-lg bg-slate-700 px-5 py-3 text-center text-xs md:text-sm xl:text-base font-medium text-white transition-all duration-200 ease-in hover:bg-slate-800 focus:outline-none focus:ring-slate-300"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Request a Demo
               </Link>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 p-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <div className="w-full lg:w-1/2 p-6 lg:p-0" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
             <Flow />
           </div>
         </div>

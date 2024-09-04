@@ -7,7 +7,7 @@ interface SourceNodeProps {
 export function SourceNode({ data }: { data: SourceNodeProps }) {
   return (
     <div className="flex h-24 w-24 items-center justify-center rounded-full bg-blue-500 shadow-lg">
-      <div className="text-white font-bold">{data.label}</div>
+      <div className="text-white text-sm md:text-base font-bold">{data.label}</div>
       <Handle
         type="source"
         position={Position.Top}

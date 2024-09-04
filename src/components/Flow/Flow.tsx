@@ -7,13 +7,12 @@ import {
   Edge,
   Node,
   OnEdgesChange,
-  OnNodeDrag,
   OnNodesChange,
   ReactFlow,
   ReactFlowProvider,
   useReactFlow,
 } from "@xyflow/react";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { SourceNode } from "./SourceNode/SourceNode";
 import { TargetNode } from "./TargetNode/TargetNode";
 import { initialEdges, initialNodes } from "@/utils/flowItems";
@@ -24,16 +23,27 @@ function FlowContent() {
   const [nodes, setNodes] = useState<Node[]>(initialNodes);
   const [edges, setEdges] = useState<Edge[]>(initialEdges);
 
+  useEffect(() => {
+    const handleResize = () => {
+      fitView({ duration: 200 });
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, [fitView]);
+
   // add interactivity to node drag, select or move.
   const onNodesChange: OnNodesChange = useCallback(
     (changes) => {
       setNodes((nds) => applyNodeChanges(changes, nds));
-
+      /*
       changes.forEach((change) => {
         if (change.type === "position" && change.position) {
           console.log(change.position);
         }
       });
+      */
     },
     [setNodes]
   );
@@ -51,11 +61,13 @@ function FlowContent() {
     []
   );
 
+  /* 
   const onNodeDragStop: OnNodeDrag = useCallback(() => {
     setTimeout(() => {
       fitView({ duration: 200 });
     }, 0);
-  }, [fitView]);
+  }, [fitView]);  
+  */
 
   return (
     <ReactFlow
@@ -66,7 +78,7 @@ function FlowContent() {
       nodeTypes={NodeTypes}
       // edgeTypes={}
       nodeOrigin={[0, 0]}
-      onNodeDragStop={onNodeDragStop}
+      // onNodeDragStop={onNodeDragStop}
       fitView={true}
       //translateExtent={}
       preventScrolling={false}

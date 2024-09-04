@@ -18,7 +18,7 @@ export function TargetNode({ data }: { data: TargetNodeProps }) {
 
   return (
     <div
-      className={` ${colors[color]} rounded-md px-4 py-2 text-slate-200 shadow-xl`}
+      className={`${colors[color]} rounded-md px-4 py-2 text-slate-200 text-sm md:text-base shadow-xl`}
     >
       <div className="font-bold">{label}</div>
       <Handle
