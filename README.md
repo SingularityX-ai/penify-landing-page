@@ -17,6 +17,7 @@ A modern, mobile-friendly and responsive landing page built with Next.js, TypeSc
 - [React Scroll](https://github.com/fisshy/react-scroll): A library for handling scroll events in React.
 - [React Tiny Popover](https://github.com/alexkatz/react-tiny-popover): A library for creating small, customizable popovers in React.
 - [React Toastify](https://fkhadra.github.io/react-toastify/introduction/): A library for displaying toast notifications in React.
+- [OpenCage Geocoding API](https://opencagedata.com/tutorials): API endpoint for reverse geocoding. We are using it to get location info based on user's geographic coordinates and extracting currency code for users location.
 
 <br>
 
