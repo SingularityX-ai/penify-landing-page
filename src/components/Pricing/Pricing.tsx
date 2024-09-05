@@ -4,7 +4,14 @@ import { useCurrencyConversion } from "@/hooks/useCurrencyConversion";
 import { PlansTable } from "./PlansTable/PlansTable";
 
 export default function Pricing() {
-  const { currency, handleCurrencyChange, getCurrency} = useCurrencyConversion();
+  const {
+    currency,
+    handleCurrencyChange,
+    getCurrency,
+    showLocationPopup,
+    handleAcceptLocation,
+    handleDeclineLocation,
+  } = useCurrencyConversion();
 
   return (
     <section>

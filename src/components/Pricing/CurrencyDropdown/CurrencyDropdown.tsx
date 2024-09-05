@@ -43,10 +43,6 @@ export function CurrencyDropdown({
     }
   }, [isDropdownOpen]);
 
-  useEffect(() => {
-    localStorage.setItem("selected-currency", JSON.stringify(currency));
-  }, [currency]);
-
   return (
     <div className="w-fit flex flex-col items-center relative">
       <button

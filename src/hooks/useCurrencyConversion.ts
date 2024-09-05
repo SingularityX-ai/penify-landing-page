@@ -9,6 +9,7 @@ export function useCurrencyConversion() {
   });
 
   const [exchangeRate, setExchangeRate] = useState<number>(82);
+  const [showLocationPopup, setShowLocationPopup] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchExchangeRate = async () => {
@@ -25,6 +26,50 @@ export function useCurrencyConversion() {
 
     fetchExchangeRate();
   }, []);
+
+  useEffect(() => {
+    const askedForLocation = localStorage.getItem("asked-for-location");
+
+    if (!askedForLocation) {
+      setShowLocationPopup(true);
+    }
+  }, []);
+
+  function getUserLocation() {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          const { latitude, longitude } = pos.coords;
+          fetchCurrencyCode(latitude, longitude);
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+    } else {
+      console.error("Geolocation is not supported by your system");
+    }
+  }
+
+  const fetchCurrencyCode = async (latitude: number, longitude: number) => {
+    try {
+      const resp = await fetch(
+        `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=5328fdf912a24872a29d86f8177dec07`
+      );
+
+      const data = await resp.json();
+
+      if (data.results && data.results.length > 0) {
+        const { iso_code } = data.results[0].annotations.currency;
+
+        if (iso_code && iso_code !== currency) {
+          handleCurrencyChange(iso_code);
+        }
+      }
+    } catch (err) {
+      console.error("Failed to fetch currency code", err);
+    }
+  };
 
   const getCurrency = useCallback(
     (priceInUSD: number) => {
@@ -45,14 +90,32 @@ export function useCurrencyConversion() {
   const handleCurrencyChange = useCallback((code: CurrencyOptions) => {
     setCurrency(code);
 
+    localStorage.setItem("selected-currency", JSON.stringify(code));
+
     const url = new URL(window.location.href);
     url.searchParams.set("currency", code);
     window.history.pushState({}, "", url.toString());
   }, []);
 
+  function handleAcceptLocation() {
+    setShowLocationPopup(false);
+
+    localStorage.setItem("asked-for-location", "true");
+    getUserLocation();
+  }
+
+  function handleDeclineLocation() {
+    setShowLocationPopup(false);
+
+    localStorage.setItem("asked-for-location", "true");
+  }
+
   return {
     currency,
     handleCurrencyChange,
     getCurrency,
+    showLocationPopup,
+    handleAcceptLocation,
+    handleDeclineLocation,
   };
 }
