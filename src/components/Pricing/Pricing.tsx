@@ -2,6 +2,7 @@ import { Element } from "react-scroll";
 import { CurrencyDropdown } from "./CurrencyDropdown/CurrencyDropdown";
 import { useCurrencyConversion } from "@/hooks/useCurrencyConversion";
 import { PlansTable } from "./PlansTable/PlansTable";
+import { LocationPopup } from "../LocationPopup/LocationPopup";
 
 export default function Pricing() {
   const {
@@ -15,6 +16,13 @@ export default function Pricing() {
 
   return (
     <section>
+      {showLocationPopup ? (
+        <LocationPopup
+          handleAcceptLocation={handleAcceptLocation}
+          handleDeclineLocation={handleDeclineLocation}
+        />
+      ) : null}
+
       <Element
         name="pricing"
         id="pricing"
@@ -30,7 +38,10 @@ export default function Pricing() {
               Choose a plan that suits you
             </h1>
 
-            <CurrencyDropdown currency={currency} handleCurrencyChange={handleCurrencyChange} />
+            <CurrencyDropdown
+              currency={currency}
+              handleCurrencyChange={handleCurrencyChange}
+            />
 
             <PlansTable currency={currency} getCurrency={getCurrency} />
           </header>
