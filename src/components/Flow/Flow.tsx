@@ -82,7 +82,7 @@ function FlowContent() {
       fitView={true}
       //translateExtent={}
       preventScrolling={false}
-      className="min-h-64"
+      className="min-h-72"
       nodesDraggable={false}
       panOnDrag={false}
       zoomOnScroll={false}

@@ -72,6 +72,7 @@ export const initialEdges: Edge[] = [
     target: "pullRequestDoc",
     animated: true,
     type: "straight",
+    sourceHandle: "right",
   },
   {
     id: "e-kb-code",
@@ -79,6 +80,7 @@ export const initialEdges: Edge[] = [
     target: "codeDoc",
     animated: true,
     type: "straight",
+    sourceHandle: "top",
   },
   {
     id: "e-kb-api",
@@ -86,6 +88,7 @@ export const initialEdges: Edge[] = [
     target: "apiDoc",
     animated: true,
     type: "straight",
+    sourceHandle: "top",
   },
   {
     id: "e-kb-arch",
@@ -93,5 +96,6 @@ export const initialEdges: Edge[] = [
     target: "archDoc",
     animated: true,
     type: "straight",
+    sourceHandle: "right",
   },
 ];
