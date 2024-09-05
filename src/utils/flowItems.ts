@@ -25,28 +25,22 @@ export const initialNodes: Node[] = [
     data: { label: "Knowledge Base" },
   },
   {
-    id: "pullRequestDoc",
-    type: "circle",
-    position: { x: 400, y: -100 },
-    data: { label: "Merge Maestro", color: "indigo" },
-  },
-  {
     id: "codeDoc",
     type: "circle",
     position: { x: 400, y: -33 },
-    data: { label: "Code Chronicles", color: "violet" },
+    data: { label: "Code Documentation", color: "violet" },
   },
   {
     id: "apiDoc",
     type: "circle",
     position: { x: 400, y: 33 },
-    data: { label: "API Atlas", color: "teal" },
+    data: { label: "API Documentation", color: "teal" },
   },
   {
     id: "archDoc",
     type: "circle",
     position: { x: 400, y: 100 },
-    data: { label: "Architecture Almanac", color: "pink" },
+    data: { label: "Architecture Documentation", color: "pink" },
   },
 ];
 
