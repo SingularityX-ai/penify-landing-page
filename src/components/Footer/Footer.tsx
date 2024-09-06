@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "public/penify-logo.svg";
+import logo from "public/penify-logo.svg?url";
 import { footerItems, socialIcons } from "@/utils/footerItems";
 import { Fragment } from "react";
 import patternLeft from "public/images/footer/pattern_left_bg.png";

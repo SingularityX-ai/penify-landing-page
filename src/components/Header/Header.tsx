@@ -2,7 +2,7 @@ import { menus } from "@/utils/menuItems";
 import { IconChevronDown, IconMenu2 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "public/penify-logo.svg";
+import logo from "public/penify-logo.svg?url";
 import { useEffect, useState } from "react";
 import { Scroller as ScrollerLink } from "../Scroller/Scroller";
 

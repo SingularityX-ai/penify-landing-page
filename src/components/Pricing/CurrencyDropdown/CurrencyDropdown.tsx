@@ -15,12 +15,12 @@ interface CurrencyTypes {
 
 const currencies: CurrencyTypes[] = [
   {
-    flag: "https://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg",
+    flag: "https://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg?url",
     code: "USD",
     title: "US",
   },
   {
-    flag: "https://purecatamphetamine.github.io/country-flag-icons/3x2/IN.svg",
+    flag: "https://purecatamphetamine.github.io/country-flag-icons/3x2/IN.svg?url",
     code: "INR",
     title: "India",
   },
