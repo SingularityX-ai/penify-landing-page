@@ -3,6 +3,7 @@ import { CurrencyDropdown } from "./CurrencyDropdown/CurrencyDropdown";
 import { useCurrencyConversion } from "@/hooks/useCurrencyConversion";
 import { PlansTable } from "./PlansTable/PlansTable";
 import { LocationPopup } from "../LocationPopup/LocationPopup";
+import { useScrollLock } from "@/hooks/useScrollLock";
 
 export default function Pricing() {
   const {
@@ -13,6 +14,8 @@ export default function Pricing() {
     handleAcceptLocation,
     handleDeclineLocation,
   } = useCurrencyConversion();
+
+  useScrollLock(showLocationPopup);
 
   return (
     <section>

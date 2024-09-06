@@ -14,7 +14,7 @@ export function LocationPopup({
       id="location-modal"
       tabIndex={-1}
       aria-hidden="true"
-      className="fixed left-0 right-0 top-0 z-50 max-h-full w-full flex items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0"
+      className="fixed left-0 right-0 top-0 z-50 max-h-full w-full flex items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0 backdrop-blur-sm"
       onClick={handleDeclineLocation}
     >
       <div className="relative mx-auto max-h-full w-full max-w-xl p-4">

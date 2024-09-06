@@ -1,3 +1,4 @@
+import { sendGTMEvent } from "@next/third-parties/google";
 import { useCallback, useEffect, useState } from "react";
 
 export type CurrencyOptions = "USD" | "INR";
@@ -61,9 +62,17 @@ export function useCurrencyConversion() {
 
       if (data.results && data.results.length > 0) {
         const { iso_code } = data.results[0].annotations.currency;
+        const { formatted } = data.results[0];
 
         if (iso_code && iso_code !== currency) {
           handleCurrencyChange(iso_code);
+        }
+
+        if (formatted) {
+          sendGTMEvent({
+            event_category: "Location Access",
+            userLocation: formatted,
+          });
         }
       }
     } catch (err) {
