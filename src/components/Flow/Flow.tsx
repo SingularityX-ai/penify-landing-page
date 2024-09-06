@@ -1,27 +1,24 @@
 import {
-  applyEdgeChanges,
-  applyNodeChanges,
   Background,
   BackgroundVariant,
   Controls,
-  Edge,
-  Node,
-  OnEdgesChange,
-  OnNodesChange,
   ReactFlow,
   ReactFlowProvider,
   useReactFlow,
 } from "@xyflow/react";
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { SourceNode } from "./SourceNode/SourceNode";
-import { TargetNode } from "./TargetNode/TargetNode";
+import { useEffect } from "react";
 import { initialEdges, initialNodes } from "@/utils/flowItems";
+import DocumentNode from "./DocumentNode/DocumentNode";
+import IONode from "./IONode/IONode";
+import DecisionNode from "./DecisionNode/DecisionNode";
+import DatabaseNode from "./DatabaseNode/DatabaseNode";
+import AgentNode from "./AgentNode/AgentNode";
+import StakeholderNode from "./StakeholderNode/StakeholderNode";
+import { BiEdge } from "./BiEdge/BiEdge";
+import { UniEdge } from "./UniEdge/UniEdge";
 
 function FlowContent() {
   const { fitView } = useReactFlow();
-
-  const [nodes, setNodes] = useState<Node[]>(initialNodes);
-  const [edges, setEdges] = useState<Edge[]>(initialEdges);
 
   useEffect(() => {
     const handleResize = () => {
@@ -33,54 +30,29 @@ function FlowContent() {
     return () => window.removeEventListener("resize", handleResize);
   }, [fitView]);
 
-  // add interactivity to node drag, select or move.
-  const onNodesChange: OnNodesChange = useCallback(
-    (changes) => {
-      setNodes((nds) => applyNodeChanges(changes, nds));
-      /*
-      changes.forEach((change) => {
-        if (change.type === "position" && change.position) {
-          console.log(change.position);
-        }
-      });
-      */
-    },
-    [setNodes]
-  );
-
-  const onEdgesChange: OnEdgesChange = useCallback(
-    (changes) => {
-      setEdges((eds) => applyEdgeChanges(changes, eds));
-    },
-    [setEdges]
-  );
-
   // custom node blocks for source and target
-  const NodeTypes = useMemo(
-    () => ({ source: SourceNode, target: TargetNode }),
-    []
-  );
+  const NodeTypes = {
+    document: DocumentNode,
+    ioParent: IONode,
+    decision: DecisionNode,
+    database: DatabaseNode,
+    agent: AgentNode,
+    stakeholder: StakeholderNode,
+  };
 
-  /* 
-  const onNodeDragStop: OnNodeDrag = useCallback(() => {
-    setTimeout(() => {
-      fitView({ duration: 200 });
-    }, 0);
-  }, [fitView]);  
-  */
+  const EdgeTypes = {
+    uniEdge: UniEdge,
+    biEdge: BiEdge,
+  }
 
   return (
     <ReactFlow
-      nodes={nodes}
-      edges={edges}
-      onNodesChange={onNodesChange}
-      onEdgesChange={onEdgesChange}
+      nodes={initialNodes}
+      edges={initialEdges}
       nodeTypes={NodeTypes}
-      // edgeTypes={}
+      edgeTypes={EdgeTypes}
       nodeOrigin={[0, 0]}
-      // onNodeDragStop={onNodeDragStop}
       fitView={true}
-      //translateExtent={}
       preventScrolling={false}
       className="min-h-64"
       nodesDraggable={false}
