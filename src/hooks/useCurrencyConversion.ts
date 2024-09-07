@@ -1,4 +1,4 @@
-import { sendGTMEvent } from "@next/third-parties/google";
+// import { sendGTMEvent } from "@next/third-parties/google";
 import { useCallback, useEffect, useState } from "react";
 
 export type CurrencyOptions = "USD" | "INR";
@@ -10,7 +10,7 @@ export function useCurrencyConversion() {
   });
 
   const [exchangeRate, setExchangeRate] = useState<number>(82);
-  const [showLocationPopup, setShowLocationPopup] = useState<boolean>(false);
+  // const [showLocationPopup, setShowLocationPopup] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchExchangeRate = async () => {
@@ -28,6 +28,7 @@ export function useCurrencyConversion() {
     fetchExchangeRate();
   }, []);
 
+  /*
   useEffect(() => {
     const askedForLocation = localStorage.getItem("asked-for-location");
 
@@ -79,6 +80,7 @@ export function useCurrencyConversion() {
       console.error("Failed to fetch currency code", err);
     }
   };
+  */
 
   const getCurrency = useCallback(
     (priceInUSD: number) => {
@@ -106,6 +108,7 @@ export function useCurrencyConversion() {
     window.history.pushState({}, "", url.toString());
   }, []);
 
+  /*
   function handleAcceptLocation() {
     setShowLocationPopup(false);
 
@@ -118,13 +121,14 @@ export function useCurrencyConversion() {
 
     localStorage.setItem("asked-for-location", "true");
   }
+  */
 
   return {
     currency,
     handleCurrencyChange,
     getCurrency,
-    showLocationPopup,
-    handleAcceptLocation,
-    handleDeclineLocation,
+    // showLocationPopup,
+    // handleAcceptLocation,
+    // handleDeclineLocation,
   };
 }

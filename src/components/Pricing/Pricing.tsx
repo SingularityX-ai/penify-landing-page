@@ -2,29 +2,30 @@ import { Element } from "react-scroll";
 import { CurrencyDropdown } from "./CurrencyDropdown/CurrencyDropdown";
 import { useCurrencyConversion } from "@/hooks/useCurrencyConversion";
 import { PlansTable } from "./PlansTable/PlansTable";
-import { LocationPopup } from "../LocationPopup/LocationPopup";
-import { useScrollLock } from "@/hooks/useScrollLock";
+// import { LocationPopup } from "../LocationPopup/LocationPopup";
+// import { useScrollLock } from "@/hooks/useScrollLock";
 
 export default function Pricing() {
   const {
     currency,
     handleCurrencyChange,
     getCurrency,
-    showLocationPopup,
-    handleAcceptLocation,
-    handleDeclineLocation,
+    // showLocationPopup,
+    // handleAcceptLocation,
+    // handleDeclineLocation,
   } = useCurrencyConversion();
 
-  useScrollLock(showLocationPopup);
+  // useScrollLock(showLocationPopup);
 
   return (
     <section>
-      {showLocationPopup ? (
+      {/* showLocationPopup ? (
         <LocationPopup
           handleAcceptLocation={handleAcceptLocation}
           handleDeclineLocation={handleDeclineLocation}
         />
-      ) : null}
+      ) : null 
+       */}
 
       <Element
         name="pricing"
