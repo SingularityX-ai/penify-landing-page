@@ -54,7 +54,7 @@ function FlowContent() {
       nodeOrigin={[0, 0]}
       fitView={true}
       preventScrolling={false}
-      className="min-h-64"
+      className="min-h-96 lg:min-h-[420px]"
       nodesDraggable={false}
       panOnDrag={false}
       zoomOnScroll={false}

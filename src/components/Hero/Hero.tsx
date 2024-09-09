@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="w-full py-8 overflow-hidden md:py-16 xl:py-24 ">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row flex-wrap -m-8">
-          <div className="w-full lg:w-1/2 p-8" data-aos="fade-up" data-aos-duration="800">
+          <div className="w-full lg:w-2/5 p-8" data-aos="fade-up" data-aos-duration="800">
             <div className="inline-block mb-6 px-4 py-2 font-semibold bg-[#4569e7] rounded-e-full rounded-b-full">
               <h3 className="text-xs md:text-sm xl:text-base text-slate-200">
                 Revolutionize Developer Workflow
@@ -43,7 +43,7 @@ export default function Hero() {
               </Link>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 p-6 lg:p-0" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <div className="w-full hidden sm:block lg:w-3/5 p-6 lg:p-0" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
             <Flow />
           </div>
         </div>

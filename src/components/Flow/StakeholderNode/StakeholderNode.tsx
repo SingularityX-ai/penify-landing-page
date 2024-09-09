@@ -10,7 +10,7 @@ function StakeholderNode() {
       <p className="text-sm text-orange-400 bg-gray-800 p-2 rounded-sm inline-block mb-3">
         Non-Technical Stakeholders
       </p>
-      <div className="w-[360px] h-[140px] rounded border border-blue-50 bg-transparent flex items-center justify-evenly">
+      <div className="w-[380px] h-[150px] rounded border border-blue-50 bg-transparent flex items-center justify-evenly">
         <div className="flex flex-col items-center">
           <StickIcon />
           <p className="text-orange-200 text-sm font-medium">Product Manager</p>

@@ -12,46 +12,46 @@ export const initialNodes: Node[] = [
     id: "io-parent-01",
     type: "ioParent",
     data: { label: "Jira Tickets Pointer" },
-    position: { x: 240, y: -54 },
+    position: { x: 240, y: -58 },
   },
 
   {
     id: "document-2",
     type: "document",
     data: { label: "Git Repo" },
-    position: { x: 0, y: 192 },
+    position: { x: 0, y: 205 },
   },
 
   {
     id: "decision",
     type: "decision",
     data: { label: "AST Indexing" },
-    position: { x: 160, y: 194 },
+    position: { x: 160, y: 208 },
   },
 
   {
     id: "database",
     type: "database",
     data: { label: "Knowledge base" },
-    position: { x: 358, y: 184 },
+    position: { x: 378, y: 197 },
   },
   {
     id: "io-parent-02",
     type: "ioParent",
     data: { label: "KB Pointer" },
-    position: { x: 172, y: 324 },
+    position: { x: 146, y: 354 },
   },
   {
     id: "agent",
     type: "agent",
     data: { label: "Agent" },
-    position: { x: 772, y: 194 },
+    position: { x: 820, y: 208 },
   },
   {
     id: "stakeholder",
     type: "stakeholder",
     data: { label: "Stakeholders" },
-    position: { x: 620, y: -55 },
+    position: { x: 660, y: -58 },
   },
 ];
 

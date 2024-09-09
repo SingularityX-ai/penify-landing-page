@@ -62,8 +62,8 @@ export function UniEdge({
             <>
               <IconCaretDownFilled color="#fff" />
 
-              <div className="absolute -top-6 left-8 w-40">
-                <p className="bg-transparent text-xs font-normal text-orange-400">
+              <div className="absolute -top-8 left-7 w-40">
+                <p className="bg-transparent text-sm font-normal text-orange-400">
                   {data && data.label}
                 </p>
               </div>
