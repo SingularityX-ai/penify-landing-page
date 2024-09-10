@@ -2,8 +2,22 @@
 
 # dependencies
 /node_modules
-/.pnp
-.pnp.js
+
+# Yarn v4
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Plug'n'Play
+.pnp.*
+
+# Yarn v4 Zero-Install
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
 .yarn/install-state.gz
 
 # testing
