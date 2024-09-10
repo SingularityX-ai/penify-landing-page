@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://snorkell-landing-page-v2.vercel.app/",
+  siteUrl: "https://www.penify.dev/",
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [
@@ -10,7 +10,7 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      "https://snorkell-landing-page-v2.vercel.app/sitemap.xml",
+      "https://www.penify.dev/sitemap.xml",
     ],
   },
   exclude: [],
