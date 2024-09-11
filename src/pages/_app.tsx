@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Fragment, useEffect } from "react";
+import { Fragment, useEffect, useState } from "react";
 import AOS from "aos";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
@@ -14,10 +14,19 @@ import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    AOS.init();
-  }, []);
+    const checkMobile = () => setIsMobile(window.innerWidth <= 640);
+
+    checkMobile();
+
+    window.addEventListener("resize", checkMobile);
+
+    AOS.init({ disable: isMobile });
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, [isMobile]);
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {

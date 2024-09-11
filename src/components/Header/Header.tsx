@@ -35,10 +35,10 @@ export default function Header() {
   return (
     <nav className="bg-themeBg sticky start-0 top-0 z-20 w-full py-4 shadow-lg md:py-6">
       <div className="container mx-auto flex flex-wrap items-center justify-between px-4">
-        <Link href="/">
+        <Link href="/" className="inline-block">
           <Image
             src={logo}
-            className="h-10 w-full md:h-12 xl:h-14"
+            className="h-10 w-auto md:h-12 xl:h-14"
             alt="Penify Logo"
             priority
           />

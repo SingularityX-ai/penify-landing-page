@@ -15,7 +15,7 @@ export default function Footer() {
             <Link href="/" className="inline-block">
               <Image
                 src={logo}
-                className="xl:h-13 h-9 w-full md:h-11"
+                className="xl:h-13 h-9 w-auto md:h-11"
                 alt="Penify Logo"
               />
             </Link>
