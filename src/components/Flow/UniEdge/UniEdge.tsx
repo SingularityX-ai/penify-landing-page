@@ -62,8 +62,8 @@ export function UniEdge({
             <>
               <IconCaretDownFilled color="#fff" />
 
-              <div className="absolute -top-8 left-7 w-40">
-                <p className="bg-transparent text-sm font-normal text-orange-400">
+              <div className="absolute -top-10 left-7 w-48">
+                <p className="bg-transparent text-base font-normal text-orange-400">
                   {data && data.label}
                 </p>
               </div>
@@ -71,7 +71,19 @@ export function UniEdge({
           )}
 
           {data?.uniType === "uniEdgeRight" && (
-            <IconCaretRightFilled color="#fff" />
+            <>
+              <IconCaretRightFilled color="#fff" />
+
+              {data.label && (
+                <div
+                  className="absolute -top-5 right-8 w-36"
+                >
+                  <p className="bg-transparent text-base font-normal text-blue-400">
+                    {data && data.label}
+                  </p>
+                </div>
+              )}
+            </>
           )}
         </div>
       </EdgeLabelRenderer>

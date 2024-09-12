@@ -70,9 +70,9 @@ export function BiEdge({
               style={{
                 transform: `translate(0, -50%) translate(${midX}px,${midY}px)`,
               }}
-              className="nodrag nopan absolute top-0 left-8 w-52"
+              className="nodrag nopan absolute top-1 left-8 w-60"
             >
-              <p className="bg-transparent text-sm font-normal text-green-400">
+              <p className="bg-transparent text-base font-normal text-teal-400">
                 {data.label}
               </p>
             </div>

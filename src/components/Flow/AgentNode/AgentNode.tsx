@@ -11,7 +11,7 @@ function AgentNode() {
       <div className="relative">
         <AgentIcon />
 
-        <p className="mt-2 text-slate-300 font-medium text-sm absolute w-28 -left-1/2">
+        <p className="mt-2 text-slate-300 font-medium text-base absolute w-32 -left-1/2">
           Agent (Chatbot)
         </p>
       </div>

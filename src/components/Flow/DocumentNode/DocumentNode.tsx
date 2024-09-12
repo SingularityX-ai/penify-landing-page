@@ -5,7 +5,7 @@ import DocumentIcon02 from "public/icons/flowchard-document-02.svg";
 
 function DocumentNode({ data }: { data: { label: string } }) {
   return (
-    <div>
+    <div className="scale-125">
       <Handle type="source" position={Position.Right} id="source-right" />
 
       {data.label === "Jira Tickets" && <DocumentIcon01 />}

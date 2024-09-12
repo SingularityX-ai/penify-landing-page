@@ -10,14 +10,14 @@ function IONode({ data }: { data: { label: string } }) {
   return (
     <>
       {data.label === "Jira Tickets Pointer" && (
-        <div>
+        <div className="scale-110">
           <Handle type="target" position={Position.Left} id="target-left" />
           <Handle type="target" position={Position.Bottom} id="target-bot" />
 
-          <p className="text-sm text-green-200 bg-gray-800 p-2 rounded-sm inline-block mb-3">
+          <p className="text-base text-green-200 bg-gray-800 p-2 rounded-sm inline-block mb-3">
             Functional and Deployed
           </p>
-          <div className="w-[380px] h-[148px] rounded border border-blue-50 bg-transparent flex items-center justify-evenly">
+          <div className="w-[380px] h-[140px] rounded border border-blue-50 bg-transparent flex items-center justify-evenly">
             <IOIcon01 />
             <IOIcon02 />
           </div>
@@ -25,15 +25,15 @@ function IONode({ data }: { data: { label: string } }) {
       )}
 
       {data.label === "KB Pointer" && (
-        <div>
+        <div className="scale-110">
           <Handle type="target" position={Position.Top} id="target-top" />
 
-          <div className="w-[570px] h-[148px] rounded border border-blue-50 bg-transparent flex items-center justify-evenly">
+          <div className="w-[550px] h-[140px] rounded border border-blue-50 bg-transparent flex items-center justify-evenly">
             <IOIcon03 />
             <IOIcon04 />
             <IOIcon05 />
           </div>
-          <p className="text-sm text-green-200 bg-gray-800 p-2 rounded-sm inline-block mt-3">
+          <p className="text-base text-green-200 bg-gray-800 p-2 rounded-sm inline-block mt-3">
             Functional and Deployed
           </p>
         </div>

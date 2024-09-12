@@ -10,7 +10,6 @@ import { useEffect } from "react";
 import { initialEdges, initialNodes } from "@/utils/flowItems";
 import DocumentNode from "./DocumentNode/DocumentNode";
 import IONode from "./IONode/IONode";
-import DecisionNode from "./DecisionNode/DecisionNode";
 import DatabaseNode from "./DatabaseNode/DatabaseNode";
 import AgentNode from "./AgentNode/AgentNode";
 import StakeholderNode from "./StakeholderNode/StakeholderNode";
@@ -34,7 +33,6 @@ function FlowContent() {
   const NodeTypes = {
     document: DocumentNode,
     ioParent: IONode,
-    decision: DecisionNode,
     database: DatabaseNode,
     agent: AgentNode,
     stakeholder: StakeholderNode,
@@ -54,7 +52,7 @@ function FlowContent() {
       nodeOrigin={[0, 0]}
       fitView={true}
       preventScrolling={false}
-      className="min-h-96 lg:min-h-[420px]"
+      className="min-h-[392px] lg:min-h-[560px]"
       nodesDraggable={false}
       panOnDrag={false}
       zoomOnScroll={false}

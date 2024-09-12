@@ -4,7 +4,7 @@ import { memo } from "react";
 
 function DatabaseNode() {
   return (
-    <div>
+    <div className="scale-125">
       <Handle type="source" position={Position.Top} id="source-top" />
       <Handle type="target" position={Position.Left} id="target-left" />
       <Handle type="source" position={Position.Bottom} id="source-bot" />

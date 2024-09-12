@@ -12,46 +12,38 @@ export const initialNodes: Node[] = [
     id: "io-parent-01",
     type: "ioParent",
     data: { label: "Jira Tickets Pointer" },
-    position: { x: 240, y: -58 },
+    position: { x: 220, y: -56 },
   },
 
   {
     id: "document-2",
     type: "document",
     data: { label: "Git Repo" },
-    position: { x: 0, y: 205 },
+    position: { x: 0, y: 218 },
   },
-
-  {
-    id: "decision",
-    type: "decision",
-    data: { label: "AST Indexing" },
-    position: { x: 160, y: 208 },
-  },
-
   {
     id: "database",
     type: "database",
     data: { label: "Knowledge base" },
-    position: { x: 378, y: 197 },
+    position: { x: 358, y: 210 },
   },
   {
     id: "io-parent-02",
     type: "ioParent",
     data: { label: "KB Pointer" },
-    position: { x: 146, y: 354 },
+    position: { x: 136, y: 380 },
   },
   {
     id: "agent",
     type: "agent",
     data: { label: "Agent" },
-    position: { x: 820, y: 208 },
+    position: { x: 841, y: 219 },
   },
   {
     id: "stakeholder",
     type: "stakeholder",
     data: { label: "Stakeholders" },
-    position: { x: 660, y: -58 },
+    position: { x: 680, y: -58 },
   },
 ];
 
@@ -69,25 +61,15 @@ export const initialEdges: Edge[] = [
   {
     id: "e2-core",
     source: "document-2",
-    target: "decision",
-    sourceHandle: "source-right",
-    targetHandle: "target-left",
-    type: "uniEdge",
-    data: { uniType: "uniEdgeRight" },
-    animated: true,
-  },
-  {
-    id: "e3-core",
-    source: "decision",
     target: "database",
     sourceHandle: "source-right",
     targetHandle: "target-left",
     type: "uniEdge",
-    data: { uniType: "uniEdgeRight" },
+    data: { uniType: "uniEdgeRight", label: "Install Penify App" },
     animated: true,
   },
   {
-    id: "e4-core",
+    id: "e3-core",
     source: "database",
     target: "io-parent-01",
     sourceHandle: "source-top",
@@ -96,7 +78,7 @@ export const initialEdges: Edge[] = [
     data: { label: "Whenever a PR is merged, it updated the Knowledge Base" },
   },
   {
-    id: "e5-core",
+    id: "e4-core",
     source: "database",
     target: "io-parent-02",
     sourceHandle: "source-bot",
@@ -106,7 +88,7 @@ export const initialEdges: Edge[] = [
     animated: true,
   },
   {
-    id: "e6-core",
+    id: "e5-core",
     source: "database",
     target: "agent",
     targetHandle: "target-left",
@@ -116,7 +98,7 @@ export const initialEdges: Edge[] = [
     animated: true,
   },
   {
-    id: "e7-core",
+    id: "e6-core",
     source: "stakeholder",
     target: "agent",
     targetHandle: "target-top",
