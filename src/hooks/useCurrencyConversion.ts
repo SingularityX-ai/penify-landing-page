@@ -28,6 +28,24 @@ export function useCurrencyConversion() {
     fetchExchangeRate();
   }, []);
 
+  useEffect(() => {
+    const fetchLocation = async () => {
+      try {
+        const response = await fetch(
+          "https://production-gateway.snorkell.ai/api/v1/analytics/getLocation"
+        );
+
+        const { currency_code } = await response.json();
+        handleCurrencyChange(currency_code);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    fetchLocation();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   /*
   useEffect(() => {
     const askedForLocation = localStorage.getItem("asked-for-location");
