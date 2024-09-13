@@ -42,10 +42,10 @@ export default function Pricing() {
               Choose a plan that suits you
             </h1>
 
-            {/* <CurrencyDropdown
+            <CurrencyDropdown
               currency={currency}
               handleCurrencyChange={handleCurrencyChange}
-            /> */}
+            />
 
             <PlansTable currency={currency} getCurrency={getCurrency} />
           </header>
