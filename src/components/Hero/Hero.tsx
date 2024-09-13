@@ -9,12 +9,12 @@ export default function Hero() {
           <div className="w-full lg:w-2/5 p-8" data-aos="fade-up" data-aos-duration="800">
             <div className="inline-block mb-6 px-4 py-2 font-semibold bg-[#4569e7] rounded-e-full rounded-b-full">
               <h3 className="text-xs md:text-sm xl:text-base text-slate-200">
-                Revolutionize Developer Workflow
+              “AI Guru” for the SDLC
               </h3>
             </div>
 
             <h1 className="mb-4 md:mb-6 font-bold text-2xl md:text-3xl lg:text-4xl text-slate-200">
-              Automated Documentation for Every Step of the Process
+              Automated Documentation at Every Step of the Software Lifecycle
             </h1>
 
             <p className="mb-6 md:mb-8 text-sm text-slate-400 md:text-base lg:text-lg">

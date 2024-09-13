@@ -12,8 +12,7 @@ export default function Tour() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl text-center" data-aos="fade-up" data-aos-duration="800">
             <h1 className="mb-4 text-2xl font-bold text-slate-200 md:text-3xl xl:text-4xl">
-              Streamline Developer Onboarding: Cut Time by 200% with Automated
-              Documentation
+              Streamline SDLC lifecycle with LLMs
             </h1>
             <p className="text-sm text-slate-400 md:text-base lg:text-lg" data-aos="fade-up" data-aos-duration="800">
               Watch How Penify Automates Documentation in Minutes - Take a Quick
