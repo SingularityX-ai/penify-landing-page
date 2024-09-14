@@ -7,7 +7,6 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Fragment, useEffect, useState } from "react";
 import AOS from "aos";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import { GoogleTagManager, sendGTMEvent } from "@next/third-parties/google";
 import { useRouter } from "next/router";
@@ -113,7 +112,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <GoogleTagManager gtmId="G-NQRNJW5NS7" />
 
       <Component {...pageProps} />
-      <SpeedInsights />
     </Fragment>
   );
 }
