@@ -15,7 +15,23 @@ jobs:
           submodules: true
           lfs: false
 
-      - name: Build and Deploy
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with: 
+          node-version: "20"
+
+      - name: Setup Yarn v4
+        run: corepack enable && yarn set version stable
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build project
+        run: yarn build
+        env:
+          IS_STATIC_EXPORT: true
+
+      - name: Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         env:
@@ -24,9 +40,10 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_BLUE_FIELD_0B3B6FB0F }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Interacting with the Github repository (commenting on PR)
           action: "upload"
-          app_location: "/" # location of the app source code
+          app_location: "/out" # location of the app source code
           api_location: "" # location of Azure Functions source code
-          output_location: "out" # location of compiled application code after building
+          output_location: "" # location of compiled application code after building
+          skip_app_build: true
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
