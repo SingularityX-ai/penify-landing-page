@@ -23,9 +23,20 @@ A modern, mobile-friendly and responsive landing page built with Next.js, TypeSc
 
 ## Getting Started
 
+### Setup Yarn
+
+Our repository has migrated from Yarn v1 to v4 for better performance and improved dependency management. Follow these steps to set up Yarn v4 for this project:
+
+1. Ensure you have Node.js installed (version 16.10 or later recommended).
+2. Enable Corepack (comes with Node.js by default): `corepack enable`
+3. Navigate to the project directory: `cd /snorkell-landing-page`
+4. Set Yarn to the latest stable version (v4): `yarn set version stable`
+5. Install dependencies: `yarn install`
+
+
 ### Local Development
 
-1. Clone the repository: `git clone git@github.com:mayurDayal2000/snorkell-landing-page-v2.git`
+1. Clone the repository: `git clone git@github.com:SingularityX-ai/snorkell-landing-page.git`
 2. Install the dependencies: `yarn install`
 3. Start the development server: `yarn dev`
 4. Open your browser and navigate to `http://localhost:3000/`
@@ -35,6 +46,7 @@ A modern, mobile-friendly and responsive landing page built with Next.js, TypeSc
 1. Build the Docker image: `docker compose build`
 2. Start the Docker container: `docker compose up`
 3. Open your browser and navigate to `http://localhost:3000/`
+
 
 <br>
 

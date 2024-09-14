@@ -4,8 +4,14 @@ FROM node:current-alpine3.20
 # Set the working directory to /app
 WORKDIR /app
 
-# Copy the package.json and yarn.lock files
-COPY package.json yarn.lock ./
+# Enable Corepack for Yarn v4 support
+RUN corepack enable
+
+# Copy package.json, yarn.lock, and .yarnrc.yml
+COPY package.json yarn.lock .yarnrc.yml ./
+
+# Set Yarn version to stable (v4)
+RUN yarn set version stable
 
 # Install dependencies using Yarn
 RUN yarn install
@@ -20,4 +26,4 @@ RUN yarn build
 EXPOSE 3000
 
 # Run the command to start the development server
-CMD ["yarn", "dev"]
+CMD ["yarn", "start"]
