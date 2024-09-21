@@ -1,4 +1,4 @@
-import { sendGTMEvent } from "@next/third-parties/google";
+import { sendGAEvent } from "@next/third-parties/google";
 import { IconBrandTelegram } from "@tabler/icons-react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Bounce, toast } from "react-toastify";
@@ -48,11 +48,7 @@ export function ContactForm() {
         transition: Bounce,
       });
 
-      sendGTMEvent({
-        event_category: "Contact Form",
-        event_label: "contact us form submission",
-        user: data.email,
-      });
+      sendGAEvent("event", "form_submission", { user: data.email });
 
       reset();
     } catch (err) {

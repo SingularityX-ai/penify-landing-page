@@ -1,4 +1,4 @@
-import { sendGTMEvent } from "@next/third-parties/google";
+import { sendGAEvent } from "@next/third-parties/google";
 import LiteYouTubeEmbed, { imgResolution } from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
@@ -10,10 +10,7 @@ interface YoutubeEmbedType {
 
 export function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedType) {
   const handlePlay = () => {
-    sendGTMEvent({
-      event_category: "Video",
-      event_label: "played penify video iframe",
-    });
+    sendGAEvent("event", "video_view");
   };
 
   return (

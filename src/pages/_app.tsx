@@ -8,7 +8,7 @@ import Head from "next/head";
 import { Fragment, useEffect, useState } from "react";
 import AOS from "aos";
 import Script from "next/script";
-import { GoogleTagManager, sendGTMEvent } from "@next/third-parties/google";
+import { GoogleAnalytics, sendGAEvent } from "@next/third-parties/google";
 import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -29,10 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      sendGTMEvent({
-        event_category: "pageView",
-        page_path: url,
-      });
+      sendGAEvent("event", "page_view", { page_path: url });
     };
 
     router.events.on("routeChangeComplete", handleRouteChange);
@@ -45,10 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
       const target = event.target as HTMLAnchorElement;
 
       if (target.tagName === "A") {
-        sendGTMEvent({
-          event_category: "link",
-          event_label: target.href || target,
-        });
+        sendGAEvent("event", "click", { click_link: target.href || target });
       }
     };
 
@@ -109,7 +103,7 @@ export default function App({ Component, pageProps }: AppProps) {
         strategy="afterInteractive"
       />
 
-      <GoogleTagManager gtmId="G-NQRNJW5NS7" />
+      <GoogleAnalytics gaId="G-NQRNJW5NS7" />
 
       <Component {...pageProps} />
     </Fragment>
