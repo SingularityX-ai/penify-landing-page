@@ -1,4 +1,4 @@
-import { testimonials } from "@/utils/testimonials";
+import { testimonialLogos, testimonials } from "@/utils/testimonials";
 import Image from "next/image";
 
 export function Testimonial() {
@@ -51,6 +51,28 @@ export function Testimonial() {
             )
           )}
         </ul>
+
+        <div className="mt-8 md:mt-12 lg:mt-14">
+          <h3 className="mb-4 text-center text-xs font-medium uppercase tracking-wide text-slate-400 md:mb-6 md:text-sm lg:mb-8 lg:text-base">
+            Powering Next-Gen Companies
+          </h3>
+
+          <ul className="flex flex-wrap items-center justify-center gap-6">
+            {testimonialLogos.map(({ name, logo }, testimonialLogoIndex) => (
+              <div
+                key={`testimonial-logo-${testimonialLogoIndex}`}
+                className="flex h-20 w-40 items-center justify-center rounded-lg bg-gray-200 p-4"
+              >
+                <Image
+                  src={logo}
+                  alt={name}
+                  className="object-cover"
+                  height={64}
+                />
+              </div>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image";
 import janeDoe from "public/images/testimonials/Jane Doe.webp";
+import aristocrat from "public/images/testimonials/Aristocrat_Leisure_logo.png";
 
 interface TestimonialsType {
   name: string;
@@ -7,6 +8,11 @@ interface TestimonialsType {
   company: string;
   avatar: StaticImageData;
   content: string;
+}
+
+interface TestimonialLogosTypes {
+  name: string;
+  logo: StaticImageData;
 }
 
 export const testimonials: TestimonialsType[] = [
@@ -33,5 +39,22 @@ export const testimonials: TestimonialsType[] = [
     avatar: janeDoe,
     content:
       "I was skeptical about AI tools, but this one has truly impressed me. It's intuitive, powerful, and constantly improving.",
+  },
+];
+
+export const testimonialLogos: TestimonialLogosTypes[] = [
+  {
+    name: "Aristocrat",
+    logo: aristocrat,
+  },
+
+  {
+    name: "Aristocrat",
+    logo: aristocrat,
+  },
+
+  {
+    name: "Aristocrat",
+    logo: aristocrat,
   },
 ];
