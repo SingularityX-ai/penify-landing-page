@@ -1,4 +1,8 @@
-import { IconBrandGithubFilled, IconStarFilled } from "@tabler/icons-react";
+import {
+  IconBrandBitbucket,
+  IconBrandGithubFilled,
+  IconStarFilled,
+} from "@tabler/icons-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -36,7 +40,7 @@ export default function Banner() {
       className="bg-bannerBg w-full px-4 py-3"
     >
       <div className="container mx-auto">
-        <div className="mb-3 me-4 flex flex-col items-center justify-center gap-2 md:mb-0 md:flex-row md:gap-4">
+        <div className="mb-3 me-4 flex flex-col flex-wrap items-center justify-center gap-2 md:mb-0 md:flex-row md:gap-4">
           <div className="flex gap-x-1 sm:items-center">
             <IconStarFilled width={18} color="#ffbc00" />
             <p className="text-center text-sm font-normal text-slate-200 md:text-base xl:text-lg">
@@ -46,15 +50,27 @@ export default function Banner() {
             </p>
           </div>
 
-          <Link
-            href="https://github.com/apps/penify-dev"
-            className="me-2 flex items-center gap-x-1 rounded-lg bg-blue-700 px-5 py-2 text-xs font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 md:text-sm"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IconBrandGithubFilled width={16} />
-            Install on GitHub
-          </Link>
+          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-4">
+            <Link
+              href="https://github.com/apps/penify-dev"
+              className="me-2 flex items-center gap-x-1 rounded-lg bg-blue-700 px-5 py-2 text-xs font-medium text-white hover:bg-blue-800 focus:outline-none md:text-sm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconBrandGithubFilled width={16} />
+              Install on GitHub
+            </Link>
+
+            <Link
+              href=""
+              className="me-2 flex items-center gap-x-1 rounded-lg bg-blue-700 px-5 py-2 text-xs font-medium text-white hover:bg-blue-800 focus:outline-none md:text-sm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconBrandBitbucket width={16} />
+              Install on BitBucket
+            </Link>
+          </div>
         </div>
       </div>
     </div>
