@@ -1,18 +1,15 @@
 import { menus } from "@/utils/menuItems";
-import { IconChevronDown, IconMenu2 } from "@tabler/icons-react";
+import { IconMenu2 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "public/penify-logo.svg?url";
 import { useEffect, useState } from "react";
 import { Scroller as ScrollerLink } from "../Scroller/Scroller";
+import { Dropwdown } from "../Dropdown/Dropdown";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [shouldMenuRender, setShouldMenuRender] = useState<boolean>(false);
-
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(false);
-  const [shouldSubMenuRender, setShouldSubMenuRender] =
-    useState<boolean>(false);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -22,15 +19,6 @@ export default function Header() {
       return () => clearTimeout(timeoutId);
     }
   }, [isMenuOpen]);
-
-  useEffect(() => {
-    if (isSubMenuOpen) {
-      setShouldSubMenuRender(true);
-    } else {
-      const timeoutId = setTimeout(() => setShouldSubMenuRender(false), 200);
-      return () => clearTimeout(timeoutId);
-    }
-  }, [isSubMenuOpen]);
 
   return (
     <nav className="bg-themeBg sticky start-0 top-0 z-20 w-full py-4 shadow-lg md:py-6">
@@ -92,55 +80,7 @@ export default function Header() {
                     </Link>
                   )
                 ) : (
-                  <>
-                    <button
-                      type="button"
-                      className={`flex w-full items-center justify-between px-3 py-2 text-sm text-gray-800 transition-all duration-200 ease-in hover:bg-gray-200 hover:text-blue-600 md:text-base lg:w-auto lg:border-0 lg:p-0 lg:text-lg lg:text-white lg:hover:bg-transparent lg:hover:text-blue-400 ${
-                        isSubMenuOpen
-                          ? "bg-gray-200 lg:bg-transparent lg:text-blue-400"
-                          : "bg-transparent lg:text-white"
-                      }`}
-                      aria-expanded={isSubMenuOpen}
-                      onClick={() => setIsSubMenuOpen((prev) => !prev)}
-                    >
-                      {title}
-                      <span
-                        className={`${
-                          isSubMenuOpen ? "rotate-180" : "rotate-0"
-                        } transition-transform`}
-                      >
-                        <IconChevronDown />
-                      </span>
-                    </button>
-
-                    <div
-                      className={`${
-                        isSubMenuOpen
-                          ? "my-2 translate-y-0 opacity-100 duration-300 ease-out"
-                          : "-translate-y-2 opacity-0 duration-200 ease-in"
-                      } z-10 w-full transform divide-y divide-gray-100 rounded-lg bg-white font-normal shadow lg:absolute`}
-                    >
-                      <ul
-                        className={`py-2 text-sm font-medium ${
-                          shouldSubMenuRender ? "block" : "hidden"
-                        }`}
-                      >
-                        {children &&
-                          children.map(({ title, href }, childIndex) => (
-                            <li key={`sub-menu-${childIndex}`}>
-                              <Link
-                                href={href}
-                                className="block rounded px-3 py-2 capitalize text-gray-800 transition-colors duration-150 ease-in hover:bg-gray-200 hover:text-blue-700"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                {title}
-                              </Link>
-                            </li>
-                          ))}
-                      </ul>
-                    </div>
-                  </>
+                  <Dropwdown title={title} items={children} type="nav" />
                 )}
               </li>
             ))}
