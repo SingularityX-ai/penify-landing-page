@@ -1,5 +1,4 @@
-import { IconBrandGithubFilled, IconStarFilled } from "@tabler/icons-react";
-import Link from "next/link";
+import { IconStarFilled } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 
 interface CounterTypes {
@@ -46,6 +45,7 @@ export default function Banner() {
             </p>
           </div>
 
+          {/* 
           <Link
             href="https://github.com/apps/penify-dev"
             className="me-2 flex items-center gap-x-1 rounded-lg bg-blue-700 px-5 py-2 text-xs font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 md:text-sm"
@@ -55,6 +55,7 @@ export default function Banner() {
             <IconBrandGithubFilled width={16} />
             Install on GitHub
           </Link>
+          */}
         </div>
       </div>
     </div>
