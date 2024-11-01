@@ -12,12 +12,12 @@ export default function Hero() {
   const vendors: VendorsTypes = [
     {
       vendor: "github",
-      title: "GitHub",
+      title: "Install on GitHub",
       href: "https://github.com/apps/penify-dev/installations/select_target",
     },
     {
       vendor: "bitbucket",
-      title: "Bitbucket",
+      title: "Install on Bitbucket",
       href: "https://production-gateway.snorkell.ai/api/bitbucket/installation-link",
     },
   ];

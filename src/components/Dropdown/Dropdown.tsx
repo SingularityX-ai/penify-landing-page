@@ -39,7 +39,7 @@ const dropdownStyles: DropdownStylesTypes = {
     openBox: "my-2 translate-y-0 opacity-100 duration-300 ease-out",
   },
   hero: {
-    menu: "flex items-center justify-center gap-x-1 rounded-lg bg-blue-700 px-5 py-3 text-center text-xs font-medium text-white transition-all duration-200 ease-in hover:bg-blue-800 focus:outline-none focus:ring-blue-300 md:text-sm xl:text-base w-full sm:w-fit",
+    menu: "flex items-center justify-center gap-x-1 rounded-lg bg-blue-700 px-5 py-3 text-center text-xs font-medium text-white transition-all duration-200 ease-in hover:bg-blue-800 focus:outline-none focus:ring-blue-300 md:text-sm xl:text-base w-full sm:w-[174px] md:w-[182px]",
     openMenu: "",
     wrapper: "inline-block",
     chevron: "w-4 h-4 xl:w-6 xl:h-6",
