@@ -75,7 +75,7 @@ export const initialEdges: Edge[] = [
     sourceHandle: "source-top",
     targetHandle: "target-bot",
     type: "biEdge",
-    data: { label: "Whenever a PR is merged, it updated the Knowledge Base" },
+    data: { label: "Whenever a PR is merged, it updates the Knowledge Base" },
   },
   {
     id: "e4-core",
