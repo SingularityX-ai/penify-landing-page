@@ -10,6 +10,14 @@ import AOS from "aos";
 import Script from "next/script";
 import { GoogleAnalytics, sendGAEvent } from "@next/third-parties/google";
 import { useRouter } from "next/router";
+import {
+  mp_init,
+  mp_track_btns,
+  mp_track_links,
+  mp_track_page,
+} from "@/lib/mixpanel";
+
+mp_init();
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -30,6 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const handleRouteChange = (url: string) => {
       sendGAEvent("event", "page_view", { page_path: url });
+      mp_track_page(url);
     };
 
     router.events.on("routeChangeComplete", handleRouteChange);
@@ -39,10 +48,21 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     const handleLinkClick = (event: MouseEvent) => {
-      const target = event.target as HTMLAnchorElement;
+      const target_anchor = event.target as HTMLAnchorElement;
+      const target_button = event.target as HTMLButtonElement;
 
-      if (target.tagName === "A") {
-        sendGAEvent("event", "click", { click_link: target.href || target });
+      if (target_anchor.tagName === "A") {
+        sendGAEvent("event", "click", {
+          click_link: target_anchor.href || target_anchor.textContent,
+        });
+        mp_track_links(target_anchor.href, target_anchor.textContent);
+      }
+
+      if (target_button.tagName === "BUTTON") {
+        sendGAEvent("event", "click", {
+          click_btn: target_button.textContent,
+        });
+        mp_track_btns(target_button.textContent);
       }
     };
 

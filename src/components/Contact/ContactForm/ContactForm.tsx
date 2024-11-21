@@ -1,3 +1,4 @@
+import { mp_track_contact_form } from "@/lib/mixpanel";
 import { sendGAEvent } from "@next/third-parties/google";
 import { IconBrandTelegram } from "@tabler/icons-react";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -49,6 +50,7 @@ export function ContactForm() {
       });
 
       sendGAEvent("event", "form_submission", { user: data.email });
+      mp_track_contact_form(data.name, data.email)
 
       reset();
     } catch (err) {
@@ -75,6 +77,7 @@ export function ContactForm() {
     <form
       onSubmit={handleSubmit(onSubmit)}
       className="mx-auto max-w-lg px-4 py-6"
+      id="contact_us"
     >
       <div className="mb-6 md:mb-4">
         <label
