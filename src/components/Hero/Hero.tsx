@@ -33,12 +33,12 @@ export default function Hero() {
           >
             <div className="inline-block mb-6 px-4 py-2 font-semibold bg-[#4569e7] rounded-e-full rounded-b-full">
               <h3 className="text-xs md:text-sm xl:text-base text-slate-200">
-                Revolutionize Developer Workflow
+                Please don't write Documentation
               </h3>
             </div>
 
             <h1 className="mb-4 md:mb-6 font-bold text-2xl md:text-3xl lg:text-4xl text-slate-200">
-              Automated Documentation for Every Step of the Process
+              Automated Documentation for Every Step of the SDLC
             </h1>
 
             <p className="mb-6 md:mb-8 text-sm text-slate-400 md:text-base lg:text-lg">
@@ -46,6 +46,12 @@ export default function Hero() {
               Updates Comprehensive Documentation — Streamlining Your Codebase
               and Saving You Time.
             </p>
+
+            <p className="mb-6 md:mb-8 text-sm text-slate-400 md:text-base lg:text-lg">
+            <span className="bg-yellow-200 text-yellow-800 font-bold px-2 py-1 rounded-md hover:bg-yellow-300 cursor-pointer transition duration-300">
+              <a href = "https://github.com/apps/penify-dev/installations/select_target" target="_blank">Now Document your entire Repository in $1.</a>
+            </span>
+          </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 -my-2.5">
               <Dropwdown title="Get Started" items={vendors} type="hero" />
