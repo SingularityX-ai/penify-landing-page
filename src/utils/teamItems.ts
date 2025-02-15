@@ -11,6 +11,12 @@ interface TeamItemsType {
   linkedIn: string;
 }
 
+type VendorsTypes = {
+  vendor?: "github" | "bitbucket";
+  title: string;
+  href: string;
+}[];
+
 export const teamItems: TeamItemsType[] = [
   {
     img: suman,
@@ -35,5 +41,19 @@ export const teamItems: TeamItemsType[] = [
     username: "Mayur Dayal",
     role: "Frontend Engineer, Designer",
     linkedIn: "mayur-dayal/",
+  },
+];
+
+
+export const vendors: VendorsTypes = [
+  {
+    vendor: "github",
+    title: "Install on GitHub",
+    href: "https://github.com/apps/penify-dev/installations/select_target",
+  },
+  {
+    vendor: "bitbucket",
+    title: "Install on Bitbucket",
+    href: "https://production-gateway.snorkell.ai/api/bitbucket/installation-link",
   },
 ];

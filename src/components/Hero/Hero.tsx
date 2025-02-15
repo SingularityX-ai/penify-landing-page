@@ -1,26 +1,10 @@
 import Link from "next/link";
 import Flow from "../Flow/Flow";
 import { Dropwdown } from "../Dropdown/Dropdown";
-
-type VendorsTypes = {
-  vendor?: "github" | "bitbucket";
-  title: string;
-  href: string;
-}[];
+import { vendors } from "@/utils/teamItems";
 
 export default function Hero() {
-  const vendors: VendorsTypes = [
-    {
-      vendor: "github",
-      title: "Install on GitHub",
-      href: "https://github.com/apps/penify-dev/installations/select_target",
-    },
-    {
-      vendor: "bitbucket",
-      title: "Install on Bitbucket",
-      href: "https://production-gateway.snorkell.ai/api/bitbucket/installation-link",
-    },
-  ];
+  
 
   return (
     <section className="w-full py-8 overflow-hidden md:py-16 xl:py-24 ">
