@@ -57,3 +57,16 @@ export const vendors: VendorsTypes = [
     href: "https://production-gateway.snorkell.ai/api/bitbucket/installation-link",
   },
 ];
+
+export const vendors2: VendorsTypes = [
+  {
+    vendor: "github",
+    title: "GitHub",
+    href: "https://github.com/apps/penify-dev/installations/select_target",
+  },
+  {
+    vendor: "bitbucket",
+    title: "Bitbucket",
+    href: "https://production-gateway.snorkell.ai/api/bitbucket/installation-link",
+  },
+];
