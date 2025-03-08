@@ -44,7 +44,7 @@ export default function Hero() {
 
             <p className="mb-6 md:mb-8 text-sm text-slate-400 md:text-base lg:text-lg">
             <span className="bg-yellow-200 text-yellow-800 font-bold px-2 py-1 rounded-md hover:bg-yellow-300 cursor-pointer transition duration-300">
-              <a href = "https://github.com/apps/penify-dev/installations/select_target" target="_blank">Now Document your entire Repository in {currency === "INR" ? "₹" : "$"}{getCurrency(PRICING.fullRepoPlan.amount)}.</a>
+              <a href = "https://github.com/apps/penify-dev/installations/select_target" target="_blank">Now Document your entire Repository in less than 1$.</a>
             </span>
           </p>
 
