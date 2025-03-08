@@ -2,6 +2,8 @@ import { CurrencyOptions } from "@/hooks/useCurrencyConversion";
 import PRICING from "@/utils/pricing.json";
 import Accordion from "@/components/Pricing/Accordion/Accordion";
 import { THead } from "./THead/THead";
+import { getPlanPrice, PlanTypes } from "@/api/pricing";
+import { use, useEffect } from "react";
 
 interface PlansTableProps {
   currency: CurrencyOptions;
@@ -9,6 +11,28 @@ interface PlansTableProps {
 }
 
 export function PlansTable({ currency, getCurrency }: PlansTableProps) {
+  useEffect(() => {
+    getPlanPrice().then((data: PlanTypes) => {
+      if (!data) {
+        return;
+      }
+      console.log("data", data);
+      PRICING.plans.forEach((item) => {
+        const monthKey = item.planIdPerMonth;
+        if (!monthKey) {
+          return;
+        } 
+        console.log("monthKey", monthKey);
+        if (!data[monthKey]) {
+          return;
+        }
+        console.log("monthKey22", monthKey);
+        item.price = data[monthKey].amount + "";
+        // item.productPaymentPerYear.planAmountPerYear = data[yearKey].amount+"";
+      });
+    });
+  });
+
   return (
     <div className="relative w-full overflow-x-auto shadow-md sm:rounded-lg mt-24">
       <table className="w-full table-fixed text-sm text-slate-400">

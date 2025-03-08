@@ -2,19 +2,27 @@
   "plans": [
     {
       "title": "Freemium",
-      "price": "0"
+      "price": "0",
+      "planIdPerMonth": "",
+      "planIdPerYear": ""
     },
     {
       "title": "Premium",
-      "price": "18"
+      "price": "18",
+      "planIdPerMonth": "price_basic_monthly_8_march_2025",
+      "planIdPerYear": "price_basic_year_8_march_2025"
     },
     {
       "title": "Pro",
-      "price": "25"
+      "price": "25",
+      "planIdPerMonth": "price_pro_monthly_8_march_2025",
+      "planIdPerYear": "price_pro_year_8_march_2025"
     },
     {
       "title": "Enterprise",
-      "price": null
+      "price": null,
+      "planIdPerMonth": "",
+      "planIdPerYear": ""
     }
   ],
   "data": [
