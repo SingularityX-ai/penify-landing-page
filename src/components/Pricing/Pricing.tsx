@@ -4,6 +4,10 @@ import { useCurrencyConversion } from "@/hooks/useCurrencyConversion";
 import { PlansTable } from "./PlansTable/PlansTable";
 import { Dropwdown } from "../Dropdown/Dropdown";
 import { vendors, vendors2 } from "@/utils/teamItems";
+import { useEffect } from "react";
+import { getPlanPrice, PlanTypes } from "@/api/pricing";
+import PRICING from "@/utils/pricing.json";
+
 // import { LocationPopup } from "../LocationPopup/LocationPopup";
 // import { useScrollLock } from "@/hooks/useScrollLock";
 
@@ -18,6 +22,31 @@ export default function Pricing() {
   } = useCurrencyConversion();
 
   // useScrollLock(showLocationPopup);
+
+  useEffect(() => {
+    getPlanPrice().then((data: PlanTypes) => {
+      if (!data) {
+        return;
+      }
+      const fullRepoKey = PRICING.fullRepoPlan.planId;
+      if(data[fullRepoKey]) {
+        PRICING.fullRepoPlan.amount = data[fullRepoKey].amount;
+      }
+      PRICING.plans.forEach((item) => {
+        const monthKey = item.planIdPerMonth;
+        if (!monthKey) {
+          return;
+        } 
+        console.log("monthKey", monthKey);
+        if (!data[monthKey]) {
+          return;
+        }
+        console.log("monthKey22", monthKey);
+        item.price = data[monthKey].amount + "";
+        // item.productPaymentPerYear.planAmountPerYear = data[yearKey].amount+"";
+      });
+    });
+  });
 
   return (
     <section>
@@ -46,7 +75,7 @@ export default function Pricing() {
             />
             <br></br><br></br>
             <h1 className="mb-10 text-center text-2xl font-bold text-slate-200 md:text-3xl xl:text-4xl">
-              Do you want to Document your <Dropwdown title="Git" items={vendors2} type="hero" /> Repository in {currency === "INR" ? "₹" : "$"}{getCurrency(1)} ?
+              Do you want to Document your <Dropwdown title="Git" items={vendors2} type="hero" /> Repository in {currency === "INR" ? "₹" : "$"}{getCurrency(PRICING.fullRepoPlan.amount)} ?
             </h1>
 
             
