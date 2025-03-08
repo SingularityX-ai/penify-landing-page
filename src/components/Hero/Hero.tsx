@@ -5,6 +5,20 @@ import { vendors } from "@/utils/teamItems";
 import { useCurrencyConversion } from "@/hooks/useCurrencyConversion";
 import PRICING from "@/utils/pricing.json";
 
+/**
+ * Renders the Hero component, which displays a promotional section
+ * for a documentation generation service. The component includes
+ * information about the service, a call to action for users to
+ * document their repositories, and a demo request link.
+ *
+ * This component utilizes the `useCurrencyConversion` hook to manage
+ * currency-related functionalities, such as displaying the correct
+ * currency symbol and amount based on user selection.
+ *
+ * @returns {JSX.Element} The rendered Hero component.
+ *
+ * @throws {Error} Throws an error if the currency conversion fails.
+ */
 export default function Hero() {
 
   const {

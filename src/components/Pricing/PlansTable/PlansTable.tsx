@@ -8,6 +8,17 @@ interface PlansTableProps {
   getCurrency: (priceInUSD: number) => number;
 }
 
+/**
+ * Renders a table displaying pricing plans with an accordion for each category.
+ *
+ * @param {PlansTableProps} props - The properties for the PlansTable component.
+ * @param {string} props.currency - The currency to be displayed in the table.
+ * @param {function} props.getCurrency - A function to retrieve the current currency.
+ *
+ * @returns {JSX.Element} The rendered PlansTable component.
+ *
+ * @throws {Error} Throws an error if the currency is not provided or invalid.
+ */
 export function PlansTable({ currency, getCurrency }: PlansTableProps) {
 
   return (

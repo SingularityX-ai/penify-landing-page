@@ -11,6 +11,17 @@ import PRICING from "@/utils/pricing.json";
 // import { LocationPopup } from "../LocationPopup/LocationPopup";
 // import { useScrollLock } from "@/hooks/useScrollLock";
 
+/**
+ * Renders the Pricing component which displays pricing plans and allows users to select a currency.
+ *
+ * This component utilizes currency conversion and fetches pricing data for different plans.
+ * It includes a header with a title and a dropdown for selecting the currency, as well as a table
+ * displaying the available plans.
+ *
+ * @returns {JSX.Element} The rendered Pricing component.
+ *
+ * @throws {Error} Throws an error if fetching the plan price fails.
+ */
 export default function Pricing() {
   const {
     currency,
